@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr"><head><title>Stage 1 and 2 solver kernels</title><meta charset="utf-8"/><link rel="preload" href="../index-47d9ba67.css" as="style"/><link rel="preload" href="../prescript-2bfc6315.js" as="script"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted Grotesk:wght@400;700&amp;family=Source Sans Pro:ital,wght@0,400;0,600;1,400;1,600&amp;family=IBM Plex Mono:wght@400;600&amp;display=swap"/><link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="og:site_name" content="Quartz 5"/><meta property="og:title" content="Stage 1 and 2 solver kernels"/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="Stage 1 and 2 solver kernels"/><meta name="twitter:description" content="Stage 1 and 2 solver kernels In one sentence: staged_solver_helpers.py is a bag of stateless NumPy kernels that the staged solver uses to carve an image into colour zones (Stage 1) and to turn the per-pixel colour stacks into a scored grid of cap-thickness colour predictions (Stage 2)."/><meta property="og:description" content="Stage 1 and 2 solver kernels In one sentence: staged_solver_helpers.py is a bag of stateless NumPy kernels that the staged solver uses to carve an image into colour zones (Stage 1) and to turn the per-pixel colour stacks into a scored grid of cap-thickness colour predictions (Stage 2)."/><meta property="og:image:alt" content="Stage 1 and 2 solver kernels In one sentence: staged_solver_helpers.py is a bag of stateless NumPy kernels that the staged solver uses to carve an image into colour zones (Stage 1) and to turn the per-pixel colour stacks into a scored grid of cap-thickness colour predictions (Stage 2)."/><meta property="twitter:domain" content="catfoodkingdom.github.io/prisma-docs"/><meta property="og:url" content="https://catfoodkingdom.github.io/prisma-docs/solver/stage-1-and-2-solver-kernels"/><meta property="twitter:url" content="https://catfoodkingdom.github.io/prisma-docs/solver/stage-1-and-2-solver-kernels"/><link rel="icon" href="../static/icon.png"/><meta name="description" content="Stage 1 and 2 solver kernels In one sentence: staged_solver_helpers.py is a bag of stateless NumPy kernels that the staged solver uses to carve an image into colour zones (Stage 1) and to turn the per-pixel colour stacks into a scored grid of cap-thickness colour predictions (Stage 2)."/><meta name="generator" content="Quartz"/><link href="../index-47d9ba67.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-735924e0.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-589c1cea.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-bbc3f7c0.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-2911f5d1.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-e427079e.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-53b25b2b.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-c93c6a44.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-8a06014f.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-77d6a441.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-6ee21cee.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-1ea6ad18.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-34bdfded.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-788c9ca3.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-642859cd.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-4abc06bd.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-274a3dfe.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-94cb6c84.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-58d5ff56.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-7262b5a7.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../static/resource-style-a5c806d2.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../static/resource-style-6bd36952.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../static/resource-style-9857b007.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../static/resource-style-d3a1a224.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" rel="stylesheet" type="text/css" data-persist="true"/><script src="../prescript-2bfc6315.js" type="application/javascript" data-persist="true"></script><script type="application/javascript" data-persist="true">const fetchData = fetch("../static/contentIndex.json").then(data => data.json())</script><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted%20Grotesk%3Awght%40400%3B700&amp;family=Source%20Sans%20Pro%3Aital%2Cwght%400%2C400%3B0%2C600%3B1%2C400%3B1%2C600&amp;family=IBM%20Plex%20Mono%3Awght%40400%3B600&amp;display=swap"/><meta property="og:image:width" content="1200"/><meta property="og:image:height" content="630"/><meta property="og:image" content="https://catfoodkingdom.github.io/prisma-docs/solver/stage-1-and-2-solver-kernels-og-image.webp"/><meta property="og:image:url" content="https://catfoodkingdom.github.io/prisma-docs/solver/stage-1-and-2-solver-kernels-og-image.webp"/><meta name="twitter:image" content="https://catfoodkingdom.github.io/prisma-docs/solver/stage-1-and-2-solver-kernels-og-image.webp"/><meta property="og:image:type" content="image/webp"/></head><body data-slug="solver/stage-1-and-2-solver-kernels" data-basepath="/prisma-docs"><div id="quartz-root" class="page" data-frame="default"><div id="quartz-body"><div class="left sidebar"><h2 class="page-title"><a href="..">Quartz 5</a></h2><div class="mobile-only"><div class="spacer"></div></div><div class="flex-component" style="flex-direction: row; flex-wrap: nowrap; gap: 0.5rem;"><div style="flex-grow: 1; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><div class="search"><button class="search-button" aria-label="Search" aria-expanded="false"><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title>Search</title><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"></path><circle cx="8" cy="8" r="7"></circle></g></svg><p>Search</p></button><div class="search-container"><div class="search-space"><input autocomplete="off" class="search-bar" name="search" type="text" aria-label="Search for something..." placeholder="Search for something..."/><div class="search-layout" data-preview="true" data-field-priority="[&quot;title&quot;,&quot;content&quot;,&quot;tags&quot;]"></div></div></div></div></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="darkmode" aria-label="Dark mode"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="dayIcon" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35" xml:space="preserve" aria-label="Dark mode"><title>Dark mode</title><path d="M6,17.5C6,16.672,5.328,16,4.5,16h-3C0.672,16,0,16.672,0,17.5    S0.672,19,1.5,19h3C5.328,19,6,18.328,6,17.5z M7.5,26c-0.414,0-0.789,0.168-1.061,0.439l-2,2C4.168,28.711,4,29.086,4,29.5    C4,30.328,4.671,31,5.5,31c0.414,0,0.789-0.168,1.06-0.44l2-2C8.832,28.289,9,27.914,9,27.5C9,26.672,8.329,26,7.5,26z M17.5,6    C18.329,6,19,5.328,19,4.5v-3C19,0.672,18.329,0,17.5,0S16,0.672,16,1.5v3C16,5.328,16.671,6,17.5,6z M27.5,9    c0.414,0,0.789-0.168,1.06-0.439l2-2C30.832,6.289,31,5.914,31,5.5C31,4.672,30.329,4,29.5,4c-0.414,0-0.789,0.168-1.061,0.44    l-2,2C26.168,6.711,26,7.086,26,7.5C26,8.328,26.671,9,27.5,9z M6.439,8.561C6.711,8.832,7.086,9,7.5,9C8.328,9,9,8.328,9,7.5    c0-0.414-0.168-0.789-0.439-1.061l-2-2C6.289,4.168,5.914,4,5.5,4C4.672,4,4,4.672,4,5.5c0,0.414,0.168,0.789,0.439,1.06    L6.439,8.561z M33.5,16h-3c-0.828,0-1.5,0.672-1.5,1.5s0.672,1.5,1.5,1.5h3c0.828,0,1.5-0.672,1.5-1.5S34.328,16,33.5,16z     M28.561,26.439C28.289,26.168,27.914,26,27.5,26c-0.828,0-1.5,0.672-1.5,1.5c0,0.414,0.168,0.789,0.439,1.06l2,2    C28.711,30.832,29.086,31,29.5,31c0.828,0,1.5-0.672,1.5-1.5c0-0.414-0.168-0.789-0.439-1.061L28.561,26.439z M17.5,29    c-0.829,0-1.5,0.672-1.5,1.5v3c0,0.828,0.671,1.5,1.5,1.5s1.5-0.672,1.5-1.5v-3C19,29.672,18.329,29,17.5,29z M17.5,7    C11.71,7,7,11.71,7,17.5S11.71,28,17.5,28S28,23.29,28,17.5S23.29,7,17.5,7z M17.5,25c-4.136,0-7.5-3.364-7.5-7.5    c0-4.136,3.364-7.5,7.5-7.5c4.136,0,7.5,3.364,7.5,7.5C25,21.636,21.636,25,17.5,25z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="nightIcon" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100" xml:space="preserve" aria-label="Light mode"><title>Light mode</title><path d="M96.76,66.458c-0.853-0.852-2.15-1.064-3.23-0.534c-6.063,2.991-12.858,4.571-19.655,4.571  C62.022,70.495,50.88,65.88,42.5,57.5C29.043,44.043,25.658,23.536,34.076,6.47c0.532-1.08,0.318-2.379-0.534-3.23  c-0.851-0.852-2.15-1.064-3.23-0.534c-4.918,2.427-9.375,5.619-13.246,9.491c-9.447,9.447-14.65,22.008-14.65,35.369  c0,13.36,5.203,25.921,14.65,35.368s22.008,14.65,35.368,14.65c13.361,0,25.921-5.203,35.369-14.65  c3.872-3.871,7.064-8.328,9.491-13.246C97.826,68.608,97.611,67.309,96.76,66.458z"></path></svg></button></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="readermode" aria-label="Reader mode"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="readerIcon" fill="currentColor" stroke="currentColor" stroke-width="0.2" stroke-linecap="round" stroke-linejoin="round" width="64px" height="64px" viewBox="0 0 24 24" aria-label="Reader mode"><title>Reader mode</title><g transform="translate(-1.8, -1.8) scale(1.15, 1.2)"><path d="M8.9891247,2.5 C10.1384702,2.5 11.2209868,2.96705384 12.0049645,3.76669482 C12.7883914,2.96705384 13.8709081,2.5 15.0202536,2.5 L18.7549359,2.5 C19.1691495,2.5 19.5049359,2.83578644 19.5049359,3.25 L19.5046891,4.004 L21.2546891,4.00457396 C21.6343849,4.00457396 21.9481801,4.28672784 21.9978425,4.6528034 L22.0046891,4.75457396 L22.0046891,20.25 C22.0046891,20.6296958 21.7225353,20.943491 21.3564597,20.9931534 L21.2546891,21 L2.75468914,21 C2.37499337,21 2.06119817,20.7178461 2.01153575,20.3517706 L2.00468914,20.25 L2.00468914,4.75457396 C2.00468914,4.37487819 2.28684302,4.061083 2.65291858,4.01142057 L2.75468914,4.00457396 L4.50368914,4.004 L4.50444233,3.25 C4.50444233,2.87030423 4.78659621,2.55650904 5.15267177,2.50684662 L5.25444233,2.5 L8.9891247,2.5 Z M4.50368914,5.504 L3.50468914,5.504 L3.50468914,19.5 L10.9478955,19.4998273 C10.4513189,18.9207296 9.73864328,18.5588115 8.96709342,18.5065584 L8.77307039,18.5 L5.25444233,18.5 C4.87474657,18.5 4.56095137,18.2178461 4.51128895,17.8517706 L4.50444233,17.75 L4.50368914,5.504 Z M19.5049359,17.75 C19.5049359,18.1642136 19.1691495,18.5 18.7549359,18.5 L15.2363079,18.5 C14.3910149,18.5 13.5994408,18.8724714 13.0614828,19.4998273 L20.5046891,19.5 L20.5046891,5.504 L19.5046891,5.504 L19.5049359,17.75 Z M18.0059359,3.999 L15.0202536,4 L14.8259077,4.00692283 C13.9889509,4.06666544 13.2254227,4.50975805 12.7549359,5.212 L12.7549359,17.777 L12.7782651,17.7601316 C13.4923805,17.2719483 14.3447024,17 15.2363079,17 L18.0059359,16.999 L18.0056891,4.798 L18.0033792,4.75457396 L18.0056891,4.71 L18.0059359,3.999 Z M8.9891247,4 L6.00368914,3.999 L6.00599909,4.75457396 L6.00599909,4.75457396 L6.00368914,4.783 L6.00368914,16.999 L8.77307039,17 C9.57551536,17 10.3461406,17.2202781 11.0128313,17.6202194 L11.2536891,17.776 L11.2536891,5.211 C10.8200889,4.56369974 10.1361548,4.13636104 9.37521067,4.02745763 L9.18347055,4.00692283 L8.9891247,4 Z"></path></g></svg></button></div></div><div class="explorer nav-files-container" data-behavior="link" data-collapsed="collapsed" data-savestate="true" data-data-fns="{&quot;order&quot;:[&quot;filter&quot;,&quot;map&quot;,&quot;sort&quot;],&quot;sortFn&quot;:&quot;(a2, b2) => {\r\n    if (!a2.isFolder &amp;&amp; !b2.isFolder || a2.isFolder &amp;&amp; b2.isFolder) {\r\n      return (a2.displayName || \&quot;\&quot;).localeCompare(b2.displayName || \&quot;\&quot;, void 0, {\r\n        numeric: true,\r\n        sensitivity: \&quot;base\&quot;\r\n      });\r\n    }\r\n    if (!a2.isFolder &amp;&amp; b2.isFolder) {\r\n      return 1;\r\n    }\r\n    return -1;\r\n  }&quot;,&quot;filterFn&quot;:&quot;(node) => node.slugSegment !== \&quot;tags\&quot;&quot;,&quot;mapFn&quot;:&quot;(node) => {\r\n    return node;\r\n  }&quot;}"><button type="button" class="explorer-toggle mobile-explorer hide-until-loaded" data-mobile="true" aria-controls="explorer-136" aria-label="Explorer"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-menu"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg></button><button type="button" class="title-button explorer-toggle desktop-explorer" data-mobile="false" aria-expanded="true"><h2>Explorer</h2><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><div id="explorer-136" class="explorer-content" aria-expanded="false" role="group"><ul class="explorer-ul overflow" id="list-0"><li class="overflow-end"></li></ul></div><template id="template-file"><li><a href="#" class="nav-file-title tree-item-self"></a></li></template><template id="template-folder"><li><div class="folder-container nav-folder-title tree-item-self"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon nav-folder-collapse-indicator collapse-icon"><polyline points="6 9 12 15 18 9"></polyline></svg><div><button class="folder-button"><span class="folder-title"></span></button></div></div><div class="folder-outer"><ul class="content tree-item-children"></ul></div></li></template></div></div><div class="center"><div class="page-header"><div class="popover-hint"><nav class="breadcrumb-container" aria-label="breadcrumbs"><div class="breadcrumb-element"><a href="../">Home</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../solver/">Solver</a><p> ❯ </p></div><div class="breadcrumb-element"><a href>Stage 1 and 2 solver kernels</a></div></nav><h1 class="article-title">Stage 1 and 2 solver kernels</h1><details class="note-properties metadata-container" open data-collapsed="false"><summary class="note-properties-header"><span class="note-properties-title">Properties</span><span class="note-properties-count">1</span></summary><table class="note-properties-table"><tbody><tr class="note-properties-row metadata-property"><td class="note-properties-key metadata-property-key">tags</td><td class="note-properties-value metadata-property-value"><span class="note-properties-tags"><a href="../tags/generator" class="internal internal-link tag-link">generator</a><span class="note-properties-separator">, </span><a href="../tags/solver" class="internal internal-link tag-link">solver</a></span></td></tr></tbody></table></details><p show-comma="true" class="content-meta"><time datetime="2026-06-22T02:17:05.410Z">Jun 21, 2026</time><span>9 min read</span></p></div></div><article class="popover-hint"><div class="markdown-preview-view markdown-rendered"><h1 id="stage-1-and-2-solver-kernels">Stage 1 and 2 solver kernels<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#stage-1-and-2-solver-kernels" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<blockquote>
+<p>In one sentence: <code>staged_solver_helpers.py</code> is a bag of stateless NumPy kernels that the staged solver uses to carve an image into colour zones (Stage 1) and to turn the per-pixel colour stacks into a scored grid of cap-thickness colour predictions (Stage 2).</p>
+</blockquote>
+<h2 id="what-this-page-is">What this page is<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#what-this-page-is" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p><code>pipeline/staged_solver_helpers.py</code> holds the shared, side-effect-free math kernels for the two early stages of the live solve. They do not own any solver policy — no commitment logic, no zone graph traversal, no budgeting decisions. They take arrays in and hand arrays back. The orchestration that <em>calls</em> them lives in <a href="../architecture/generator.pipeline.staged_runner" class="internal internal-link" data-slug="architecture/generator.pipeline.staged_runner">generator.pipeline.staged_runner</a>; this module is the low-level toolbox.</p>
+<p>These kernels run on every webapp solve. The webapp solve runs the <strong>staged backend</strong> (<code>pipeline/runner.py:843</code> imports and calls <code>run_staged_backend_path</code>, defined at <code>pipeline/staged_runner.py:10310</code>), <strong>not</strong> the legacy “6-step” engine in <code>solve.py</code>. So everything below is on the hot path for a real generate.</p>
+<h3 id="origin-note-stale-docstring-defuse">Origin note (stale-docstring defuse)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#origin-note-stale-docstring-defuse" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>The module docstring claims these functions “used to live in the retired dual-resolution solver wrapper” (<code>pipeline/staged_solver_helpers.py:1-8</code>). That is a historical note about <em>where the code moved from</em>, not about its current status. The functions are <strong>live</strong> — every public name in <code>__all__</code> (<code>pipeline/staged_solver_helpers.py:306-315</code>) has at least one in-tree caller (see <a href="#liveness" class="internal internal-link alias">Liveness</a> below). Do not read “retired … legacy … dead solver wrapper” in that header as a claim that this code is dead; the <em>wrapper</em> is gone, the kernels were lifted out and kept.</p>
+<h2 id="the-kernels">The kernels<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#the-kernels" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>Function</th><th>Anchor</th><th>Stage</th><th>Role</th></tr></thead><tbody><tr><td><code>generate_stage1_zone_labels</code></td><td><code>:254</code></td><td>1</td><td>Carve the planning image into a dense zone-label map</td></tr><tr><td><code>_smooth_label_map</code></td><td><code>:216</code></td><td>1</td><td>Majority-vote boundary smoothing of a label map</td></tr><tr><td><code>_relabel_contiguous_labels</code></td><td><code>:247</code></td><td>1</td><td>Force label ids into dense <code>0..n-1</code></td></tr><tr><td><code>_vectorized_stack_ids</code></td><td><code>:21</code></td><td>2</td><td>Encode per-pixel layer stacks into unique-stack ids</td></tr><tr><td><code>_predict_transmission_batch</code></td><td><code>:58</code></td><td>2</td><td>Batch spline transmission for an array of thicknesses</td></tr><tr><td><code>_precompute_cap_oklabs</code></td><td><code>:87</code></td><td>2</td><td>Spline-model cap-OKLab grid + over-budget <code>inf</code> sentinel</td></tr><tr><td><code>_precompute_cap_oklabs_vectorized</code></td><td><code>:131</code></td><td>2</td><td>Photo-stack cap-OKLab grid (scoring + dense views)</td></tr><tr><td><code>_score_candidates_batch</code></td><td><code>:190</code></td><td>2</td><td>Score many candidate stacks against a zone’s pixels</td></tr><tr><td><code>_score_stack_for_cell</code></td><td><code>:180</code></td><td>2</td><td>Per-stack fallback scorer (memory-safe path)</td></tr></tbody></table></div>
+<h2 id="stage-1--zone-label-generation">Stage 1 — zone-label generation<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#stage-1--zone-label-generation" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p><code>generate_stage1_zone_labels</code> (<code>pipeline/staged_solver_helpers.py:254</code>) produces a 2-D integer label map the same height/width as the planning image, where each integer is a colour zone. It is “dense Stage 1 zone-label map <strong>without solver commitment logic</strong>” (<code>:264</code>) — it only segments; the runner decides what to do with the zones.</p>
+<p><strong>Cell size.</strong> If <code>scale</code> is not passed, it is derived as <code>round(color_region_target_mm / solver_fine_pitch_mm)</code>, floored to ≥1 (<code>:266-271</code>). <code>pixels_per_cell = scale * scale</code> (<code>:272</code>). In the live path the runner passes an explicit <code>scale</code> override (<code>coarse_scale_override</code>, derived from the stage-1 coarsening factor) when staging is active (<code>staged_runner.py:702-717</code>), so the internal derivation is mostly a fallback.</p>
+<p><strong>Three cell modes</strong> (<code>:274-298</code>), selected by <code>cfg.cell_mode</code>:</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th><code>cell_mode</code></th><th>Mechanism</th><th>Notes</th></tr></thead><tbody><tr><td><code>&quot;grid&quot;</code></td><td>Plain <code>scale × scale</code> square tiling via <code>np.repeat</code></td><td>Deterministic axis-aligned cells; default-ish</td></tr><tr><td><code>&quot;felzenszwalb&quot;</code></td><td><code>skimage.segmentation.felzenszwalb</code>, <code>scale = max(1, pixels_per_cell*0.8)</code>, <code>sigma=0.8</code>, <code>min_size=pixels_per_cell</code></td><td>Content-aware blobs</td></tr><tr><td>anything else</td><td><code>skimage.segmentation.slic</code>, <code>n_segments = (h*w)//(pixels_per_cell*4)</code>, <code>compactness=10</code></td><td>SLIC superpixels; the catch-all branch</td></tr></tbody></table></div>
+<p>After segmentation the labels are forced contiguous (<code>:300</code>), optionally boundary-smoothed if <code>cfg.smooth_boundaries</code> is set (<code>:301-302</code>, radius from <code>cfg.boundary_smooth_radius</code>), then relabelled contiguous again on the way out (<code>:303</code>).</p>
+<p><strong><code>_smooth_label_map</code></strong> (<code>:216</code>) iterates <code>radius</code> passes; each pass finds 4-neighbour boundary pixels and replaces each with the majority label in its 3×3 window (<code>np.bincount(...).argmax()</code>, <code>:240-242</code>). It short-circuits when a pass finds no boundary (<code>:232-233</code>) and finishes with a contiguous relabel (<code>:244</code>). <code>_relabel_contiguous_labels</code> (<code>:247</code>) is the trivial “unique + inverse-index reshape” that guarantees ids are <code>0..n-1</code> as <code>int32</code>.</p>
+<blockquote>
+<p>The <code>radius</code>/<code>boundary_smooth_radius</code> plumbing here is the same <code>smooth_boundaries</code> feature noted as bug-fixed 2026-04-12 in project memory; this kernel is where the majority vote actually happens.</p>
+</blockquote>
+<h2 id="stage-2--from-per-pixel-stacks-to-a-scored-cap-grid">Stage 2 — from per-pixel stacks to a scored cap grid<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#stage-2--from-per-pixel-stacks-to-a-scored-cap-grid" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>Stage 2 (entry around <code>staged_runner.py:6195</code>) turns LUT-queried per-pixel thicknesses into a compact, scorable representation. The kernels do three jobs: <strong>encode</strong>, <strong>predict</strong>, <strong>score</strong>.</p>
+<h3 id="encode--_vectorized_stack_ids">Encode — <code>_vectorized_stack_ids</code><a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#encode--_vectorized_stack_ids" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><code>_vectorized_stack_ids</code> (<code>:21</code>) collapses the per-pixel thickness dictionary into a small set of <em>unique stacks</em>. Mechanics:</p>
+<ol>
+<li>Round each filament’s thickness to an integer layer count: <code>rint(raw / layer_height)</code> per palette entry (<code>:31-34</code>).</li>
+<li>Pack the per-pixel layer-count vector into a single integer using a positional base of <code>max_layers + 1</code> (<code>:36-38</code>) — a mixed-radix encoding where each filament occupies one “digit”. <code>max_layers</code> defaults to 50 but the live caller passes <code>cfg.effective_max_layers()</code> (<code>staged_runner.py:6218</code>).</li>
+<li><code>np.unique(..., return_inverse=True)</code> gives <code>pixel_stack_ids</code> (per-pixel index into the unique table) and the unique codes (<code>:40-41</code>).</li>
+<li>Decode each unique code back into a <code>{filament_id: thickness_mm}</code> dict, dropping zero-layer entries (<code>:43-53</code>).</li>
+</ol>
+<p>Returns <code>(pixel_stack_ids, unique_codes, unique_stack_dicts)</code>. This is the key compression step: a megapixel image with a handful of distinct stacks becomes a few hundred unique-stack dicts the rest of Stage 2 reasons over.</p>
+<blockquote>
+<p><strong>Palette order matters for the photo-stack model.</strong> The caller chooses the palette ordering <em>before</em> encoding: for the photo-stack model it keeps <code>cfg.palette</code> order (<code>staged_runner.py:6209-6212</code>) because that model is an ordered physical stack; for the historical spline model it <code>sorted()</code>s the palette because spline composition is order-insensitive. The kernel itself just encodes whatever ordered palette it is handed.</p>
+</blockquote>
+<h3 id="predict--_predict_transmission_batch">Predict — <code>_predict_transmission_batch</code><a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#predict--_predict_transmission_batch" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><code>_predict_transmission_batch</code> (<code>:58</code>) evaluates the spline transmission model for a whole array of thicknesses at once. It pulls the per-channel splines via <code>lib.transmission._get_splines</code> (<code>:60-62</code>) and:</p>
+<ul>
+<li>thickness ≤ 0 → transmission <code>1.0</code> (<code>:68</code>, <code>:72</code>);</li>
+<li>thickness within knot range → clipped <code>[0,1]</code> spline eval per R/G/B (<code>:74-78</code>);</li>
+<li>thickness beyond the last knot → per-element <code>lib.transmission._extrapolate</code> (<code>:80-82</code>).</li>
+</ul>
+<p>Returns an <code>(N, 3)</code> RGB transmission array. This is the spline-model batch evaluator; see <a href="../architecture/lib.transmission" class="internal internal-link" data-slug="architecture/lib.transmission">lib.transmission</a> for the underlying <code>PchipInterpolator</code> splines and the transmission contract <code>T_total = T_wb · ∏ T_fi · T_wc</code>.</p>
+<h3 id="cap-oklab-precompute--the-two-grids">Cap-OKLab precompute — the two grids<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#cap-oklab-precompute--the-two-grids" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>Stage 2 needs, for every unique stack, the OKLab colour it would show at <strong>each possible white-cap thickness</strong>. There are two implementations, picked by model kind at <code>staged_runner.py:6241</code>.</p>
+<h4 id="spline-model--_precompute_cap_oklabs">Spline model — <code>_precompute_cap_oklabs</code><a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#spline-model--_precompute_cap_oklabs" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h4>
+<p><code>_precompute_cap_oklabs</code> (<code>:87</code>) builds the cap grid for the historical spline model:</p>
+<ol>
+<li>Cap steps <code>0 .. d_wc_max</code> at <code>layer_height</code> spacing (<code>:94-98</code>); <code>d_wc_max = cfg.effective_boundary_d_wc_max()</code>.</li>
+<li>White-cap transmission for all cap steps via <code>_predict_transmission_batch</code> (<code>:100-102</code>).</li>
+<li>For each unique stack: compose white-base + colour layers with <code>compose_stack</code> (<code>:108-112</code>, from <a href="../architecture/generator.model" class="internal internal-link" data-slug="architecture/generator.model">generator.model</a>), multiply by every cap transmission, convert to OKLab with <code>to_oklab</code> (<code>:114-115</code>).</li>
+<li><strong>Over-budget <code>inf</code> sentinel</strong> (<code>:116-126</code>): the cap headroom left by this stack’s colour thickness is computed with <code>max_cap_height_for_colour_thickness</code> from <a href="../architecture/generator.pipeline.height_budget" class="internal internal-link" data-slug="architecture/generator.pipeline.height_budget">generator.pipeline.height_budget</a> (<code>remaining = t_max - d_wb - colour_thickness</code>, clamped to <code>d_wc_max</code>). Any cap step beyond that headroom has its OKLab row set to <code>np.inf</code> (<code>:124-125</code>). Because the downstream scorer takes a Euclidean distance and then <code>.min()</code> over cap steps, an <code>inf</code> row can never be the chosen cap — so the optimizer is structurally forbidden from selecting an unprintable cap. This is the mechanism that keeps the solve inside the <code>~3 mm</code> total-height budget.</li>
+</ol>
+<p>Returns <code>(cap_values, all_oklabs)</code> where <code>all_oklabs</code> is <code>(unique_stacks, n_steps, 3)</code>.</p>
+<h4 id="photo-stack-model--_precompute_cap_oklabs_vectorized">Photo-stack model — <code>_precompute_cap_oklabs_vectorized</code><a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#photo-stack-model--_precompute_cap_oklabs_vectorized" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h4>
+<p><code>_precompute_cap_oklabs_vectorized</code> (<code>:131</code>) does the same job for the photo-stack provider, but returns <strong>two</strong> views (<code>:138-147</code>):</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>View</th><th>Budget handling</th><th>Used for</th></tr></thead><tbody><tr><td><code>scoring_oklabs</code></td><td>over-budget cells masked with <code>inf</code> (<code>:175-176</code>)</td><td>zone scoring — the optimizer can’t pick unprintable combos</td></tr><tr><td><code>dense_oklabs</code></td><td>finite at every cell</td><td>Stage-4 cap lookup always gets a colour answer; budget enforcement is the cap planner’s job</td></tr></tbody></table></div>
+<p>Cap steps come from the <em>LUT cap grid</em> (deduped from each LUT’s <code>cap_thicknesses</code>, <code>:153-162</code>) — never scavenged from the pruned LUT, never routed through the row-shaped predictor (docstring <code>:144-146</code>, behaviour <code>:163-177</code>). The actual grid evaluation is delegated to <code>predict_unique_stack_cap_oklab_grid</code> (<code>photo_stack_lut.py:957</code>), which returns <code>(dense_oklabs, within_budget)</code>; the budget mask is applied here at <code>:175-176</code> with <code>budget_mm = t_max - d_wb</code> (<code>:173</code>).</p>
+<p>The caller binds the dense view to <code>dense_cap_oklabs</code> and the scoring view to <code>all_oklabs</code> (<code>staged_runner.py:6242-6248</code>); the spline branch sets <code>dense_cap_oklabs = all_oklabs</code> since it has no separate dense view (<code>:6250-6251</code>).</p>
+<h3 id="score--_score_candidates_batch">Score — <code>_score_candidates_batch</code><a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#score--_score_candidates_batch" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><code>_score_candidates_batch</code> (<code>:190</code>) scores a set of candidate stacks against a zone’s pixels. For each candidate it computes, per pixel, the OKLab distance to the candidate’s <em>best</em> cap step, then averages over the zone’s pixels — “mean optimal-cap dE” (<code>:180-187</code>). It has two code paths:</p>
+<ul>
+<li><strong>Vectorized</strong> (<code>:205-208</code>): if the <code>pixels × candidates × steps × 3</code> tensor is under 50 M elements, it broadcasts the whole thing, squares-sums-sqrts to dE, takes <code>min</code> over cap steps then <code>mean</code> over pixels.</li>
+<li><strong>Per-candidate fallback</strong> (<code>:210-213</code>): above that size it loops candidates and calls <code>_score_stack_for_cell</code> (<code>:180</code>) one at a time to cap peak memory.</li>
+</ul>
+<p>Both return a <code>(candidates,)</code> array of scores; lower is better. This is the kernel the zone-candidate machinery calls in two places: enumerating each zone’s own candidates (<code>staged_runner.py:794</code>) and scoring borrowed neighbour candidates during augmentation (<code>staged_runner.py:889</code>). The candidate ids being scored are unique-stack ids, and the cap grid passed in is the scoring view (<code>all_oklabs</code>), so the <code>inf</code> sentinel rows propagate into these scores as “never selected”.</p>
+<h2 id="how-the-kernels-wire-together-stage-2-sequence">How the kernels wire together (Stage 2 sequence)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#how-the-kernels-wire-together-stage-2-sequence" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<pre><code>_query_stage2_pixel_stacks (LUT batch query)   staged_runner.py:6198
+        ↓ thickness_result
+_vectorized_stack_ids                           staged_runner.py:6214  → helpers:21
+        ↓ pixel_stack_ids, unique_stack_dicts
+_precompute_cap_oklabs[_vectorized]             staged_runner.py:6242/6250 → helpers:87/131
+        ↓ all_oklabs (scoring view, inf-masked)
+_enumerate_zone_candidates                      staged_runner.py:6262
+   └─ _score_candidates_batch                   staged_runner.py:794   → helpers:190
+_augment_zone_candidates_with_neighbor_...      staged_runner.py:6281
+   └─ _score_candidates_batch                   staged_runner.py:889   → helpers:190
+</code></pre>
+<p>Timings for two of these steps are recorded into the run’s performance profile as <code>stage2_vectorized_stack_ids_s</code> (<code>staged_runner.py:6224</code>) and <code>stage2_precompute_cap_oklabs_s</code> (<code>staged_runner.py:6255</code>) — these show up in <code>run.json</code> files under the run cache.</p>
+<h2 id="reuse-by-the-luminance-handler">Reuse by the luminance handler<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#reuse-by-the-luminance-handler" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p><code>_predict_transmission_batch</code> is also imported and used outside Stage 2 by <a href="../architecture/generator.pipeline.luminance_handler" class="internal internal-link" data-slug="architecture/generator.pipeline.luminance_handler">generator.pipeline.luminance_handler</a> (<code>pipeline/luminance_handler.py:19</code>). In <code>_sample_white_luminance_curve</code>’s spline branch it computes white-cap transmission for an array of cap thicknesses (<code>luminance_handler.py:407-410</code>), then converts to OKLab. So this one kernel serves both the Stage 2 cap precompute and the white-cap luminance handling — a single source of truth for “spline transmission of many thicknesses at once.” (The photo-stack branch of that same method bypasses the kernel and asks the provider’s own <code>sample_white_cap_oklab</code> directly, <code>luminance_handler.py:399-404</code>.)</p>
+<h2 id="liveness">Liveness<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#liveness" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>Confirmed from grep over <code>Prisma/</code> (not from docstrings). Every public name in <code>__all__</code> has a live in-tree caller:</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>Symbol</th><th>Status</th><th>Evidence</th></tr></thead><tbody><tr><td><code>generate_stage1_zone_labels</code></td><td><strong>live</strong></td><td>imported <code>staged_runner.py:30</code>, called <code>:709</code></td></tr><tr><td><code>_vectorized_stack_ids</code></td><td><strong>live</strong></td><td>imported <code>staged_runner.py:29</code>, called <code>:6214</code></td></tr><tr><td><code>_precompute_cap_oklabs</code></td><td><strong>live</strong></td><td>imported <code>staged_runner.py:26</code>, called <code>:6250</code> (spline branch)</td></tr><tr><td><code>_precompute_cap_oklabs_vectorized</code></td><td><strong>live</strong></td><td>imported <code>staged_runner.py:27</code>, called <code>:6242</code> (photo-stack branch)</td></tr><tr><td><code>_score_candidates_batch</code></td><td><strong>live</strong></td><td>imported <code>staged_runner.py:28</code>, called <code>:794</code> and <code>:889</code></td></tr><tr><td><code>_score_stack_for_cell</code></td><td><strong>live</strong></td><td>internal fallback from <code>_score_candidates_batch</code> (<code>helpers:212</code>)</td></tr><tr><td><code>_predict_transmission_batch</code></td><td><strong>live</strong></td><td>called internally (<code>helpers:100</code>) <strong>and</strong> imported by <code>luminance_handler.py:19</code>, used <code>:407</code></td></tr><tr><td><code>_smooth_label_map</code></td><td><strong>live</strong></td><td>called from <code>generate_stage1_zone_labels</code> (<code>helpers:302</code>)</td></tr><tr><td><code>_relabel_contiguous_labels</code></td><td><strong>live</strong></td><td>called internally at <code>helpers:300</code>, <code>:303</code>, <code>:244</code></td></tr></tbody></table></div>
+<p>The staged backend itself is the live solve path: <code>pipeline/runner.py:843-846</code> imports and calls <code>run_staged_backend_path</code> (defined <code>staged_runner.py:10310</code>). The legacy <code>solve.py</code> “6-step” engine is a separate, non-webapp path and does <strong>not</strong> use these kernels.</p>
+<h2 id="related">Related<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#related" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li><a href="../architecture/generator.pipeline.staged_runner" class="internal internal-link" data-slug="architecture/generator.pipeline.staged_runner">generator.pipeline.staged_runner</a> — the orchestrator that calls every kernel here</li>
+<li><a href="../architecture/generator.pipeline.height_budget" class="internal internal-link" data-slug="architecture/generator.pipeline.height_budget">generator.pipeline.height_budget</a> — supplies the cap-headroom used for the <code>inf</code> sentinel</li>
+<li><a href="../architecture/generator.pipeline.luminance_handler" class="internal internal-link" data-slug="architecture/generator.pipeline.luminance_handler">generator.pipeline.luminance_handler</a> — second consumer of <code>_predict_transmission_batch</code></li>
+<li><a href="../architecture/generator.model" class="internal internal-link" data-slug="architecture/generator.model">generator.model</a> — <code>compose_stack</code> / <code>to_oklab</code> used by the spline cap precompute</li>
+<li><a href="../architecture/lib.transmission" class="internal internal-link" data-slug="architecture/lib.transmission">lib.transmission</a> — <code>_get_splines</code> / <code>_extrapolate</code> behind the batch predictor</li>
+<li><a href="../architecture/generator.photo_stack_lut" class="internal internal-link" data-slug="architecture/generator.photo_stack_lut">generator.photo_stack_lut</a> — <code>predict_unique_stack_cap_oklab_grid</code>, the photo-stack grid evaluator</li>
+<li><a href="../staged-solver-pipeline" class="internal internal-link alias" data-slug="staged-solver-pipeline">Staged solver pipeline</a> — overview of the Stage 1→4 flow</li>
+<li><a href="../transmission-model" class="internal internal-link alias" data-slug="transmission-model">Transmission model</a> — the <code>T_total = T_wb · ∏ T_fi · T_wc</code> contract</li>
+<li><a href="../cap-budget-and-total-height" class="internal internal-link alias" data-slug="cap-budget-and-total-height">Cap budget and total height</a> — the <code>~3 mm</code> total-height contract these kernels enforce</li>
+</ul></div></article><hr/><div class="page-footer"></div></div><div class="right sidebar"><div class="graph"><h3>Graph View</h3><div class="graph-outer"><div class="graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:1,&quot;scale&quot;:1.1,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.3,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:false,&quot;enableRadial&quot;:false}"></div><button class="global-graph-icon" aria-label="Global Graph"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55 55" fill="currentColor" xml:space="preserve"><path d="M49,0c-3.309,0-6,2.691-6,6c0,1.035,0.263,2.009,0.726,2.86l-9.829,9.829C32.542,17.634,30.846,17,29,17
+                s-3.542,0.634-4.898,1.688l-7.669-7.669C16.785,10.424,17,9.74,17,9c0-2.206-1.794-4-4-4S9,6.794,9,9s1.794,4,4,4
+                c0.74,0,1.424-0.215,2.019-0.567l7.669,7.669C21.634,21.458,21,23.154,21,25s0.634,3.542,1.688,4.897L10.024,42.562
+                C8.958,41.595,7.549,41,6,41c-3.309,0-6,2.691-6,6s2.691,6,6,6s6-2.691,6-6c0-1.035-0.263-2.009-0.726-2.86l12.829-12.829
+                c1.106,0.86,2.44,1.436,3.898,1.619v10.16c-2.833,0.478-5,2.942-5,5.91c0,3.309,2.691,6,6,6s6-2.691,6-6c0-2.967-2.167-5.431-5-5.91
+                v-10.16c1.458-0.183,2.792-0.759,3.898-1.619l7.669,7.669C41.215,39.576,41,40.26,41,41c0,2.206,1.794,4,4,4s4-1.794,4-4
+                s-1.794-4-4-4c-0.74,0-1.424,0.215-2.019,0.567l-7.669-7.669C36.366,28.542,37,26.846,37,25s-0.634-3.542-1.688-4.897l9.665-9.665
+                C46.042,11.405,47.451,12,49,12c3.309,0,6-2.691,6-6S52.309,0,49,0z M11,9c0-1.103,0.897-2,2-2s2,0.897,2,2s-0.897,2-2,2
+                S11,10.103,11,9z M6,51c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S8.206,51,6,51z M33,49c0,2.206-1.794,4-4,4s-4-1.794-4-4
+                s1.794-4,4-4S33,46.794,33,49z M29,31c-3.309,0-6-2.691-6-6s2.691-6,6-6s6,2.691,6,6S32.309,31,29,31z M47,41c0,1.103-0.897,2-2,2
+                s-2-0.897-2-2s0.897-2,2-2S47,39.897,47,41z M49,10c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S51.206,10,49,10z"></path></svg></button></div><div class="global-graph-outer"><div class="global-graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:-1,&quot;scale&quot;:0.9,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.2,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:true,&quot;enableRadial&quot;:true}"></div></div></div><div class="toc"><button type="button" class="toc-header" aria-controls="toc-134" aria-expanded="true"><h3>Table of Contents</h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><ul id="list-0" class="toc-content overflow"><li class="depth-0"><a href="#stage-1-and-2-solver-kernels" data-for="stage-1-and-2-solver-kernels">Stage 1 and 2 solver kernels</a></li><li class="depth-1"><a href="#what-this-page-is" data-for="what-this-page-is">What this page is</a></li><li class="depth-2"><a href="#origin-note-stale-docstring-defuse" data-for="origin-note-stale-docstring-defuse">Origin note (stale-docstring defuse)</a></li><li class="depth-1"><a href="#the-kernels" data-for="the-kernels">The kernels</a></li><li class="depth-1"><a href="#stage-1--zone-label-generation" data-for="stage-1--zone-label-generation">Stage 1 — zone-label generation</a></li><li class="depth-1"><a href="#stage-2--from-per-pixel-stacks-to-a-scored-cap-grid" data-for="stage-2--from-per-pixel-stacks-to-a-scored-cap-grid">Stage 2 — from per-pixel stacks to a scored cap grid</a></li><li class="depth-2"><a href="#encode--_vectorized_stack_ids" data-for="encode--_vectorized_stack_ids">Encode — _vectorized_stack_ids</a></li><li class="depth-2"><a href="#predict--_predict_transmission_batch" data-for="predict--_predict_transmission_batch">Predict — _predict_transmission_batch</a></li><li class="depth-2"><a href="#cap-oklab-precompute--the-two-grids" data-for="cap-oklab-precompute--the-two-grids">Cap-OKLab precompute — the two grids</a></li><li class="depth-2"><a href="#score--_score_candidates_batch" data-for="score--_score_candidates_batch">Score — _score_candidates_batch</a></li><li class="depth-1"><a href="#how-the-kernels-wire-together-stage-2-sequence" data-for="how-the-kernels-wire-together-stage-2-sequence">How the kernels wire together (Stage 2 sequence)</a></li><li class="depth-1"><a href="#reuse-by-the-luminance-handler" data-for="reuse-by-the-luminance-handler">Reuse by the luminance handler</a></li><li class="depth-1"><a href="#liveness" data-for="liveness">Liveness</a></li><li class="depth-1"><a href="#related" data-for="related">Related</a></li><li class="overflow-end"></li></ul></div><div class="backlinks"><h3>Backlinks</h3><ul id="list-0" class="overflow"><li><a href="../home" class="internal">Home</a></li><li class="overflow-end"></li></ul></div></div><footer class><p>Created with <a href="https://quartz.jzhao.xyz/">Quartz v5.0.0</a> © 2026</p><ul><li><a href="https://github.com/jackyzha0/quartz">GitHub</a></li><li><a href="https://discord.gg/cRFFHYye7t">Discord Community</a></li></ul></footer></div></div></body><script src="../static/resource-after-e13fffa1.js" type="application/javascript" data-persist="true"></script><script src="../static/resource-after-8b336f9a.js" type="application/javascript" data-persist="true"></script><script src="../static/resource-after-baba652b.js" type="application/javascript" data-persist="true"></script><script src="../static/resource-after-5eb75950.js" type="module" data-persist="true"></script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/copy-tex.min.js" type="application/javascript" data-persist="true"></script><script src="../postscript-503771fb.js" type="module" data-persist="true"></script></html>
