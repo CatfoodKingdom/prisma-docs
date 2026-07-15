@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 520" width="960" height="520" role="img" aria-labelledby="title desc">
+  <title id="title">Representative sample geometry role structures</title>
+  <desc id="desc">Three side cross-sections show a variable role by itself, a fixed role below the variable role, and fixed roles both below and above the variable role. Role labels are ordered bottom to top as LR_01, LR_02, and LR_03.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 Z" class="arrow-fill"/></marker>
+    <style>
+      :root { --surface:#f8fafc; --surface-2:#e8edf3; --text:#1f2937; --muted:#52606d; --line:#6b7a8a; --grid:#c8d0d9; --variable:#35a9c8; --fixed-below:#e8bc3d; --fixed-above:#58a978; }
+      @media (prefers-color-scheme:dark) { :root { --surface:#151a22; --surface-2:#252d38; --text:#edf2f7; --muted:#b3bfcc; --line:#9aa8b7; --grid:#3c4653; --variable:#43b8d7; --fixed-below:#f0ca51; --fixed-above:#6fbd8d; } }
+      text { font-family:system-ui,-apple-system,"Segoe UI",sans-serif; fill:var(--text); letter-spacing:0; }
+      .heading { font-size:19px; font-weight:600; } .label { font-size:16px; font-weight:600; } .note { font-size:15px; fill:var(--muted); } .tiny { font-size:13px; fill:var(--muted); }
+      .layer { stroke:var(--line); stroke-width:2; stroke-linejoin:round; } .arrow-fill { fill:var(--line); }
+    </style>
+  </defs>
+  <rect x="1" y="1" width="958" height="518" rx="8" fill="var(--surface)" stroke="var(--grid)"/>
+
+  <text x="38" y="43" class="heading">Structure</text>
+  <text x="260" y="43" class="heading">Side cross-section</text>
+  <text x="752" y="43" class="heading">Bottom-to-top roles</text>
+  <line x1="34" y1="62" x2="926" y2="62" stroke="var(--grid)" stroke-width="2"/>
+
+  <!-- Variable role only. -->
+  <text x="38" y="119" class="label">Variable role only</text>
+  <path class="layer" d="M260 154 V133 H337 V128 H414 V123 H491 V118 H568 V113 H645 V108 H720 V154 Z" fill="var(--variable)"/>
+  <line x1="250" y1="154" x2="730" y2="154" stroke="var(--line)" stroke-width="2"/>
+  <text x="752" y="129" class="label">LR_01 (variable)</text>
+
+  <line x1="34" y1="188" x2="926" y2="188" stroke="var(--grid)"/>
+
+  <!-- Fixed role below the variable role. -->
+  <text x="38" y="245" class="label">Fixed role below</text>
+  <rect class="layer" x="260" y="280" width="460" height="28" fill="var(--fixed-below)"/>
+  <path class="layer" d="M260 280 V259 H337 V254 H414 V249 H491 V244 H568 V239 H645 V234 H720 V280 Z" fill="var(--variable)"/>
+  <line x1="250" y1="308" x2="730" y2="308" stroke="var(--line)" stroke-width="2"/>
+  <text x="752" y="246" class="label">LR_02 (variable)</text>
+  <text x="752" y="294" class="label">LR_01 (fixed)</text>
+
+  <line x1="34" y1="340" x2="926" y2="340" stroke="var(--grid)"/>
+
+  <!-- Fixed roles below and above the variable role. -->
+  <text x="38" y="395" class="label">Fixed roles below</text>
+  <text x="38" y="417" class="label">and above</text>
+  <rect class="layer" x="260" y="449" width="460" height="28" fill="var(--fixed-below)"/>
+  <path class="layer" d="M260 449 V420 H337 V414 H414 V408 H491 V402 H568 V396 H645 V390 H720 V449 Z" fill="var(--variable)"/>
+  <path class="layer" d="M260 402 H337 V396 H414 V390 H491 V384 H568 V378 H645 V372 H720 V390 H645 V396 H568 V402 H491 V408 H414 V414 H337 V420 H260 Z" fill="var(--fixed-above)"/>
+  <line x1="250" y1="477" x2="730" y2="477" stroke="var(--line)" stroke-width="2"/>
+  <text x="752" y="386" class="label">LR_03 (fixed)</text>
+  <text x="752" y="424" class="label">LR_02 (variable)</text>
+  <text x="752" y="463" class="label">LR_01 (fixed)</text>
+
+  <text x="480" y="504" text-anchor="middle" class="note">Only the variable role changes thickness across swatches.</text>
+</svg>

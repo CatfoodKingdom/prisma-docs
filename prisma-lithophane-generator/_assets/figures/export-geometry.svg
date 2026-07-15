@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 400" width="960" height="400" role="img" aria-labelledby="title desc">
+  <title id="title">Export from thickness maps to STL or 3MF</title>
+  <desc id="desc">Per-material thickness maps become stacked watertight shells, then export either as one STL file per object or one 3MF with material assignments.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 Z" class="arrow-fill"/></marker>
+    <style>
+      :root { --surface:#f8fafc; --surface-2:#e8edf3; --text:#1f2937; --muted:#52606d; --line:#6b7a8a; --grid:#c8d0d9; --cyan:#35a9c8; --magenta:#d65b88; --yellow:#e8bc3d; --green:#58a978; --violet:#7868b5; }
+      @media (prefers-color-scheme:dark) { :root { --surface:#151a22; --surface-2:#252d38; --text:#edf2f7; --muted:#b3bfcc; --line:#9aa8b7; --grid:#3c4653; --cyan:#43b8d7; --magenta:#e16c99; --yellow:#f0ca51; --green:#6fbd8d; --violet:#9386ca; } }
+      text { font-family:system-ui,-apple-system,"Segoe UI",sans-serif; fill:var(--text); letter-spacing:0; }
+      .heading { font-size:19px; font-weight:600; } .label { font-size:16px; font-weight:600; } .note { font-size:15px; fill:var(--muted); } .tiny { font-size:13px; fill:var(--muted); }
+      .arrow { fill:none; stroke:var(--line); stroke-width:2; marker-end:url(#arrow); } .arrow-fill { fill:var(--line); }
+    </style>
+  </defs>
+  <rect x="1" y="1" width="958" height="398" rx="8" fill="var(--surface)" stroke="var(--grid)"/>
+
+  <text x="150" y="45" text-anchor="middle" class="heading">Per-material thickness maps</text>
+  <text x="150" y="68" text-anchor="middle" class="note">one solved grid per material</text>
+  <g transform="translate(48 98)">
+    <rect x="0" y="0" width="112" height="86" fill="var(--surface-2)" stroke="var(--line)"/>
+    <path d="M8 76 L30 42 L53 58 L76 21 L104 51 V78 H8 Z" fill="var(--cyan)" fill-opacity="0.75"/>
+    <rect x="94" y="28" width="112" height="86" fill="var(--surface-2)" stroke="var(--line)"/>
+    <path d="M102 104 L125 79 L148 88 L173 49 L198 68 V106 H102 Z" fill="var(--magenta)" fill-opacity="0.72"/>
+    <text x="103" y="118" text-anchor="middle" class="note">color material maps</text>
+    <rect x="47" y="126" width="112" height="86" fill="var(--surface-2)" stroke="var(--line)"/>
+    <path d="M55 203 L78 171 L101 184 L125 145 L151 166 V204 H55 Z" fill="var(--surface)" stroke="var(--line)"/>
+    <text x="103" y="233" text-anchor="middle" class="note">white cap</text>
+  </g>
+
+  <path d="M293 191 H375" class="arrow"/>
+  <text x="334" y="178" text-anchor="middle" class="note">mesh</text>
+
+  <text x="500" y="45" text-anchor="middle" class="heading">Solid geometry</text>
+  <text x="500" y="68" text-anchor="middle" class="note">stacked in true print order</text>
+  <g transform="translate(390 106)">
+    <polygon points="23,194 176,194 210,174 57,174" fill="var(--surface-2)" stroke="var(--line)" stroke-width="2"/>
+    <polygon points="57,174 210,174 210,192 57,212" fill="var(--grid)" stroke="var(--line)"/>
+    <polygon points="30,142 150,142 185,122 65,122" fill="var(--yellow)" stroke="var(--line)"/>
+    <polygon points="65,122 185,122 185,143 65,163" fill="var(--yellow)" fill-opacity="0.68" stroke="var(--line)"/>
+    <polygon points="74,91 184,91 211,75 101,75" fill="var(--magenta)" stroke="var(--line)"/>
+    <polygon points="101,75 211,75 211,96 101,112" fill="var(--magenta)" fill-opacity="0.68" stroke="var(--line)"/>
+    <path d="M32 52 L78 44 L104 25 L142 39 L185 18 L213 34 L184 51 L143 42 L107 61 L77 55 Z" fill="var(--surface-2)" stroke="var(--line)" stroke-width="2"/>
+    <path d="M32 52 V71 L77 74 L107 80 L143 61 L184 70 L213 53 V34 L184 51 L143 42 L107 61 L77 55 Z" fill="var(--surface-2)" stroke="var(--line)"/>
+    <line x1="17" y1="216" x2="220" y2="216" stroke="var(--line)" stroke-width="2"/>
+  </g>
+  <text x="500" y="345" text-anchor="middle" class="label">watertight shells</text>
+  <text x="500" y="367" text-anchor="middle" class="note">white base, color materials, white cap</text>
+
+  <path d="M625 191 H700" class="arrow"/>
+  <text x="663" y="178" text-anchor="middle" class="note">package</text>
+
+  <text x="824" y="45" text-anchor="middle" class="heading">Chosen output</text>
+  <g transform="translate(718 90)">
+    <rect x="0" y="0" width="212" height="104" rx="5" fill="var(--surface-2)" stroke="var(--line)" stroke-width="2"/>
+    <text x="22" y="34" class="heading">STL</text>
+    <path d="M22 49 H190" stroke="var(--grid)"/>
+    <text x="22" y="72" class="note">one file per object</text>
+    <text x="22" y="93" class="note">material assigned in slicer</text>
+    <rect x="0" y="132" width="212" height="104" rx="5" fill="var(--surface-2)" stroke="var(--line)" stroke-width="2"/>
+    <text x="22" y="166" class="heading">3MF</text>
+    <path d="M22 181 H190" stroke="var(--grid)"/>
+    <text x="22" y="204" class="note">one file, every object</text>
+    <text x="22" y="225" class="note">with material assignments</text>
+  </g>
+  <text x="824" y="357" text-anchor="middle" class="note">same geometry, different packaging</text>
+</svg>

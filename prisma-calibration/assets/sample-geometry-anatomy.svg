@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 330" role="img" aria-label="Top view of a calibration strip with callouts for the spine and a swatch">
+  <defs>
+    <marker id="arrowhead" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto" markerUnits="strokeWidth">
+      <path d="M1,1 L7,4 L1,7 Z" fill="#000"/>
+    </marker>
+    <style>
+      text { font-family: Inter, Arial, sans-serif; fill: #000; dominant-baseline: middle; }
+      .label { font-size: 20px; font-weight: 700; }
+      .arrow { fill: none; stroke: #000; stroke-width: 1.4; marker-end: url(#arrowhead); }
+    </style>
+  </defs>
+  <rect width="900" height="330" fill="#f7f7f2"/>
+  <g transform="translate(164 100)">
+    <rect x="0" y="0" width="572" height="18" rx="2" fill="#183a4b"/>
+    <rect x="0" y="0" width="16" height="148" rx="2" fill="#183a4b"/>
+    <rect x="556" y="0" width="16" height="148" rx="2" fill="#183a4b"/>
+    <rect x="16" y="18" width="90" height="130" fill="#d9e4e8"/>
+    <rect x="106" y="18" width="90" height="130" fill="#d0dde3"/>
+    <rect x="196" y="18" width="90" height="130" fill="#c7d6dd"/>
+    <rect x="286" y="18" width="90" height="130" fill="#becfd8"/>
+    <rect x="376" y="18" width="90" height="130" fill="#b5c8d2"/>
+    <rect x="466" y="18" width="90" height="130" fill="#acbfcb"/>
+    <path d="M106 18V148M196 18V148M286 18V148M376 18V148M466 18V148" stroke="#6f8793" stroke-width="1.5"/>
+  </g>
+  <text x="116" y="68" text-anchor="middle" class="label">Spine</text>
+  <path class="arrow" d="M160 74 L230 109"/>
+  <text x="770" y="265" text-anchor="middle" class="label">Swatch</text>
+  <path class="arrow" d="M724 255 L526 188"/>
+</svg>

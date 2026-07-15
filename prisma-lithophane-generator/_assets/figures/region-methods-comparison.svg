@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 390" width="960" height="390" role="img" aria-labelledby="title desc">
+  <title id="title">Region method comparison</title>
+  <desc id="desc">The same image is divided three ways. Image regions form unequal areas that follow strong image structure. Superpixels form compact, roughly even areas that still bend around image edges. Fixed grid uses equal squares without following the image.</desc>
+  <defs>
+    <style>
+      :root { --surface:#f8fafc; --surface-2:#e8edf3; --text:#1f2937; --muted:#52606d; --line:#6b7a8a; --grid:#c8d0d9; --sky:#84bfd0; --land:#6f9665; --land-2:#496f50; --sun:#e9bd4d; --region:#f7fbff; }
+      @media (prefers-color-scheme:dark) { :root { --surface:#151a22; --surface-2:#252d38; --text:#edf2f7; --muted:#b3bfcc; --line:#aab6c2; --grid:#3c4653; --sky:#568a9a; --land:#587c52; --land-2:#36583d; --sun:#d4aa43; --region:#eef6fb; } }
+      text { font-family:system-ui,-apple-system,"Segoe UI",sans-serif; fill:var(--text); letter-spacing:0; }
+      .heading { font-size:18px; font-weight:600; } .note { font-size:14px; fill:var(--muted); }
+      .frame { fill:var(--surface-2); stroke:var(--grid); stroke-width:1.5; }
+      .regions { fill:none; stroke:var(--region); stroke-width:2; stroke-linejoin:round; }
+      .source-edge { fill:none; stroke:var(--line); stroke-width:2.2; }
+      .region-key { fill:none; stroke:var(--line); stroke-width:2; }
+    </style>
+    <clipPath id="clip-a"><rect x="45" y="78" width="250" height="220" rx="4"/></clipPath>
+    <clipPath id="clip-b"><rect x="355" y="78" width="250" height="220" rx="4"/></clipPath>
+    <clipPath id="clip-c"><rect x="665" y="78" width="250" height="220" rx="4"/></clipPath>
+    <pattern id="fixed-grid" width="50" height="55" patternUnits="userSpaceOnUse"><path d="M50 0H0V55" class="regions"/></pattern>
+  </defs>
+
+  <rect x="1" y="1" width="958" height="388" rx="8" fill="var(--surface)" stroke="var(--grid)"/>
+
+  <text x="170" y="42" text-anchor="middle" class="heading">Image regions</text>
+  <text x="170" y="63" text-anchor="middle" class="note">unequal regions follow image structure</text>
+  <text x="480" y="42" text-anchor="middle" class="heading">Superpixels</text>
+  <text x="480" y="63" text-anchor="middle" class="note">compact regions bend around edges</text>
+  <text x="790" y="42" text-anchor="middle" class="heading">Fixed grid</text>
+  <text x="790" y="63" text-anchor="middle" class="note">equal cells ignore image structure</text>
+
+  <!-- Image regions. -->
+  <g clip-path="url(#clip-a)">
+    <rect x="45" y="78" width="250" height="220" fill="var(--sky)"/>
+    <circle cx="237" cy="128" r="31" fill="var(--sun)"/>
+    <path d="M45 209 C93 178 129 190 167 216 C205 242 249 220 295 190 V298 H45 Z" fill="var(--land)"/>
+    <path d="M45 255 C96 232 132 249 179 263 C220 276 258 258 295 242 V298 H45 Z" fill="var(--land-2)"/>
+    <circle cx="101" cy="164" r="18" fill="var(--land-2)"/>
+    <path d="M101 180 V237" stroke="var(--land-2)" stroke-width="12"/>
+    <path d="M45 209 C93 178 129 190 167 216 C205 242 249 220 295 190" class="source-edge"/>
+    <path d="M45 129 C91 145 126 132 158 104 M158 104 C184 91 201 91 209 102 M265 78 C256 91 255 103 262 112" class="regions"/>
+    <path d="M45 209 C71 221 81 244 79 298 M112 187 C131 209 135 241 129 298 M167 216 C180 235 181 265 176 298 M226 229 C235 249 237 273 232 298" class="regions"/>
+    <path d="M206 111 C206 92 220 83 239 84 C263 85 276 103 273 128 C270 151 251 164 229 160 C209 157 196 140 198 120 Z" class="regions"/>
+    <path d="M83 146 C88 130 104 124 119 133 C132 141 135 158 127 171 C119 184 101 188 87 179 C75 171 71 157 76 145 Z" class="regions"/>
+  </g>
+  <rect x="45" y="78" width="250" height="220" rx="4" class="frame" fill-opacity="0"/>
+
+  <!-- Superpixels. -->
+  <g clip-path="url(#clip-b)">
+    <rect x="355" y="78" width="250" height="220" fill="var(--sky)"/>
+    <circle cx="547" cy="128" r="31" fill="var(--sun)"/>
+    <path d="M355 209 C403 178 439 190 477 216 C515 242 559 220 605 190 V298 H355 Z" fill="var(--land)"/>
+    <path d="M355 255 C406 232 442 249 489 263 C530 276 568 258 605 242 V298 H355 Z" fill="var(--land-2)"/>
+    <circle cx="411" cy="164" r="18" fill="var(--land-2)"/>
+    <path d="M411 180 V237" stroke="var(--land-2)" stroke-width="12"/>
+    <path d="M355 209 C403 178 439 190 477 216 C515 242 559 220 605 190" class="source-edge"/>
+    <path d="M398 78 L401 119 L389 151 L397 188 L381 217 L393 258 L389 298 M444 78 L439 112 L451 145 L443 180 L455 205 L446 244 L451 298 M491 78 L486 111 L496 145 L487 183 L500 222 L490 258 L497 298 M536 78 L531 99 M535 157 L528 189 L540 220 L532 258 L539 298 M578 78 L585 110 L579 146 L587 180 L577 215 L588 254 L582 298" class="regions"/>
+    <path d="M355 122 L395 119 L439 112 L486 111 L516 115 M355 165 L389 151 L429 154 L451 145 L487 145 L516 140 M355 209 L381 217 L415 198 L455 205 L477 216 L500 222 L528 189 L559 220 L577 215 L605 190 M355 254 L393 258 L446 244 L490 258 L532 258 L588 254 M355 281 L389 298 M451 298 L446 244 M497 298 L490 258 M539 298 L532 258" class="regions"/>
+    <path d="M516 115 C523 90 548 87 566 101 C584 116 579 145 558 156 C538 166 515 153 512 133 C511 126 512 120 516 115 Z" class="regions"/>
+    <path d="M390 151 C396 137 410 130 424 136 C437 142 443 157 438 171 C433 184 417 190 403 184 C389 178 384 164 390 151 Z" class="regions"/>
+  </g>
+  <rect x="355" y="78" width="250" height="220" rx="4" class="frame" fill-opacity="0"/>
+
+  <!-- Fixed grid. -->
+  <g clip-path="url(#clip-c)">
+    <rect x="665" y="78" width="250" height="220" fill="var(--sky)"/>
+    <circle cx="857" cy="128" r="31" fill="var(--sun)"/>
+    <path d="M665 209 C713 178 749 190 787 216 C825 242 869 220 915 190 V298 H665 Z" fill="var(--land)"/>
+    <path d="M665 255 C716 232 752 249 799 263 C840 276 878 258 915 242 V298 H665 Z" fill="var(--land-2)"/>
+    <circle cx="721" cy="164" r="18" fill="var(--land-2)"/>
+    <path d="M721 180 V237" stroke="var(--land-2)" stroke-width="12"/>
+    <path d="M665 209 C713 178 749 190 787 216 C825 242 869 220 915 190" class="source-edge"/>
+    <rect x="665" y="78" width="250" height="220" fill="url(#fixed-grid)"/>
+  </g>
+  <rect x="665" y="78" width="250" height="220" rx="4" class="frame" fill-opacity="0"/>
+
+  <g>
+    <line x1="74" y1="335" x2="110" y2="335" class="source-edge"/>
+    <text x="121" y="340" class="note">source-image edge</text>
+    <line x1="378" y1="335" x2="414" y2="335" class="region-key"/>
+    <text x="425" y="340" class="note">region boundary</text>
+    <text x="790" y="331" text-anchor="middle" class="note">Color region target sets the intended</text>
+    <text x="790" y="349" text-anchor="middle" class="note">physical scale in every method.</text>
+  </g>
+</svg>

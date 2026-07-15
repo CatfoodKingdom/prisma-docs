@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 390" width="960" height="390" role="img" aria-labelledby="title desc">
+  <title id="title">Spine Total compared with the sample swatch stacks</title>
+  <desc id="desc">A side cross-section shows a fixed bottom role, a variable staircase, and a continuous spine. Spine Total is measured from the bottom of the geometry to the top of the spine and must be at least as high as the tallest swatch stack. Any extra spine height is assigned to the topmost material role.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 Z" class="arrow-fill"/></marker>
+    <marker id="arrow-start" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M10 0 L0 5 L10 10 Z" class="arrow-fill"/></marker>
+    <style>
+      :root { --surface:#f8fafc; --surface-2:#e8edf3; --text:#1f2937; --muted:#52606d; --line:#6b7a8a; --grid:#c8d0d9; --cyan:#35a9c8; --magenta:#d65b88; --yellow:#e8bc3d; --green:#58a978; }
+      @media (prefers-color-scheme:dark) { :root { --surface:#151a22; --surface-2:#252d38; --text:#edf2f7; --muted:#b3bfcc; --line:#9aa8b7; --grid:#3c4653; --cyan:#43b8d7; --magenta:#e16c99; --yellow:#f0ca51; --green:#6fbd8d; } }
+      text { font-family:system-ui,-apple-system,"Segoe UI",sans-serif; fill:var(--text); letter-spacing:0; }
+      .heading { font-size:20px; font-weight:600; } .label { font-size:15px; font-weight:600; } .note { font-size:14px; fill:var(--muted); } .tiny { font-size:13px; fill:var(--muted); }
+      .role { stroke:var(--line); stroke-width:2; stroke-linejoin:round; } .reference { fill:none; stroke:var(--grid); stroke-width:1.5; stroke-dasharray:6 5; }
+      .dimension { fill:none; stroke:var(--magenta); stroke-width:2.5; marker-start:url(#arrow-start); marker-end:url(#arrow); } .leader { fill:none; stroke:var(--line); stroke-width:2; marker-end:url(#arrow); }
+      .arrow-fill { fill:var(--magenta); }
+    </style>
+  </defs>
+  <rect x="1" y="1" width="958" height="388" rx="8" fill="var(--surface)" stroke="var(--grid)"/>
+  <text x="480" y="39" text-anchor="middle" class="heading">Spine Total is the height of the continuous spine</text>
+  <text x="480" y="63" text-anchor="middle" class="note">it is not a second measurement of the swatch stack</text>
+
+  <g transform="translate(110 100)">
+    <rect x="0" y="176" width="560" height="38" fill="var(--yellow)" class="role"/>
+    <path d="M0 176 V150 H112 V124 H224 V98 H336 V72 H448 V46 H560 V176 Z" fill="var(--cyan)" class="role"/>
+    <path d="M0 66 H560 V46 H448 V72 H336 V98 H224 V124 H112 V150 H0 Z" fill="var(--green)" fill-opacity=".9" class="role"/>
+    <rect x="-14" y="10" width="28" height="204" fill="var(--green)" class="role"/>
+    <path d="M-14 10 H574 V38 H14 V214 H-14 Z" fill="var(--green)" class="role"/>
+    <line x1="-35" y1="10" x2="645" y2="10" class="reference"/>
+    <line x1="-35" y1="214" x2="645" y2="214" class="reference"/>
+    <line x1="600" y1="10" x2="600" y2="214" class="dimension"/>
+    <text x="620" y="116" class="label">Spine Total</text>
+    <text x="280" y="198" text-anchor="middle" class="label">LR_01 · Fixed</text>
+    <text x="280" y="144" text-anchor="middle" class="label">LR_02 · Variable</text>
+    <text x="280" y="29" text-anchor="middle" class="label">LR_03 · Fixed (topmost role)</text>
+  </g>
+
+  <text x="770" y="135" class="label">Extra spine height</text>
+  <text x="770" y="157" class="note">belongs to the topmost role</text>
+  <path d="M754 164 C720 167 702 151 675 130" class="leader"/>
+  <text x="750" y="238" class="label">Tallest swatch stack</text>
+  <text x="750" y="260" class="note">sets the minimum</text>
+  <text x="750" y="279" class="note">allowed height</text>
+  <path d="M734 248 C704 242 680 228 659 208" class="leader"/>
+  <text x="480" y="354" text-anchor="middle" class="note">Review Spine Total after reordering material roles.</text>
+</svg>

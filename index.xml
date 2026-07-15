@@ -1,70 +1,70 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <rss version="2.0">
     <channel>
-      <title>Quartz 5</title>
+      <title>Prisma Documentation</title>
       <link>https://catfoodkingdom.github.io/prisma-docs</link>
-      <description>Last 10 notes on Quartz 5</description>
+      <description>Last 10 notes on Prisma Documentation</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
     <title>Architecture</title>
-    <link>https://catfoodkingdom.github.io/prisma-docs/architecture/</link>
-    <guid>https://catfoodkingdom.github.io/prisma-docs/architecture/</guid>
+    <link>https://catfoodkingdom.github.io/prisma-docs/prisma-calibration/technical-reference/architecture/</link>
+    <guid>https://catfoodkingdom.github.io/prisma-docs/prisma-calibration/technical-reference/architecture/</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Thu, 25 Jun 2026 21:54:22 GMT</pubDate>
+    <pubDate>Wed, 15 Jul 2026 01:21:19 GMT</pubDate>
   </item><item>
-    <title>Colour</title>
-    <link>https://catfoodkingdom.github.io/prisma-docs/colour/</link>
-    <guid>https://catfoodkingdom.github.io/prisma-docs/colour/</guid>
+    <title>Architecture</title>
+    <link>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/technical-reference/architecture/</link>
+    <guid>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/technical-reference/architecture/</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Thu, 25 Jun 2026 21:54:22 GMT</pubDate>
+    <pubDate>Wed, 15 Jul 2026 01:21:19 GMT</pubDate>
   </item><item>
-    <title>Concepts</title>
-    <link>https://catfoodkingdom.github.io/prisma-docs/concepts/</link>
-    <guid>https://catfoodkingdom.github.io/prisma-docs/concepts/</guid>
+    <title>Color</title>
+    <link>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/technical-reference/color/</link>
+    <guid>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/technical-reference/color/</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Thu, 25 Jun 2026 21:54:22 GMT</pubDate>
+    <pubDate>Wed, 15 Jul 2026 01:21:19 GMT</pubDate>
   </item><item>
     <title>Conditioning</title>
-    <link>https://catfoodkingdom.github.io/prisma-docs/conditioning/</link>
-    <guid>https://catfoodkingdom.github.io/prisma-docs/conditioning/</guid>
+    <link>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/technical-reference/conditioning/</link>
+    <guid>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/technical-reference/conditioning/</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Thu, 25 Jun 2026 21:54:22 GMT</pubDate>
+    <pubDate>Wed, 15 Jul 2026 01:21:19 GMT</pubDate>
   </item><item>
     <title>Generator</title>
-    <link>https://catfoodkingdom.github.io/prisma-docs/generator/</link>
-    <guid>https://catfoodkingdom.github.io/prisma-docs/generator/</guid>
+    <link>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/technical-reference/generator/</link>
+    <guid>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/technical-reference/generator/</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Thu, 25 Jun 2026 21:54:22 GMT</pubDate>
+    <pubDate>Wed, 15 Jul 2026 01:21:19 GMT</pubDate>
   </item><item>
     <title>Output</title>
-    <link>https://catfoodkingdom.github.io/prisma-docs/output/</link>
-    <guid>https://catfoodkingdom.github.io/prisma-docs/output/</guid>
+    <link>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/technical-reference/output/</link>
+    <guid>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/technical-reference/output/</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Thu, 25 Jun 2026 21:54:22 GMT</pubDate>
+    <pubDate>Wed, 15 Jul 2026 01:21:19 GMT</pubDate>
   </item><item>
     <title>Printability</title>
-    <link>https://catfoodkingdom.github.io/prisma-docs/printability/</link>
-    <guid>https://catfoodkingdom.github.io/prisma-docs/printability/</guid>
+    <link>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/technical-reference/printability/</link>
+    <guid>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/technical-reference/printability/</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Thu, 25 Jun 2026 21:54:22 GMT</pubDate>
+    <pubDate>Wed, 15 Jul 2026 01:21:19 GMT</pubDate>
   </item><item>
     <title>Solver</title>
-    <link>https://catfoodkingdom.github.io/prisma-docs/solver/</link>
-    <guid>https://catfoodkingdom.github.io/prisma-docs/solver/</guid>
+    <link>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/technical-reference/solver/</link>
+    <guid>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/technical-reference/solver/</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Thu, 25 Jun 2026 21:54:22 GMT</pubDate>
+    <pubDate>Wed, 15 Jul 2026 01:21:19 GMT</pubDate>
   </item><item>
     <title>Tooling</title>
-    <link>https://catfoodkingdom.github.io/prisma-docs/tooling/</link>
-    <guid>https://catfoodkingdom.github.io/prisma-docs/tooling/</guid>
+    <link>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/technical-reference/tooling/</link>
+    <guid>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/technical-reference/tooling/</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Thu, 25 Jun 2026 21:54:22 GMT</pubDate>
+    <pubDate>Wed, 15 Jul 2026 01:21:19 GMT</pubDate>
   </item><item>
-    <title>Using</title>
-    <link>https://catfoodkingdom.github.io/prisma-docs/using/</link>
-    <guid>https://catfoodkingdom.github.io/prisma-docs/using/</guid>
+    <title>module</title>
+    <link>https://catfoodkingdom.github.io/prisma-docs/tags/module</link>
+    <guid>https://catfoodkingdom.github.io/prisma-docs/tags/module</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Thu, 25 Jun 2026 21:54:22 GMT</pubDate>
+    <pubDate>Wed, 15 Jul 2026 01:21:19 GMT</pubDate>
   </item>
     </channel>
   </rss>

@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 127" role="img" aria-label="Extracted transmission domain strip with six muted linear swatches">
+  <rect width="448" height="127" rx="4" fill="#f7f7f2"/>
+  <g transform="translate(12 12)">
+    <rect x="0" y="0" width="424" height="103" rx="3" fill="#183a4b"/>
+    <rect x="2" y="2" width="70" height="99" fill="#5f8792"/>
+    <rect x="72" y="2" width="70" height="99" fill="#4f7581"/>
+    <rect x="142" y="2" width="70" height="99" fill="#416470"/>
+    <rect x="212" y="2" width="70" height="99" fill="#33525f"/>
+    <rect x="282" y="2" width="70" height="99" fill="#27424f"/>
+    <rect x="352" y="2" width="70" height="99" fill="#1b313d"/>
+    <path d="M72 2V101M142 2V101M212 2V101M282 2V101M352 2V101" stroke="#183a4b" stroke-opacity="0.45" stroke-width="2"/>
+  </g>
+</svg>

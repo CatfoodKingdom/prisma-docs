@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 420" width="960" height="420" role="img" aria-labelledby="title desc">
+  <title id="title">Calibration sample geometry anatomy</title>
+  <desc id="desc">A proportioned top view shows a row of contiguous swatches inside a three-sided spine with one open edge and an inset measurement area. A side cross-section shows one fixed role and one variable role forming a thickness staircase from the thinnest to the thickest swatch.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 Z" class="arrow-fill"/></marker>
+    <style>
+      :root { --surface:#f8fafc; --surface-2:#e8edf3; --text:#1f2937; --muted:#52606d; --line:#6b7a8a; --grid:#c8d0d9; --cyan:#35a9c8; --magenta:#d65b88; --yellow:#e8bc3d; --green:#58a978; --violet:#7868b5; }
+      @media (prefers-color-scheme:dark) { :root { --surface:#151a22; --surface-2:#252d38; --text:#edf2f7; --muted:#b3bfcc; --line:#9aa8b7; --grid:#3c4653; --cyan:#43b8d7; --magenta:#e16c99; --yellow:#f0ca51; --green:#6fbd8d; --violet:#9386ca; } }
+      text { font-family:system-ui,-apple-system,"Segoe UI",sans-serif; fill:var(--text); letter-spacing:0; }
+      .heading { font-size:20px; font-weight:600; } .label { font-size:16px; font-weight:600; } .note { font-size:15px; fill:var(--muted); } .tiny { font-size:13px; fill:var(--muted); }
+      .leader { fill:none; stroke:var(--line); stroke-width:2; marker-end:url(#arrow); } .arrow-fill { fill:var(--line); }
+    </style>
+  </defs>
+  <rect x="1" y="1" width="958" height="418" rx="8" fill="var(--surface)" stroke="var(--grid)"/>
+
+  <text x="245" y="45" text-anchor="middle" class="heading">Top view</text>
+  <text x="245" y="69" text-anchor="middle" class="note">single row of contiguous swatches</text>
+  <g transform="translate(55 130)">
+    <!-- Representative footprint with user-specified swatch count and dimensions. -->
+    <rect x="11" y="11" width="44.75" height="75" fill="var(--cyan)" fill-opacity="0.45"/>
+    <rect x="55.75" y="11" width="44.75" height="75" fill="var(--cyan)" fill-opacity="0.52"/>
+    <rect x="100.5" y="11" width="44.75" height="75" fill="var(--cyan)" fill-opacity="0.59"/>
+    <rect x="145.25" y="11" width="44.75" height="75" fill="var(--cyan)" fill-opacity="0.66"/>
+    <rect x="190" y="11" width="44.75" height="75" fill="var(--cyan)" fill-opacity="0.73"/>
+    <rect x="234.75" y="11" width="44.75" height="75" fill="var(--cyan)" fill-opacity="0.80"/>
+    <rect x="279.5" y="11" width="44.75" height="75" fill="var(--cyan)" fill-opacity="0.88"/>
+    <rect x="324.25" y="11" width="44.75" height="75" fill="var(--cyan)"/>
+    <path d="M55.75 11 V86 M100.5 11 V86 M145.25 11 V86 M190 11 V86 M234.75 11 V86 M279.5 11 V86 M324.25 11 V86" stroke="var(--line)" stroke-width="1.2"/>
+    <rect x="201.2" y="29.75" width="22.4" height="37.5" fill="none" stroke="var(--magenta)" stroke-width="2" stroke-dasharray="5 4"/>
+    <!-- Spine: back, left, and right walls; swatches end flush at the open edge. -->
+    <path d="M0 0 H380 V86 H369 V11 H11 V86 H0 Z" fill="var(--surface-2)" stroke="var(--line)" stroke-width="2"/>
+  </g>
+  <text x="63" y="111" class="label">spine</text><path d="M108 107 C116 114 122 122 126 132" class="leader"/>
+  <text x="60" y="260" class="label">swatch</text><path d="M115 254 C130 232 143 203 151 174" class="leader"/>
+  <text x="210" y="260" class="label">measurement inset</text><path d="M304 251 C297 224 286 195 267 178" class="leader"/>
+  <text x="420" y="288" text-anchor="end" class="label">open edge</text><path d="M389 278 V219" class="leader"/>
+
+  <line x1="490" y1="75" x2="490" y2="365" stroke="var(--grid)" stroke-width="2"/>
+
+  <text x="722" y="45" text-anchor="middle" class="heading">Side cross-section</text>
+  <text x="722" y="69" text-anchor="middle" class="note">thickness staircase</text>
+  <g transform="translate(535 139)">
+    <rect x="0" y="146" width="370" height="36" fill="var(--yellow)" stroke="var(--line)" stroke-width="2"/>
+    <path d="M0 146 V126 H52 V112 H104 V98 H156 V84 H208 V70 H260 V56 H312 V42 H370 V146 Z" fill="var(--cyan)" stroke="var(--line)" stroke-width="2" stroke-linejoin="round"/>
+    <line x1="52" y1="126" x2="52" y2="146" stroke="var(--surface)"/><line x1="104" y1="112" x2="104" y2="146" stroke="var(--surface)"/><line x1="156" y1="98" x2="156" y2="146" stroke="var(--surface)"/><line x1="208" y1="84" x2="208" y2="146" stroke="var(--surface)"/><line x1="260" y1="70" x2="260" y2="146" stroke="var(--surface)"/><line x1="312" y1="56" x2="312" y2="146" stroke="var(--surface)"/>
+    <text x="185" y="169" text-anchor="middle" class="label">fixed role</text>
+    <text x="185" y="118" text-anchor="middle" class="label">variable role</text>
+    <text x="0" y="211" class="note">thinnest swatch</text><text x="370" y="211" text-anchor="end" class="note">thickest swatch</text>
+    <path d="M110 205 H260" class="leader"/>
+  </g>
+  <text x="722" y="380" text-anchor="middle" class="note">roles are slots; each sample assigns the filaments</text>
+</svg>

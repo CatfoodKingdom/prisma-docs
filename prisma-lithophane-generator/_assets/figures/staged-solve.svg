@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 420" width="960" height="420" role="img" aria-labelledby="title desc">
+  <title id="title">The five staged solve steps</title>
+  <desc id="desc">The solve compiles settings, plans color regions, chooses one recipe per region, builds the white cap, and assembles per-filament thickness maps with quality and printability results.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 Z" class="arrow-fill"/></marker>
+    <style>
+      :root { --surface:#f8fafc; --surface-2:#e8edf3; --text:#1f2937; --muted:#52606d; --line:#6b7a8a; --grid:#c8d0d9; --cyan:#35a9c8; --magenta:#d65b88; --yellow:#e8bc3d; --green:#58a978; --violet:#7868b5; }
+      @media (prefers-color-scheme:dark) { :root { --surface:#151a22; --surface-2:#252d38; --text:#edf2f7; --muted:#b3bfcc; --line:#9aa8b7; --grid:#3c4653; --cyan:#43b8d7; --magenta:#e16c99; --yellow:#f0ca51; --green:#6fbd8d; --violet:#9386ca; } }
+      text { font-family:system-ui,-apple-system,"Segoe UI",sans-serif; fill:var(--text); letter-spacing:0; }
+      .heading { font-size:17px; font-weight:600; } .label { font-size:15px; font-weight:600; } .note { font-size:14px; fill:var(--muted); } .tiny { font-size:12px; fill:var(--muted); }
+      .arrow { fill:none; stroke:var(--line); stroke-width:2; marker-end:url(#arrow); } .arrow-fill { fill:var(--line); }
+    </style>
+  </defs>
+  <rect x="1" y="1" width="958" height="418" rx="8" fill="var(--surface)" stroke="var(--grid)"/>
+
+  <path d="M181 95 H211" class="arrow"/><path d="M371 95 H401" class="arrow"/><path d="M561 95 H591" class="arrow"/><path d="M751 95 H781" class="arrow"/>
+
+  <!-- 1 Compile the settings. -->
+  <g>
+    <circle cx="44" cy="43" r="16" fill="var(--surface-2)" stroke="var(--line)"/><text x="44" y="49" text-anchor="middle" class="heading">1</text>
+    <text x="68" y="40" class="heading">Compile the</text><text x="68" y="61" class="heading">settings</text>
+    <g transform="translate(42 128)">
+      <line x1="0" y1="14" x2="112" y2="14" stroke="var(--line)" stroke-width="2"/><circle cx="34" cy="14" r="8" fill="var(--cyan)"/>
+      <line x1="0" y1="52" x2="112" y2="52" stroke="var(--line)" stroke-width="2"/><circle cx="77" cy="52" r="8" fill="var(--magenta)"/>
+      <line x1="0" y1="90" x2="112" y2="90" stroke="var(--line)" stroke-width="2"/><circle cx="52" cy="90" r="8" fill="var(--yellow)"/>
+    </g>
+    <text x="99" y="265" text-anchor="middle" class="label">compiled plan</text>
+    <text x="99" y="287" text-anchor="middle" class="note">resolution, region spacing,</text><text x="99" y="306" text-anchor="middle" class="note">printability limits</text>
+  </g>
+
+  <!-- 2 Plan the color regions. -->
+  <g>
+    <circle cx="234" cy="43" r="16" fill="var(--surface-2)" stroke="var(--line)"/><text x="234" y="49" text-anchor="middle" class="heading">2</text>
+    <text x="258" y="40" class="heading">Plan the</text><text x="258" y="61" class="heading">color regions</text>
+    <g transform="translate(228 125)">
+      <path d="M0 0 H58 V43 H31 V91 H0 Z" fill="var(--cyan)"/><path d="M58 0 H118 V58 H88 V43 H58 Z" fill="var(--magenta)"/>
+      <path d="M31 43 H88 V91 H31 Z" fill="var(--yellow)"/><path d="M88 58 H118 V91 H88 Z" fill="var(--green)"/>
+      <path d="M0 0 H58 V43 H31 V91 H0 Z M58 0 H118 V58 H88 V43 H58 Z M31 43 H88 V91 H31 Z M88 58 H118 V91 H88 Z" fill="none" stroke="var(--surface)" stroke-width="3"/>
+    </g>
+    <text x="289" y="265" text-anchor="middle" class="label">contiguous patches</text>
+    <text x="289" y="287" text-anchor="middle" class="note">similar target color</text><text x="289" y="306" text-anchor="middle" class="note">plus neighbor map</text>
+  </g>
+
+  <!-- 3 Choose a recipe per region. -->
+  <g>
+    <circle cx="424" cy="43" r="16" fill="var(--surface-2)" stroke="var(--line)"/><text x="424" y="49" text-anchor="middle" class="heading">3</text>
+    <text x="448" y="40" class="heading">Choose a recipe</text><text x="448" y="61" class="heading">per region</text>
+    <g transform="translate(430 125)">
+      <rect x="0" y="74" width="111" height="23" fill="var(--surface-2)" stroke="var(--line)"/>
+      <rect x="10" y="51" width="91" height="23" fill="var(--yellow)"/><rect x="24" y="28" width="63" height="23" fill="var(--magenta)"/><rect x="38" y="5" width="35" height="23" fill="var(--cyan)"/>
+      <path d="M116 83 H139" class="arrow"/><circle cx="151" cy="83" r="10" fill="var(--violet)"/>
+    </g>
+    <text x="479" y="265" text-anchor="middle" class="label">score candidate stacks</text>
+    <text x="479" y="287" text-anchor="middle" class="note">color match, height step,</text><text x="479" y="306" text-anchor="middle" class="note">and thinner-stack preference</text>
+  </g>
+
+  <!-- 4 Build the white cap. -->
+  <g>
+    <circle cx="614" cy="43" r="16" fill="var(--surface-2)" stroke="var(--line)"/><text x="614" y="49" text-anchor="middle" class="heading">4</text>
+    <text x="638" y="40" class="heading">Build the</text><text x="638" y="61" class="heading">white cap</text>
+    <g transform="translate(608 133)">
+      <rect x="0" y="76" width="120" height="24" fill="var(--surface-2)" stroke="var(--line)"/>
+      <path d="M0 76 V57 H36 V39 H72 V52 H120 V76 Z" fill="var(--magenta)" stroke="var(--line)"/>
+      <path d="M0 32 H34 V22 H72 V14 H120 V52 H72 V39 H36 V57 H0 Z" fill="var(--surface-2)" stroke="var(--line)" stroke-width="2"/>
+      <path d="M24 32 C31 22 40 22 47 32 Z M75 14 C85 0 97 2 107 14 Z" fill="var(--cyan)" stroke="var(--line)"/>
+    </g>
+    <text x="669" y="265" text-anchor="middle" class="label">brightness and relief</text>
+    <text x="669" y="287" text-anchor="middle" class="note">continuous white coverage</text><text x="669" y="306" text-anchor="middle" class="note">plus printability checks</text>
+  </g>
+
+  <!-- 5 Assemble the output. -->
+  <g>
+    <circle cx="804" cy="43" r="16" fill="var(--surface-2)" stroke="var(--line)"/><text x="804" y="49" text-anchor="middle" class="heading">5</text>
+    <text x="828" y="40" class="heading">Assemble the</text><text x="828" y="61" class="heading">output</text>
+    <g transform="translate(797 126)">
+      <rect x="22" y="0" width="100" height="72" fill="var(--cyan)" fill-opacity="0.72" stroke="var(--line)"/>
+      <path d="M27 56 L47 34 L66 45 L86 18 L117 43 V67 H27 Z" fill="var(--surface)" fill-opacity="0.5"/>
+      <rect x="11" y="12" width="100" height="72" fill="var(--magenta)" fill-opacity="0.45" stroke="var(--line)"/>
+      <rect x="0" y="24" width="100" height="72" fill="var(--yellow)" fill-opacity="0.35" stroke="var(--line)"/>
+    </g>
+    <text x="859" y="265" text-anchor="middle" class="label">per-filament thickness maps</text>
+    <text x="859" y="287" text-anchor="middle" class="note">plus quality and</text><text x="859" y="306" text-anchor="middle" class="note">printability summary</text>
+  </g>
+
+  <g transform="translate(288 352)">
+    <rect x="0" y="0" width="142" height="42" rx="4" fill="var(--surface-2)" stroke="var(--line)"/><text x="71" y="26" text-anchor="middle" class="label">Target Colors</text>
+    <rect x="242" y="0" width="142" height="42" rx="4" fill="var(--surface-2)" stroke="var(--line)"/><text x="313" y="26" text-anchor="middle" class="label">The Color LUT</text>
+    <path d="M142 21 H231" class="arrow"/><text x="187" y="13" text-anchor="middle" class="tiny">matched during</text><text x="187" y="40" text-anchor="middle" class="tiny">recipe choice</text>
+  </g>
+</svg>

@@ -1,0 +1,129 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1500 740" role="img" aria-label="Overview of raw extraction, appearance extraction, and the camera transform between transmission and appearance domains">
+  <defs>
+    <marker id="arrowhead" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto" markerUnits="strokeWidth">
+      <path d="M1,1 L11,6 L1,11 Z" fill="#475569"/>
+    </marker>
+    <filter id="soft-shadow" x="-25%" y="-30%" width="150%" height="170%">
+      <feDropShadow dx="0" dy="5" stdDeviation="6" flood-color="#000" flood-opacity="0.22"/>
+    </filter>
+    <style>
+      text {
+        font-family: Inter, Arial, sans-serif;
+        fill: #000;
+        dominant-baseline: middle;
+      }
+      .title {
+        font-size: 24px;
+        font-weight: 700;
+      }
+      .label {
+        font-size: 17px;
+        font-weight: 650;
+      }
+      .small {
+        font-size: 14px;
+        font-weight: 550;
+      }
+      .arrow-label {
+        font-size: 18px;
+        font-weight: 650;
+      }
+      .arrow {
+        fill: none;
+        stroke: #475569;
+        stroke-width: 3;
+        marker-end: url(#arrowhead);
+      }
+    </style>
+  </defs>
+
+  <rect width="1500" height="740" fill="#f7f7f2"/>
+
+  <text x="350" y="46" text-anchor="middle" class="title">Linear RAW inputs</text>
+  <text x="1130" y="46" text-anchor="middle" class="title">Embedded JPEG appearance</text>
+
+  <g transform="translate(90 78)">
+    <rect width="260" height="178" fill="#050505"/>
+    <rect x="58" y="35" width="143" height="108" rx="2" fill="#d9decf"/>
+    <text x="130" y="210" text-anchor="middle" class="small">RAW blank</text>
+  </g>
+
+  <g transform="translate(390 78)">
+    <rect width="260" height="178" fill="#050505"/>
+    <rect x="48" y="30" width="164" height="124" rx="2" fill="#191a14"/>
+    <rect x="51" y="33" width="158" height="118" rx="1" fill="#d9decf"/>
+    <g transform="translate(71 79) scale(0.255)">
+      <rect x="0" y="0" width="444" height="13" rx="2" fill="#113447"/>
+      <rect x="0" y="0" width="12" height="112" rx="2" fill="#113447"/>
+      <rect x="432" y="0" width="12" height="112" rx="2" fill="#113447"/>
+      <rect x="12" y="13" width="70" height="99" fill="#86aeb8"/>
+      <rect x="82" y="13" width="70" height="99" fill="#709ba9"/>
+      <rect x="152" y="13" width="70" height="99" fill="#5c8798"/>
+      <rect x="222" y="13" width="70" height="99" fill="#487486"/>
+      <rect x="292" y="13" width="70" height="99" fill="#355f73"/>
+      <rect x="362" y="13" width="70" height="99" fill="#244a5f"/>
+      <path d="M82 13V112M152 13V112M222 13V112M292 13V112M362 13V112" stroke="#183a4b" stroke-opacity="0.4" stroke-width="2"/>
+    </g>
+    <text x="130" y="210" text-anchor="middle" class="small">RAW sample</text>
+  </g>
+
+  <g transform="translate(1000 78)">
+    <rect width="260" height="178" fill="#050505"/>
+    <rect x="48" y="30" width="164" height="124" rx="2" fill="#1f2017"/>
+    <rect x="51" y="33" width="158" height="118" rx="1" fill="#fbfdf3"/>
+    <g transform="translate(71 79) scale(0.255)">
+      <rect x="0" y="0" width="444" height="13" rx="2" fill="#063c5b"/>
+      <rect x="0" y="0" width="12" height="112" rx="2" fill="#063c5b"/>
+      <rect x="432" y="0" width="12" height="112" rx="2" fill="#063c5b"/>
+      <rect x="12" y="13" width="70" height="99" fill="#a6dced"/>
+      <rect x="82" y="13" width="70" height="99" fill="#7bc7df"/>
+      <rect x="152" y="13" width="70" height="99" fill="#50afd2"/>
+      <rect x="222" y="13" width="70" height="99" fill="#2c97c0"/>
+      <rect x="292" y="13" width="70" height="99" fill="#1177a6"/>
+      <rect x="362" y="13" width="70" height="99" fill="#034e78"/>
+      <path d="M82 13V112M152 13V112M222 13V112M292 13V112M362 13V112" stroke="#033b5e" stroke-opacity="0.45" stroke-width="2"/>
+    </g>
+    <text x="130" y="210" text-anchor="middle" class="small">Appearance sample</text>
+  </g>
+
+  <path class="arrow" d="M350 318 L350 486"/>
+  <rect x="230" y="378" width="240" height="56" rx="6" fill="#f7f7f2"/>
+  <text x="350" y="394" text-anchor="middle" class="arrow-label">Extraction &amp;</text>
+  <text x="350" y="418" text-anchor="middle" class="arrow-label">Flatfield Correction</text>
+
+  <path class="arrow" d="M1130 318 L1130 486"/>
+  <rect x="1068" y="390" width="124" height="32" rx="6" fill="#f7f7f2"/>
+  <text x="1130" y="406" text-anchor="middle" class="arrow-label">Extraction</text>
+
+  <g transform="translate(138 532)" filter="url(#soft-shadow)">
+    <rect x="0" y="0" width="424" height="103" rx="3" fill="#183a4b"/>
+    <rect x="2" y="2" width="70" height="99" fill="#5f8792"/>
+    <rect x="72" y="2" width="70" height="99" fill="#4f7581"/>
+    <rect x="142" y="2" width="70" height="99" fill="#416470"/>
+    <rect x="212" y="2" width="70" height="99" fill="#33525f"/>
+    <rect x="282" y="2" width="70" height="99" fill="#27424f"/>
+    <rect x="352" y="2" width="70" height="99" fill="#1b313d"/>
+    <path d="M72 2V101M142 2V101M212 2V101M282 2V101M352 2V101" stroke="#183a4b" stroke-opacity="0.45" stroke-width="2"/>
+  </g>
+  <text x="350" y="683" text-anchor="middle" class="label">Transmission domain</text>
+
+  <g transform="translate(918 532)" filter="url(#soft-shadow)">
+    <rect x="0" y="0" width="424" height="103" rx="3" fill="#033b5e"/>
+    <rect x="2" y="2" width="70" height="99" fill="#a6dced"/>
+    <rect x="72" y="2" width="70" height="99" fill="#7bc7df"/>
+    <rect x="142" y="2" width="70" height="99" fill="#50afd2"/>
+    <rect x="212" y="2" width="70" height="99" fill="#2c97c0"/>
+    <rect x="282" y="2" width="70" height="99" fill="#1177a6"/>
+    <rect x="352" y="2" width="70" height="99" fill="#034e78"/>
+    <path d="M72 2V101M142 2V101M212 2V101M282 2V101M352 2V101" stroke="#033b5e" stroke-opacity="0.45" stroke-width="2"/>
+  </g>
+  <text x="1130" y="683" text-anchor="middle" class="label">Appearance domain</text>
+
+  <path class="arrow" d="M594 558 L884 558"/>
+  <rect x="638" y="516" width="202" height="32" rx="6" fill="#f7f7f2"/>
+  <text x="739" y="532" text-anchor="middle" class="arrow-label">Camera Transform</text>
+
+  <path class="arrow" d="M884 611 L594 611"/>
+  <rect x="604" y="621" width="270" height="32" rx="6" fill="#f7f7f2"/>
+  <text x="739" y="637" text-anchor="middle" class="arrow-label">Inverse Camera Transform</text>
+</svg>

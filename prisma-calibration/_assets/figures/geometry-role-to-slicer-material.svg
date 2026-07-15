@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 430" width="960" height="430" role="img" aria-labelledby="title desc">
+  <title id="title">Match exported geometry roles to slicer material assignments</title>
+  <desc id="desc">An exported three-role sample geometry is separated into LR_01, LR_02, and LR_03 bodies. Arrows connect each labeled body to the same role in the sample record and to its slicer filament assignment. The LR labels, rather than vertical guesswork or color, preserve the intended mapping.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 Z" class="arrow-fill"/></marker>
+    <style>
+      :root { --surface:#f8fafc; --surface-2:#e8edf3; --text:#1f2937; --muted:#52606d; --line:#6b7a8a; --grid:#c8d0d9; --cyan:#35a9c8; --magenta:#d65b88; --yellow:#e8bc3d; --green:#58a978; }
+      @media (prefers-color-scheme:dark) { :root { --surface:#151a22; --surface-2:#252d38; --text:#edf2f7; --muted:#b3bfcc; --line:#9aa8b7; --grid:#3c4653; --cyan:#43b8d7; --magenta:#e16c99; --yellow:#f0ca51; --green:#6fbd8d; } }
+      text { font-family:system-ui,-apple-system,"Segoe UI",sans-serif; fill:var(--text); letter-spacing:0; }
+      .heading { font-size:19px; font-weight:600; } .label { font-size:15px; font-weight:600; } .note { font-size:14px; fill:var(--muted); } .tiny { font-size:13px; fill:var(--muted); }
+      .panel { fill:var(--surface-2); stroke:var(--grid); stroke-width:1.5; } .body { stroke:var(--line); stroke-width:2; stroke-linejoin:round; }
+      .connector { fill:none; stroke:var(--line); stroke-width:2; marker-end:url(#arrow); } .arrow-fill { fill:var(--line); }
+    </style>
+  </defs>
+  <rect x="1" y="1" width="958" height="428" rx="8" fill="var(--surface)" stroke="var(--grid)"/>
+  <text x="480" y="38" text-anchor="middle" class="heading">Use the LR labels from export through slicing</text>
+  <text x="480" y="62" text-anchor="middle" class="note">STEP bodies and role-specific STLs carry the same material-role identity</text>
+
+  <g transform="translate(38 90)">
+    <rect width="270" height="276" rx="5" class="panel"/>
+    <text x="135" y="31" text-anchor="middle" class="heading">Exported geometry</text>
+    <text x="135" y="53" text-anchor="middle" class="note">separate labeled bodies</text>
+    <g transform="translate(30 78)">
+      <rect x="0" y="142" width="210" height="34" fill="var(--yellow)" class="body"/>
+      <path d="M0 120 H42 V110 H84 V100 H126 V90 H168 V80 H210 V142 H0 Z" fill="var(--cyan)" class="body"/>
+      <path d="M0 98 H42 V88 H84 V78 H126 V68 H168 V58 H210 V80 H168 V90 H126 V100 H84 V110 H42 V120 H0 Z" fill="var(--green)" class="body"/>
+      <text x="105" y="162" text-anchor="middle" class="label">LR_01</text>
+      <text x="105" y="126" text-anchor="middle" class="label">LR_02</text>
+      <text x="105" y="75" text-anchor="middle" class="label">LR_03</text>
+    </g>
+  </g>
+
+  <g transform="translate(372 90)">
+    <rect width="214" height="276" rx="5" class="panel"/>
+    <text x="107" y="31" text-anchor="middle" class="heading">Sample record</text>
+    <text x="107" y="53" text-anchor="middle" class="note">filament per role</text>
+    <g transform="translate(22 82)">
+      <rect width="170" height="46" rx="4" fill="var(--surface)" stroke="var(--grid)"/>
+      <rect x="10" y="10" width="26" height="26" rx="3" fill="var(--yellow)"/><text x="48" y="28" class="label">LR_01</text><text x="107" y="28" class="tiny">filament</text>
+      <rect y="62" width="170" height="46" rx="4" fill="var(--surface)" stroke="var(--grid)"/>
+      <rect x="10" y="72" width="26" height="26" rx="3" fill="var(--cyan)"/><text x="48" y="90" class="label">LR_02</text><text x="107" y="90" class="tiny">filament</text>
+      <rect y="124" width="170" height="46" rx="4" fill="var(--surface)" stroke="var(--grid)"/>
+      <rect x="10" y="134" width="26" height="26" rx="3" fill="var(--green)"/><text x="48" y="152" class="label">LR_03</text><text x="107" y="152" class="tiny">filament</text>
+    </g>
+  </g>
+
+  <g transform="translate(650 90)">
+    <rect width="272" height="276" rx="5" class="panel"/>
+    <text x="136" y="31" text-anchor="middle" class="heading">Slicer assignment</text>
+    <text x="136" y="53" text-anchor="middle" class="note">match by LR label</text>
+    <g transform="translate(25 82)">
+      <rect width="222" height="46" rx="4" fill="var(--surface)" stroke="var(--grid)"/>
+      <text x="14" y="28" class="label">LR_01 body</text><rect x="176" y="10" width="28" height="26" rx="3" fill="var(--yellow)"/>
+      <rect y="62" width="222" height="46" rx="4" fill="var(--surface)" stroke="var(--grid)"/>
+      <text x="14" y="90" class="label">LR_02 body</text><rect x="176" y="72" width="28" height="26" rx="3" fill="var(--cyan)"/>
+      <rect y="124" width="222" height="46" rx="4" fill="var(--surface)" stroke="var(--grid)"/>
+      <text x="14" y="152" class="label">LR_03 body</text><rect x="176" y="134" width="28" height="26" rx="3" fill="var(--green)"/>
+    </g>
+  </g>
+
+  <path d="M308 228 H364" class="connector"/><path d="M586 228 H642" class="connector"/>
+  <text x="480" y="404" text-anchor="middle" class="note">Do not infer the assignment from display color or vertical position; preserve the LR identity.</text>
+</svg>

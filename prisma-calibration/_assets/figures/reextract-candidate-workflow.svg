@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 440" width="960" height="440" role="img" aria-labelledby="title desc">
+  <title id="title">Re-extract Sample Images candidate workflow</title>
+  <desc id="desc">The accepted measurement stays active while Extract Images creates a separate candidate set. Manual placement resolves samples that need corners. Review Extracted Images assigns Save or Skip to every candidate. Save Results replaces only saved measurements, while skipped samples retain their accepted measurements.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 Z" class="arrow-fill"/></marker>
+    <style>
+      :root { --surface:#f8fafc; --surface-2:#e8edf3; --text:#1f2937; --muted:#52606d; --line:#6b7a8a; --grid:#c8d0d9; --cyan:#35a9c8; --magenta:#d65b88; --yellow:#e8bc3d; --green:#58a978; }
+      @media (prefers-color-scheme:dark) { :root { --surface:#151a22; --surface-2:#252d38; --text:#edf2f7; --muted:#b3bfcc; --line:#9aa8b7; --grid:#3c4653; --cyan:#43b8d7; --magenta:#e16c99; --yellow:#f0ca51; --green:#6fbd8d; } }
+      text { font-family:system-ui,-apple-system,"Segoe UI",sans-serif; fill:var(--text); letter-spacing:0; }
+      .heading { font-size:19px; font-weight:600; } .label { font-size:15px; font-weight:600; } .note { font-size:14px; fill:var(--muted); } .tiny { font-size:13px; fill:var(--muted); }
+      .step { fill:var(--surface-2); stroke:var(--grid); stroke-width:1.5; } .accepted { fill:var(--surface); stroke:var(--green); stroke-width:2.5; }
+      .candidate { fill:var(--surface); stroke:var(--cyan); stroke-width:2.5; } .connector { fill:none; stroke:var(--line); stroke-width:2; marker-end:url(#arrow); }
+      .protected { fill:none; stroke:var(--green); stroke-width:2.5; } .arrow-fill { fill:var(--line); }
+    </style>
+  </defs>
+  <rect x="1" y="1" width="958" height="438" rx="8" fill="var(--surface)" stroke="var(--grid)"/>
+  <text x="480" y="38" text-anchor="middle" class="heading">Re-extraction works in a separate candidate set</text>
+  <text x="480" y="62" text-anchor="middle" class="note">the accepted measurement remains active until Save Results succeeds</text>
+
+  <g transform="translate(34 92)">
+    <rect width="174" height="78" rx="5" class="accepted"/>
+    <text x="87" y="31" text-anchor="middle" class="label">Accepted measurement</text>
+    <text x="87" y="54" text-anchor="middle" class="note">remains active</text>
+  </g>
+  <path d="M208 131 H288" class="connector"/>
+  <g transform="translate(296 92)">
+    <rect width="150" height="78" rx="5" class="step"/>
+    <text x="75" y="31" text-anchor="middle" class="label">Extract Images</text>
+    <text x="75" y="54" text-anchor="middle" class="note">new measurements</text>
+  </g>
+  <path d="M446 131 H510" class="connector"/>
+  <g transform="translate(518 92)">
+    <rect width="174" height="78" rx="5" class="candidate"/>
+    <text x="87" y="31" text-anchor="middle" class="label">Candidate set</text>
+    <text x="87" y="54" text-anchor="middle" class="note">not yet published</text>
+  </g>
+  <path d="M692 131 H756" class="connector"/>
+  <g transform="translate(764 92)">
+    <rect width="162" height="78" rx="5" class="step"/>
+    <text x="81" y="31" text-anchor="middle" class="label">Manual step</text>
+    <text x="81" y="54" text-anchor="middle" class="note">where required</text>
+  </g>
+
+  <path d="M605 170 V211" class="connector"/>
+  <text x="621" y="197" class="tiny">automatic</text>
+  <path d="M845 170 V227 H680" class="connector"/>
+  <g transform="translate(470 219)">
+    <rect width="210" height="88" rx="5" class="step"/>
+    <text x="105" y="31" text-anchor="middle" class="label">Review Extracted Images</text>
+    <text x="105" y="56" text-anchor="middle" class="note">choose Save or Skip</text>
+  </g>
+  <path d="M470 263 H398" class="connector"/>
+  <g transform="translate(224 219)">
+    <rect width="174" height="88" rx="5" class="step"/>
+    <text x="87" y="31" text-anchor="middle" class="label">Save Results</text>
+    <text x="87" y="56" text-anchor="middle" class="note">apply saved candidates</text>
+  </g>
+  <path d="M311 307 V355 H208" class="connector"/>
+  <g transform="translate(34 338)">
+    <rect width="174" height="72" rx="5" class="accepted"/>
+    <text x="87" y="29" text-anchor="middle" class="label">Published result</text>
+    <text x="87" y="51" text-anchor="middle" class="note">saved candidate only</text>
+  </g>
+
+  <path d="M121 170 V324" class="protected"/>
+  <path d="M121 324 H746" class="protected"/>
+  <g transform="translate(746 331)">
+    <rect width="180" height="72" rx="5" class="accepted"/>
+    <text x="90" y="29" text-anchor="middle" class="label">Skipped samples</text>
+    <text x="90" y="51" text-anchor="middle" class="note">keep accepted result</text>
+  </g>
+  <text x="475" y="348" text-anchor="middle" class="tiny">accepted measurements remain protected throughout review</text>
+</svg>

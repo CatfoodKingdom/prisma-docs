@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr"><head><title>The pipeline orchestrator and shared state</title><meta charset="utf-8"/><link rel="preload" href="../../../index-42bd8b3f.css" as="style"/><link rel="preload" href="../../../prescript-2bfc6315.js" as="script"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted Grotesk:wght@400;700&amp;family=Source Sans Pro:ital,wght@0,400;0,600;1,400;1,600&amp;family=IBM Plex Mono:wght@400;600&amp;display=swap"/><link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="og:site_name" content="Prisma Documentation"/><meta property="og:title" content="The pipeline orchestrator and shared state"/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="The pipeline orchestrator and shared state"/><meta name="twitter:description" content="In one sentence: pipeline/ is the small framework layer — a single orchestration function (run_pipeline) that loads profiles, runs an optional preprocessing chain, optionally scouts a swap-banding plan when the palette overflows the AMS color slots, builds LUTs, hands the heavy solve to the staged ..."/><meta property="og:description" content="In one sentence: pipeline/ is the small framework layer — a single orchestration function (run_pipeline) that loads profiles, runs an optional preprocessing chain, optionally scouts a swap-banding plan when the palette overflows the AMS color slots, builds LUTs, hands the heavy solve to the staged ..."/><meta property="og:image:alt" content="In one sentence: pipeline/ is the small framework layer — a single orchestration function (run_pipeline) that loads profiles, runs an optional preprocessing chain, optionally scouts a swap-banding plan when the palette overflows the AMS color slots, builds LUTs, hands the heavy solve to the staged ..."/><meta property="twitter:domain" content="catfoodkingdom.github.io/prisma-docs"/><meta property="og:url" content="https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/technical-reference/generator/the-pipeline-orchestrator-and-shared-state"/><meta property="twitter:url" content="https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/technical-reference/generator/the-pipeline-orchestrator-and-shared-state"/><link rel="icon" href="../../../static/icon.png"/><meta name="description" content="In one sentence: pipeline/ is the small framework layer — a single orchestration function (run_pipeline) that loads profiles, runs an optional preprocessing chain, optionally scouts a swap-banding plan when the palette overflows the AMS color slots, builds LUTs, hands the heavy solve to the staged ..."/><meta name="generator" content="Quartz"/><link href="../../../index-42bd8b3f.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-735924e0.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-589c1cea.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-bbc3f7c0.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-2911f5d1.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-e427079e.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-53b25b2b.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-c93c6a44.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-8a06014f.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-77d6a441.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-6ee21cee.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-1ea6ad18.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-788c9ca3.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-642859cd.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-4abc06bd.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-274a3dfe.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-94cb6c84.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-58d5ff56.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-7262b5a7.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../static/resource-style-a5c806d2.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../static/resource-style-6bd36952.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../static/resource-style-9857b007.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../static/resource-style-d3a1a224.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" rel="stylesheet" type="text/css" data-persist="true"/><script src="../../../prescript-2bfc6315.js" type="application/javascript" data-persist="true"></script><script type="application/javascript" data-persist="true">const fetchData = fetch("../../../static/contentIndex.json").then(data => data.json())</script><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted%20Grotesk%3Awght%40400%3B700&amp;family=Source%20Sans%20Pro%3Aital%2Cwght%400%2C400%3B0%2C600%3B1%2C400%3B1%2C600&amp;family=IBM%20Plex%20Mono%3Awght%40400%3B600&amp;display=swap"/><meta property="og:image:width" content="1200"/><meta property="og:image:height" content="630"/><meta property="og:image" content="https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/technical-reference/generator/the-pipeline-orchestrator-and-shared-state-og-image.webp"/><meta property="og:image:url" content="https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/technical-reference/generator/the-pipeline-orchestrator-and-shared-state-og-image.webp"/><meta name="twitter:image" content="https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/technical-reference/generator/the-pipeline-orchestrator-and-shared-state-og-image.webp"/><meta property="og:image:type" content="image/webp"/></head><body data-slug="prisma-lithophane-generator/technical-reference/generator/the-pipeline-orchestrator-and-shared-state" data-basepath="/prisma-docs"><div id="quartz-root" class="page" data-frame="default"><div id="quartz-body"><div class="left sidebar"><h2 class="page-title"><a href="../../..">Prisma Documentation</a></h2><div class="mobile-only"><div class="spacer"></div></div><div class="flex-component" style="flex-direction: row; flex-wrap: nowrap; gap: 0.5rem;"><div style="flex-grow: 1; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><div class="search"><button class="search-button" aria-label="Search" aria-expanded="false"><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title>Search</title><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"></path><circle cx="8" cy="8" r="7"></circle></g></svg><p>Search</p></button><div class="search-container"><div class="search-space"><input autocomplete="off" class="search-bar" name="search" type="text" aria-label="Search for something..." placeholder="Search for something..."/><div class="search-layout" data-preview="true" data-field-priority="[&quot;title&quot;,&quot;content&quot;,&quot;tags&quot;]"></div></div></div></div></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="darkmode" aria-label="Dark mode"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="dayIcon" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35" xml:space="preserve" aria-label="Dark mode"><title>Dark mode</title><path d="M6,17.5C6,16.672,5.328,16,4.5,16h-3C0.672,16,0,16.672,0,17.5    S0.672,19,1.5,19h3C5.328,19,6,18.328,6,17.5z M7.5,26c-0.414,0-0.789,0.168-1.061,0.439l-2,2C4.168,28.711,4,29.086,4,29.5    C4,30.328,4.671,31,5.5,31c0.414,0,0.789-0.168,1.06-0.44l2-2C8.832,28.289,9,27.914,9,27.5C9,26.672,8.329,26,7.5,26z M17.5,6    C18.329,6,19,5.328,19,4.5v-3C19,0.672,18.329,0,17.5,0S16,0.672,16,1.5v3C16,5.328,16.671,6,17.5,6z M27.5,9    c0.414,0,0.789-0.168,1.06-0.439l2-2C30.832,6.289,31,5.914,31,5.5C31,4.672,30.329,4,29.5,4c-0.414,0-0.789,0.168-1.061,0.44    l-2,2C26.168,6.711,26,7.086,26,7.5C26,8.328,26.671,9,27.5,9z M6.439,8.561C6.711,8.832,7.086,9,7.5,9C8.328,9,9,8.328,9,7.5    c0-0.414-0.168-0.789-0.439-1.061l-2-2C6.289,4.168,5.914,4,5.5,4C4.672,4,4,4.672,4,5.5c0,0.414,0.168,0.789,0.439,1.06    L6.439,8.561z M33.5,16h-3c-0.828,0-1.5,0.672-1.5,1.5s0.672,1.5,1.5,1.5h3c0.828,0,1.5-0.672,1.5-1.5S34.328,16,33.5,16z     M28.561,26.439C28.289,26.168,27.914,26,27.5,26c-0.828,0-1.5,0.672-1.5,1.5c0,0.414,0.168,0.789,0.439,1.06l2,2    C28.711,30.832,29.086,31,29.5,31c0.828,0,1.5-0.672,1.5-1.5c0-0.414-0.168-0.789-0.439-1.061L28.561,26.439z M17.5,29    c-0.829,0-1.5,0.672-1.5,1.5v3c0,0.828,0.671,1.5,1.5,1.5s1.5-0.672,1.5-1.5v-3C19,29.672,18.329,29,17.5,29z M17.5,7    C11.71,7,7,11.71,7,17.5S11.71,28,17.5,28S28,23.29,28,17.5S23.29,7,17.5,7z M17.5,25c-4.136,0-7.5-3.364-7.5-7.5    c0-4.136,3.364-7.5,7.5-7.5c4.136,0,7.5,3.364,7.5,7.5C25,21.636,21.636,25,17.5,25z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="nightIcon" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100" xml:space="preserve" aria-label="Light mode"><title>Light mode</title><path d="M96.76,66.458c-0.853-0.852-2.15-1.064-3.23-0.534c-6.063,2.991-12.858,4.571-19.655,4.571  C62.022,70.495,50.88,65.88,42.5,57.5C29.043,44.043,25.658,23.536,34.076,6.47c0.532-1.08,0.318-2.379-0.534-3.23  c-0.851-0.852-2.15-1.064-3.23-0.534c-4.918,2.427-9.375,5.619-13.246,9.491c-9.447,9.447-14.65,22.008-14.65,35.369  c0,13.36,5.203,25.921,14.65,35.368s22.008,14.65,35.368,14.65c13.361,0,25.921-5.203,35.369-14.65  c3.872-3.871,7.064-8.328,9.491-13.246C97.826,68.608,97.611,67.309,96.76,66.458z"></path></svg></button></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="readermode" aria-label="Reader mode"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="readerIcon" fill="currentColor" stroke="currentColor" stroke-width="0.2" stroke-linecap="round" stroke-linejoin="round" width="64px" height="64px" viewBox="0 0 24 24" aria-label="Reader mode"><title>Reader mode</title><g transform="translate(-1.8, -1.8) scale(1.15, 1.2)"><path d="M8.9891247,2.5 C10.1384702,2.5 11.2209868,2.96705384 12.0049645,3.76669482 C12.7883914,2.96705384 13.8709081,2.5 15.0202536,2.5 L18.7549359,2.5 C19.1691495,2.5 19.5049359,2.83578644 19.5049359,3.25 L19.5046891,4.004 L21.2546891,4.00457396 C21.6343849,4.00457396 21.9481801,4.28672784 21.9978425,4.6528034 L22.0046891,4.75457396 L22.0046891,20.25 C22.0046891,20.6296958 21.7225353,20.943491 21.3564597,20.9931534 L21.2546891,21 L2.75468914,21 C2.37499337,21 2.06119817,20.7178461 2.01153575,20.3517706 L2.00468914,20.25 L2.00468914,4.75457396 C2.00468914,4.37487819 2.28684302,4.061083 2.65291858,4.01142057 L2.75468914,4.00457396 L4.50368914,4.004 L4.50444233,3.25 C4.50444233,2.87030423 4.78659621,2.55650904 5.15267177,2.50684662 L5.25444233,2.5 L8.9891247,2.5 Z M4.50368914,5.504 L3.50468914,5.504 L3.50468914,19.5 L10.9478955,19.4998273 C10.4513189,18.9207296 9.73864328,18.5588115 8.96709342,18.5065584 L8.77307039,18.5 L5.25444233,18.5 C4.87474657,18.5 4.56095137,18.2178461 4.51128895,17.8517706 L4.50444233,17.75 L4.50368914,5.504 Z M19.5049359,17.75 C19.5049359,18.1642136 19.1691495,18.5 18.7549359,18.5 L15.2363079,18.5 C14.3910149,18.5 13.5994408,18.8724714 13.0614828,19.4998273 L20.5046891,19.5 L20.5046891,5.504 L19.5046891,5.504 L19.5049359,17.75 Z M18.0059359,3.999 L15.0202536,4 L14.8259077,4.00692283 C13.9889509,4.06666544 13.2254227,4.50975805 12.7549359,5.212 L12.7549359,17.777 L12.7782651,17.7601316 C13.4923805,17.2719483 14.3447024,17 15.2363079,17 L18.0059359,16.999 L18.0056891,4.798 L18.0033792,4.75457396 L18.0056891,4.71 L18.0059359,3.999 Z M8.9891247,4 L6.00368914,3.999 L6.00599909,4.75457396 L6.00599909,4.75457396 L6.00368914,4.783 L6.00368914,16.999 L8.77307039,17 C9.57551536,17 10.3461406,17.2202781 11.0128313,17.6202194 L11.2536891,17.776 L11.2536891,5.211 C10.8200889,4.56369974 10.1361548,4.13636104 9.37521067,4.02745763 L9.18347055,4.00692283 L8.9891247,4 Z"></path></g></svg></button></div></div><div class="explorer nav-files-container" data-behavior="link" data-collapsed="collapsed" data-savestate="true" data-data-fns="{&quot;order&quot;:[&quot;filter&quot;,&quot;map&quot;,&quot;sort&quot;],&quot;sortFn&quot;:&quot;(a2, b2) => {\r\n    const __rank = {\&quot;prisma-lithophane-generator\&quot;:0,\&quot;prisma-calibration\&quot;:1,\&quot;getting-started\&quot;:0,\&quot;how-to-use\&quot;:1,\&quot;how-it-works\&quot;:2,\&quot;technical-reference\&quot;:3};\r\n    const __rankPath = {\&quot;prisma-lithophane-generator/how-to-use/installing-prisma\&quot;:0,\&quot;prisma-lithophane-generator/how-to-use/launching-prisma\&quot;:1,\&quot;prisma-lithophane-generator/how-to-use/configuration\&quot;:2,\&quot;prisma-lithophane-generator/how-to-use/image\&quot;:3,\&quot;prisma-lithophane-generator/how-to-use/palette\&quot;:4,\&quot;prisma-lithophane-generator/how-to-use/settings\&quot;:5,\&quot;prisma-lithophane-generator/how-to-use/preview\&quot;:6,\&quot;prisma-lithophane-generator/how-to-use/exporting\&quot;:7,\&quot;prisma-lithophane-generator/how-to-use/3d-printing\&quot;:8,\&quot;prisma-lithophane-generator/how-to-use/tutorials\&quot;:9,\&quot;prisma-lithophane-generator/how-it-works/how-a-solve-works\&quot;:0,\&quot;prisma-lithophane-generator/how-it-works/image-adjustments\&quot;:1,\&quot;prisma-lithophane-generator/how-it-works/preprocessing\&quot;:2,\&quot;prisma-lithophane-generator/how-it-works/target-colors\&quot;:3,\&quot;prisma-lithophane-generator/how-it-works/palette\&quot;:4,\&quot;prisma-lithophane-generator/how-it-works/color-model\&quot;:5,\&quot;prisma-lithophane-generator/how-it-works/the-color-lut\&quot;:6,\&quot;prisma-lithophane-generator/how-it-works/the-solve\&quot;:7,\&quot;prisma-lithophane-generator/how-it-works/white-cap\&quot;:8,\&quot;prisma-lithophane-generator/how-it-works/grouping\&quot;:9,\&quot;prisma-lithophane-generator/how-it-works/export\&quot;:10,\&quot;prisma-calibration/how-to-use/installing-the-calibration-app\&quot;:0,\&quot;prisma-calibration/how-to-use/launching-the-calibration-app\&quot;:1,\&quot;prisma-calibration/how-to-use/filaments\&quot;:2,\&quot;prisma-calibration/how-to-use/geometries\&quot;:3,\&quot;prisma-calibration/how-to-use/logbook\&quot;:4,\&quot;prisma-calibration/how-to-use/images\&quot;:5,\&quot;prisma-calibration/how-to-use/modeling\&quot;:6,\&quot;prisma-calibration/how-to-use/maintenance\&quot;:7,\&quot;prisma-calibration/how-to-use/backups\&quot;:8,\&quot;prisma-calibration/how-to-use/calibration-tutorials\&quot;:9,\&quot;prisma-calibration/how-it-works/transmission-vs-appearance\&quot;:0,\&quot;prisma-calibration/how-it-works/sample-geometry\&quot;:1,\&quot;prisma-calibration/how-it-works/extraction\&quot;:2,\&quot;prisma-calibration/how-it-works/color-model-v1\&quot;:3,\&quot;prisma-calibration/how-it-works/color-model-v2\&quot;:4,\&quot;prisma-calibration/how-it-works/model-fitting\&quot;:5,\&quot;prisma-calibration/how-it-works/the-camera-transform\&quot;:6,\&quot;prisma-calibration/how-it-works/maintenance-operations\&quot;:7};\r\n    const __pa = a2.slugSegments.join(\&quot;/\&quot;), __pb = b2.slugSegments.join(\&quot;/\&quot;);\r\n    const __ra = __rankPath[__pa] ?? __rank[a2.slugSegment], __rb = __rankPath[__pb] ?? __rank[b2.slugSegment];\r\n    if (__ra !== void 0 || __rb !== void 0) return (__ra ?? 99) - (__rb ?? 99);\r\n    if (!a2.isFolder &amp;&amp; !b2.isFolder || a2.isFolder &amp;&amp; b2.isFolder) {\r\n      return (a2.displayName || \&quot;\&quot;).localeCompare(b2.displayName || \&quot;\&quot;, void 0, {\r\n        numeric: true,\r\n        sensitivity: \&quot;base\&quot;\r\n      });\r\n    }\r\n    if (!a2.isFolder &amp;&amp; b2.isFolder) {\r\n      return 1;\r\n    }\r\n    return -1;\r\n  }&quot;,&quot;filterFn&quot;:&quot;(node) => node.slugSegment !== \&quot;tags\&quot;&quot;,&quot;mapFn&quot;:&quot;(node) => {\r\n    return node;\r\n  }&quot;}"><button type="button" class="explorer-toggle mobile-explorer hide-until-loaded" data-mobile="true" aria-controls="explorer-285" aria-label="Explorer"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-menu"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg></button><button type="button" class="title-button explorer-toggle desktop-explorer" data-mobile="false" aria-expanded="true"><h2>Explorer</h2><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><div id="explorer-285" class="explorer-content" aria-expanded="false" role="group"><ul class="explorer-ul overflow" id="list-0"><li class="overflow-end"></li></ul></div><template id="template-file"><li><a href="#" class="nav-file-title tree-item-self"></a></li></template><template id="template-folder"><li><div class="folder-container nav-folder-title tree-item-self"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon nav-folder-collapse-indicator collapse-icon"><polyline points="6 9 12 15 18 9"></polyline></svg><div><button class="folder-button"><span class="folder-title"></span></button></div></div><div class="folder-outer"><ul class="content tree-item-children"></ul></div></li></template></div></div><div class="center"><div class="page-header"><div class="popover-hint"><nav class="breadcrumb-container" aria-label="breadcrumbs"><div class="breadcrumb-element"><a href="../../../">Home</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../../prisma-lithophane-generator/">Prisma Lithophane Generator</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../../prisma-lithophane-generator/technical-reference/">Technical Reference</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../../prisma-lithophane-generator/technical-reference/generator/">Generator</a><p> ❯ </p></div><div class="breadcrumb-element"><a href>The pipeline orchestrator and shared state</a></div></nav><h1 class="article-title">The pipeline orchestrator and shared state</h1><details class="note-properties metadata-container" open data-collapsed="false"><summary class="note-properties-header"><span class="note-properties-title">Properties</span><span class="note-properties-count">1</span></summary><table class="note-properties-table"><tbody><tr class="note-properties-row metadata-property"><td class="note-properties-key metadata-property-key">tags</td><td class="note-properties-value metadata-property-value"><span class="note-properties-tags"><a href="../../../tags/generator" class="internal internal-link tag-link">generator</a><span class="note-properties-separator">, </span><a href="../../../tags/pipeline" class="internal internal-link tag-link">pipeline</a></span></td></tr></tbody></table></details><p show-comma="true" class="content-meta"><time datetime="2026-07-15T01:21:09.289Z">Jul 14, 2026</time><span>12 min read</span></p></div></div><article class="popover-hint"><div class="markdown-preview-view markdown-rendered"><blockquote>
+<p>In one sentence: <code>pipeline/</code> is the small framework layer — a single orchestration function (<code>run_pipeline</code>) that loads profiles, runs an optional preprocessing chain, optionally scouts a swap-banding plan when the palette overflows the AMS color slots, builds LUTs, hands the heavy solve to the staged backend, and finalises one shared <code>PipelineState</code> carrier, with one pluggable slot (preprocessing operators) that self-registers from disk and persists its on/off state to JSON.</p>
+</blockquote>
+<p>This is the developer companion to the <a href="../../../prisma-lithophane-generator/technical-reference/architecture/generator.pipeline.runner" class="internal internal-link" data-slug="prisma-lithophane-generator/technical-reference/architecture/generator.pipeline.runner">generator.pipeline.runner</a> package. It covers the data carriers, the fixed-spine design, the preprocessing plugin base class, parameter self-description, registry auto-discovery, and module on/off persistence. It also flags two seams (<code>revalidate()</code> and <code>snapshot.py</code>) that are wired but dormant in production.</p>
+<blockquote>
+<p><strong>What changed:</strong> the old pluggable <em>grouping</em> slot (<code>GreedyGrouping</code> / <code>GroupBudgetGrouping</code>, a <code>grouping_enabled</code> preset flag, a grouping registry) was <strong>deleted</strong>. Swap grouping is now the built-in <strong>two-pass swap-banding path</strong> in the runner, engaged purely on AMS overflow — no module, no toggle. The full story lives in <a href="../../../prisma-lithophane-generator/technical-reference/output/ams-grouping-and-swap-planning" class="internal internal-link alias" data-slug="prisma-lithophane-generator/technical-reference/output/ams-grouping-and-swap-planning">AMS grouping and swap planning</a>; this page describes only where it plugs into the spine.</p>
+</blockquote>
+<p>Related: generation_pipeline (narrative walkthrough) · <a href="../../../prisma-lithophane-generator/technical-reference/architecture/generator.facade" class="internal internal-link" data-slug="prisma-lithophane-generator/technical-reference/architecture/generator.facade">generator.facade</a> (the entry layer above this) · <a href="../../../prisma-lithophane-generator/technical-reference/architecture/generator.pipeline.staged_runner" class="internal internal-link" data-slug="prisma-lithophane-generator/technical-reference/architecture/generator.pipeline.staged_runner">generator.pipeline.staged_runner</a> (the solve engine below it) · <a href="../../../prisma-lithophane-generator/technical-reference/solver/the-staged-backend-(stage-0-5)" class="internal internal-link alias" data-slug="prisma-lithophane-generator/technical-reference/solver/the-staged-backend-(stage-0-5)">The staged backend (Stage 0-5)</a> · <a href="../../../prisma-lithophane-generator/technical-reference/output/ams-grouping-and-swap-planning" class="internal internal-link alias" data-slug="prisma-lithophane-generator/technical-reference/output/ams-grouping-and-swap-planning">AMS grouping and swap planning</a> · Module management and settings.</p>
+<hr/>
+<h2 id="how-to-drive-it-users">How to drive it (users)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#how-to-drive-it-users" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>You never call this package directly — you change its behavior through the <strong>Modules</strong> panel and <strong>Settings</strong> in the generator web app (port 8010). Two knobs land here:</p>
+<ul>
+<li><strong>Preprocessing operators</strong> — a chain of optional image-cleanup / gamut steps that run on the source raster before color solving. Several can be on at once. This is the only module-toggled slot.</li>
+<li><strong>Quality preset</strong> — preview vs full vs compare; controls how many layers. (Swap banding is <em>not</em> a knob — it fires automatically on <code>FULL_PRESET</code> when the palette overflows the AMS color slots.)</li>
+</ul>
+<p>Toggling a preprocessing module in the UI writes to a JSON file (<code>modules.json</code>) so the choice survives a restart. The contract is enforced server-side: see <a href="#module-onoff-persistence" class="internal internal-link alias">Module on/off persistence</a> below.</p>
+<hr/>
+<h2 id="the-shared-carriers-pipelinestatepy">The shared carriers (<code>pipeline/state.py</code>)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#the-shared-carriers-pipelinestatepy" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>Everything the pipeline produces is accumulated on one mutable object that is threaded through every stage. There are four dataclasses, all defined in <code>pipeline/state.py</code>.</p>
+<h3 id="pipelinestate--the-bag-of-solve-state"><code>PipelineState</code> — the bag of solve state<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#pipelinestate--the-bag-of-solve-state" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><code>pipeline/state.py:224</code> defines the object passed through all stages. The runner constructs it once (<code>pipeline/runner.py:808</code>) and mutates it in place. Fields, grouped by who fills them:</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>Field</th><th>Filled by</th><th>Notes</th></tr></thead><tbody><tr><td><code>image</code>, <code>config</code></td><td>constructor</td><td><code>image</code> is overwritten with the post-preprocess raster (<code>pipeline/runner.py:1024</code>)</td></tr><tr><td><code>profiles</code> (<code>ProfileSet</code>)</td><td>Load spine</td><td><code>pipeline/runner.py:862</code></td></tr><tr><td><code>appearance_provider</code></td><td>Load spine</td><td><code>pipeline/runner.py:869</code></td></tr><tr><td><code>swap_grouping</code></td><td>Load spine (AMS overflow only)</td><td>the swap-band plan dict (<code>groups</code>, <code>band_layers</code>, <code>canonical_palette</code>, <code>pause_z_mm</code>, <code>cap_limit_mm</code>, …); written by <code>_swap_grouping_metadata</code> at <code>pipeline/runner.py:947</code>; <code>None</code> on a normal solve. See <a href="../../../prisma-lithophane-generator/technical-reference/output/ams-grouping-and-swap-planning" class="internal internal-link alias" data-slug="prisma-lithophane-generator/technical-reference/output/ams-grouping-and-swap-planning">AMS grouping and swap planning</a></td></tr><tr><td><code>luts</code></td><td>LUT spine</td><td><code>pipeline/runner.py:1082</code> / <code>:1111</code> / <code>:1160</code> (banded or plain, spline or provider)</td></tr><tr><td><code>observed_target_oklab</code>, <code>solve_target_oklab</code></td><td>runner</td><td>two grids; see <a href="#observation-vs-solve-grid" class="internal internal-link alias">Observation vs solve grid</a></td></tr><tr><td><code>thickness_maps</code> (<code>ThicknessMaps</code>)</td><td>staged finalise</td><td>copied from the staged bundle at <code>pipeline/runner.py:702</code></td></tr><tr><td><code>solved_plan</code> (<code>SolvedMaterialPlan</code>)</td><td>staged finalise</td><td>canonical export artifact, <code>pipeline/runner.py:686</code></td></tr><tr><td><code>staged_result</code></td><td>staged finalise</td><td>raw staged-backend bundle, <code>pipeline/runner.py:682</code></td></tr><tr><td><code>diagnostics</code></td><td>runner</td><td>the SOLE canonical home for <code>__de__</code> / <code>__gamut_mask__</code> on this path (<code>pipeline/state.py:269</code>)</td></tr><tr><td><code>stats</code> (<code>SolveStats</code>)</td><td><code>_compute_stats</code></td><td><code>pipeline/runner.py:456</code></td></tr><tr><td><code>cap_quality</code></td><td>staged finalise</td><td><code>pipeline/runner.py:730</code></td></tr><tr><td><code>source_image</code>, <code>preprocessing_trace</code>, <code>preprocessing_metrics</code></td><td>preprocessing slot</td><td>only populated when the chain is non-empty</td></tr><tr><td><code>snapshot_publisher</code></td><td>runner (write-only)</td><td>set at <code>pipeline/runner.py:1220</code>, <strong>never read</strong> — see <a href="#dormant-and-test-only-seams" class="internal internal-link alias">Dormant seams</a></td></tr><tr><td><code>blueprint_triage</code> (<code>PrintabilityReport</code>)</td><td>reset to <code>None</code> on the staged path (<code>pipeline/runner.py:698</code>)</td><td>NB: this is the <a href="../../../prisma-lithophane-generator/technical-reference/printability/blueprint-triage-the-unwired-engine" class="internal internal-link alias" data-slug="prisma-lithophane-generator/technical-reference/printability/blueprint-triage-the-unwired-engine">Blueprint triage the unwired engine</a> report class, <strong>not</strong> the unrelated mesh <code>PrintabilityReport</code></td></tr></tbody></table></div>
+<p>The <code>diagnostics</code> dict is load-bearing and the comment at <code>pipeline/state.py:262-269</code> is code-true: on the staged/webapp path <code>__de__</code> and <code>__gamut_mask__</code> live in <code>state.diagnostics</code>, never mirrored into <code>thickness_maps</code>. <code>_compute_stats</code> reads diagnostics first and only falls back to <code>thickness_maps</code> for legacy/CLI-style states (<code>pipeline/runner.py:470-471</code>).</p>
+<h3 id="pipelineconfig--the-frozen-request"><code>PipelineConfig</code> — the frozen request<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#pipelineconfig--the-frozen-request" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><code>pipeline/state.py:52</code> is the full parameter set for one solve. It is built by the facade’s <code>_to_pipeline_config</code> (<code>facade.py:497</code>), not by hand. Beyond the ~120 plain fields it carries the preprocessing-slot members and a set of <code>effective_*</code> resolver methods:</p>
+<ul>
+<li><code>preprocessors: List[Any]</code> (<code>pipeline/state.py:156</code>) — the ordered list of <strong>enabled</strong> operator instances. Sorting happens in the facade resolver, not here.</li>
+<li><code>preprocessing_params: Dict[str, Dict]</code> (<code>pipeline/state.py:157</code>) — the FULL per-operator params dict (every registered operator’s block at its default), rides along for fingerprinting.</li>
+<li><code>preset: QualityPreset</code> (<code>pipeline/state.py:159</code>) — defaults to <code>FULL_PRESET</code>.</li>
+</ul>
+<p>(There is no <code>grouping</code> field anymore — the pluggable grouping slot was removed. When swap banding fires, its plan lives on <code>PipelineState.swap_grouping</code>, not on the config.)</p>
+<p>The <code>effective_*</code> methods compute derived values so callers never duplicate the arithmetic: <code>effective_max_layers()</code> (<code>pipeline/state.py:174</code>) lets the preset cap layers, <code>effective_white_cap()</code> falls back to the base white, <code>effective_d_wc_max()</code> / <code>effective_boundary_d_wc_max()</code> derive cap authority (the latter also clamps to the runtime swap-band cap limit when banding is active), <code>color_slots()</code> (<code>pipeline/state.py:219</code>) = <code>ams_slots - effective_white_slots()</code> — the same threshold that gates swap banding. <code>__post_init__</code> (<code>pipeline/state.py:161</code>) canonicalizes the palette order and applies a resolution backstop from <code>config.resolution_schema</code>.</p>
+<h3 id="profileset-and-qualitypreset"><code>ProfileSet</code> and <code>QualityPreset</code><a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#profileset-and-qualitypreset" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><code>ProfileSet</code> (<code>pipeline/state.py:21</code>) is a trivial three-field bundle of loaded filament profiles: <code>color_profiles</code>, <code>wb_profile</code>, <code>wc_profile</code>. <code>QualityPreset</code> (<code>pipeline/state.py:29</code>) now carries just <code>name</code> and <code>max_layers</code> — the old <code>grouping_enabled</code> flag was removed. Three named instances exist:</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>Preset</th><th><code>max_layers</code></th><th>Anchor</th></tr></thead><tbody><tr><td><code>PREVIEW_PRESET</code></td><td>15</td><td><code>pipeline/state.py:36</code></td></tr><tr><td><code>FULL_PRESET</code></td><td><code>None</code> (unbounded)</td><td><code>pipeline/state.py:41</code></td></tr><tr><td><code>COMPARE_PRESET</code></td><td>15</td><td><code>pipeline/state.py:46</code></td></tr></tbody></table></div>
+<p>The only thing <code>QualityPreset</code> controls is a layer ceiling. Whether swap banding runs is <em>not</em> a preset flag — it is decided by <code>_swap_banding_requested</code>, which requires <code>preset.name == &quot;full&quot;</code> <strong>and</strong> <code>len(palette) > color_slots()</code> (<code>pipeline/runner.py:50-55</code>).</p>
+<hr/>
+<h2 id="the-orchestrator-fixed-spine-plus-two-slots-pipelinerunnerpy">The orchestrator: fixed spine plus two slots (<code>pipeline/runner.py</code>)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#the-orchestrator-fixed-spine-plus-two-slots-pipelinerunnerpy" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p><code>run_pipeline</code> (<code>pipeline/runner.py:736</code>) is the whole orchestration. The structure is a <strong>fixed spine</strong> of always-run stages, with the <strong>preprocessing slot</strong> woven into Load and an optional <strong>swap-banding two-pass</strong> inserted before LUT build on AMS overflow. Reading the function top to bottom:</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>#</th><th>Stage</th><th>Kind</th><th>Anchor</th></tr></thead><tbody><tr><td>1</td><td><strong>Load</strong> — validate palette, load profiles, create appearance provider, run the optional swap scout/band plan and preprocessing chain, then compute target clouds</td><td>spine + optional expansions</td><td><code>pipeline/runner.py:838-1067</code></td></tr><tr><td>—</td><td><strong>Swap-banding two-pass</strong> — scout solve → <code>choose_band_plan</code> → write <code>state.swap_grouping</code></td><td><strong>AMS overflow only</strong></td><td><code>pipeline/runner.py:888-970</code></td></tr><tr><td>—</td><td><strong>F1 Preprocessing</strong> — run the enabled operator chain, overwrite <code>state.image</code></td><td><strong>slot</strong></td><td><code>pipeline/runner.py:991-1029</code></td></tr><tr><td>—</td><td>Target clouds + white-point/luminance setup</td><td>spine detail</td><td><code>pipeline/runner.py:1034-1054</code></td></tr><tr><td>2</td><td><strong>Build LUTs</strong> — spline or provider path, plain or banded</td><td>spine</td><td><code>pipeline/runner.py:1069-1184</code></td></tr><tr><td>3</td><td><strong>Gamut</strong> — <code>_apply_target_gamut_mapping</code> + final luminance-authority pass</td><td>spine</td><td><code>pipeline/runner.py:1193-1198</code></td></tr><tr><td>4</td><td><strong>Solve</strong> — <code>run_staged_backend_path</code> then <code>_finalize_staged_backend_state</code></td><td>spine</td><td><code>pipeline/runner.py:1222-1230</code></td></tr><tr><td>5</td><td><strong>Stats</strong> — <code>_compute_stats</code></td><td>spine</td><td><code>pipeline/runner.py:1247-1248</code></td></tr></tbody></table></div>
+<p>Two facts that the stale module header hides (cite the line anchors, not the header):</p>
+<ul>
+<li><strong>The webapp solve is the STAGED backend.</strong> The Solve stage calls <code>run_staged_backend_path</code> from <code>pipeline.staged_runner</code> (<code>pipeline/runner.py:1222-1225</code>). It does <strong>not</strong> run <code>solve.py</code>’s legacy “6-step” CLI engine. <code>_finalize_staged_backend_state</code> (<code>pipeline/runner.py:677</code>) copies exactly one staged result bundle onto the legacy-facing <code>state</code> fields, and recomputes dE via <code>_recompute_de_diagnostics</code> straight into <code>state.diagnostics</code> (<code>pipeline/runner.py:726</code>).</li>
+<li><strong>The preprocessing slot and the banded two-pass are the only conditional parts.</strong> The preprocessing slot is a legal no-op when <code>config.preprocessors</code> is empty (<code>pipeline/runner.py:991</code> — the whole block is guarded). The swap-banding two-pass runs only when <code>_swap_banding_requested(config)</code> is true (<code>pipeline/runner.py:745</code>, <code>:889</code>); when it does, the spine’s five reported stages expand to eight (<code>load, scout, band_plan, prepare, lut, gamut, solve, stats</code> — the phase plan is selected at <code>pipeline/runner.py:748-795</code>). There is no post-solve grouping stage.</li>
+</ul>
+<h3 id="observation-vs-solve-grid">Observation vs solve grid<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#observation-vs-solve-grid" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>The runner is the single owner of target-cloud computation (<code>compute_solve_target_cloud</code>, <code>pipeline/runner.py:1034-1037</code>). <code>observed_target_oklab</code> lives on the observation grid (<code>image_sample_pitch_mm</code>); <code>solve_target_oklab</code> is projected onto the solve grid (<code>solver_fine_pitch_mm</code>) and is what the solve path and dE recomputation both consume. The white-point rescale (<code>_apply_target_white_rescale</code>, reassign at <code>pipeline/runner.py:224</code>) and the gamut map (<code>_apply_target_gamut_mapping</code>, reassign at <code>:307</code>) rewrite <code>solve_target_oklab</code> in place, so it is not necessarily the original projection array.</p>
+<h3 id="progress-reporting">Progress reporting<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#progress-reporting" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>Progress is delegated to the <a href="../../../prisma-lithophane-generator/technical-reference/architecture/generator.progress" class="internal internal-link" data-slug="prisma-lithophane-generator/technical-reference/architecture/generator.progress">generator.progress</a> module — the old facade-level <code>_ProgressTracker</code> class is gone. <code>run_pipeline</code> calls <code>coerce_progress_reporter(progress, stage_count=…)</code> (<code>pipeline/runner.py:749</code>; a plain callback, an existing <code>ProgressReporter</code>, or <code>None</code> all coerce cleanly) and then carves per-stage child reporters through a local <code>_phase(key, label)</code> helper (<code>pipeline/runner.py:797</code>). Each stage’s <code>emit(...)</code> sends a dict with <code>stage</code>, <code>stage_index</code>, <code>stage_count</code>, <code>overall_pct</code>, <code>elapsed_s</code>, and palette index/count; the reporter enforces monotonic overall progress and cooperative cancellation checkpoints. No callback ⇒ the reporter is <code>None</code> and nothing is emitted. The per-run phase weights (5-stage vs 8-stage swap-banding, and the photo-stack variants) are the <code>phase_specs</code> tables at <code>pipeline/runner.py:756-795</code>.</p>
+<hr/>
+<h2 id="the-module-plugin-contract-pipelinebasepy">The module plugin contract (<code>pipeline/base.py</code>)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#the-module-plugin-contract-pipelinebasepy" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>One abstract base class defines what a pluggable module is: <code>PreprocessingModule</code>. (The old <code>GroupingModule</code> ABC was deleted along with the pluggable grouping slot.) It is an ABC with one abstract method and a <code>describe()</code> that serializes the module for the UI.</p>
+<h3 id="preprocessingmodule-f1"><code>PreprocessingModule</code> (F1)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#preprocessingmodule-f1" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><code>pipeline/base.py:72</code>. An image preprocessing operator. Class attributes the slot runner reads:</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>Attribute</th><th>Meaning</th><th>Anchor</th></tr></thead><tbody><tr><td><code>name</code>, <code>description</code></td><td>identity / UI text</td><td><code>pipeline/base.py:87-88</code></td></tr><tr><td><code>params: Dict[str, ParamDef]</code></td><td>self-described tunables</td><td><code>pipeline/base.py:89</code></td></tr><tr><td><code>default_enabled: bool</code></td><td>default on/off</td><td><code>pipeline/base.py:90</code></td></tr><tr><td><code>input_domain</code> / <code>output_domain</code> (<code>ColorDomain</code>)</td><td>color-domain contract; the slot runner inserts conversions between adjacent operators whose domains differ</td><td><code>pipeline/base.py:91-92</code></td></tr><tr><td><code>order: float</code></td><td>position in the chain; conventional bands Wing A 100–199, B 200–299, C 300–399, D 400–499; ties resolve by lex import path</td><td><code>pipeline/base.py:93</code></td></tr><tr><td><code>required_context: FrozenSet[ContextKey]</code></td><td>optional shared services (e.g. palette metadata) the runner resolves before <code>apply()</code></td><td><code>pipeline/base.py:94</code></td></tr></tbody></table></div>
+<p>(There is no longer a <code>supports_protect_mask</code> attribute — the subject-protect-mask feature was removed.)</p>
+<p>Abstract method: <code>apply(image, *, context, progress) -> PreprocessingResult</code> (<code>pipeline/base.py:96</code>). The live operators all live under <code>preprocessing/operators/</code> and self-register — e.g. <code>a1_bilateral_denoise</code>, <code>b1_printscale_bilateral</code>, <code>b3_tv_flatten</code>, <code>c1_achievable_tonemap</code>, <code>c2_soft_gamut_compress</code> (each <code>@register_preprocessing</code> at e.g. <code>preprocessing/operators/a1_bilateral_denoise.py:35</code>). See generator.preprocessing.</p>
+<h3 id="swap-grouping-is-no-longer-a-module">Swap grouping is no longer a module<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#swap-grouping-is-no-longer-a-module" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>There is no <code>GroupingModule</code> base class, no <code>greedy_optimize</code>/<code>group_budget</code> implementations, and no grouping entry in the registry. AMS swap grouping is now the built-in <strong>two-pass swap-banding path</strong> run directly by <code>run_pipeline</code> (scout solve → <code>choose_band_plan</code> from <code>grouping/band_plan.py</code> → <code>state.swap_grouping</code>), engaged purely on AMS overflow. It is not toggled and not registered. The full mechanism is documented in <a href="../../../prisma-lithophane-generator/technical-reference/output/ams-grouping-and-swap-planning" class="internal internal-link alias" data-slug="prisma-lithophane-generator/technical-reference/output/ams-grouping-and-swap-planning">AMS grouping and swap planning</a>.</p>
+<blockquote>
+<p>Worth knowing: <code>pipeline/__init__.py</code> re-exports <code>ParamDef</code>, <code>ProgressCallback</code>, the state classes/presets, and <code>run_pipeline</code> / <code>revalidate</code> (<code>pipeline/__init__.py:2-17</code>) — but <strong>not</strong> <code>PreprocessingModule</code> or the preprocessing registry helpers. Preprocessing operators import the registry decorator directly from <code>pipeline.registry</code>.</p>
+</blockquote>
+<h3 id="paramdef--parameter-self-description"><code>ParamDef</code> — parameter self-description<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#paramdef--parameter-self-description" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><code>pipeline/base.py:24</code>. A dataclass that lets a module describe one tunable to both the solver and the frontend renderer in one place. Core fields: <code>name</code>, <code>label</code>, <code>type</code> (<code>&quot;int&quot; | &quot;float&quot; | &quot;bool&quot; | &quot;choice&quot; | &quot;html&quot; | &quot;computed_text&quot;</code>), <code>default</code>, plus <code>choices</code>/<code>choice_labels</code>/<code>min</code>/<code>max</code>/<code>description</code>. UI-only fields: <code>unit</code>, <code>tooltip</code>, <code>group</code>, <code>show_when</code> (conditional visibility keyed on another param’s value), and <code>order</code> (<code>pipeline/base.py:40-44</code>). <code>to_dict()</code> (<code>pipeline/base.py:46</code>) emits the JSON the API/UI consumes, omitting <code>None</code>-valued optional keys. This is why the Modules panel can render parameter forms without any hand-written per-module frontend code.</p>
+<hr/>
+<h2 id="registry-and-auto-discovery-pipelineregistrypy">Registry and auto-discovery (<code>pipeline/registry.py</code>)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#registry-and-auto-discovery-pipelineregistrypy" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>The registry is now a single module-level dict — <code>_PREPROCESSORS</code> (<code>pipeline/registry.py:12</code>) — populated by a class decorator at import time. <code>@register_preprocessing</code> (<code>pipeline/registry.py:106</code>) stores <code>cls</code> under <code>cls.name</code> and adds its name to <code>PREPROCESSING_MODULE_IDS</code>. (The grouping registry — <code>_GROUPINGS</code>, <code>register_grouping</code>, the hand-listed <code>_KNOWN_GROUPING_*</code> sets — was removed with the grouping slot.)</p>
+<p><strong>Preprocessing discovery is filesystem-driven.</strong> <code>_discover_preprocessing_operators</code> (<code>pipeline/registry.py:23</code>) walks <code>preprocessing.operators</code> with <code>pkgutil.iter_modules</code>, imports every public (non-<code>_</code>, non-package) submodule in <strong>lex-sorted order</strong> (<code>pipeline/registry.py:42-52</code>), and that import position becomes each operator’s <code>order</code> tiebreaker. An empty <code>operators/</code> package is legal — the slot becomes a no-op (<code>pipeline/registry.py:30</code>). Discovery runs once per process: <code>_ensure_preprocessing_populated</code> (<code>pipeline/registry.py:88</code>) re-discovers only when <code>_PREPROCESSORS</code> is empty, and <code>_ensure_registry_populated</code> (<code>pipeline/registry.py:101</code>) is its only wrapper.</p>
+<p>Public accessors all call <code>_ensure_registry_populated</code> first: <code>get_preprocessing</code> (<code>pipeline/registry.py:115</code>), <code>list_preprocessings</code> (<code>:120</code>), and <code>list_all_modules</code> (<code>pipeline/registry.py:131</code>) which instantiates each class via <code>cls.__new__</code> and returns its <code>describe()</code> dict. <code>_clear_registry</code> (<code>pipeline/registry.py:125</code>) is testing-only.</p>
+<hr/>
+<h2 id="module-onoff-persistence-pipelinemodulespy">Module on/off persistence (<code>pipeline/modules.py</code>)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#module-onoff-persistence-pipelinemodulespy" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p><code>pipeline/modules.py</code> reads and writes the JSON file of <code>{module_name: enabled}</code> flags. This is fully live — the generator server wires every endpoint to it. It now handles preprocessing operators only.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>Function</th><th>Behavior</th><th>Anchor</th></tr></thead><tbody><tr><td><code>load_module_state(path)</code></td><td>read JSON, fill missing keys with defaults, normalize</td><td><code>pipeline/modules.py:38</code></td></tr><tr><td><code>save_module_state(path, state)</code></td><td>normalize then write</td><td><code>pipeline/modules.py:47</code></td></tr><tr><td><code>toggle_module(path, id, enabled)</code></td><td>flip one flag, validate the id against <code>_PREPROCESSORS</code>, normalize, persist, return full state</td><td><code>pipeline/modules.py:55</code></td></tr></tbody></table></div>
+<p>One normalization rule remains, since preprocessing is the only slot:</p>
+<ul>
+<li><strong>Preprocessing is non-exclusive.</strong> <code>_normalize_module_state</code> (<code>pipeline/modules.py:14</code>) fills defaults for every registered operator and drops retired keys; <code>_get_all_defaults</code> (<code>pipeline/modules.py:24</code>) collects each module’s <code>default_enabled</code>. Operators each contribute independently and several may be on at once. The zero-enabled case is a legal no-op. (The old grouping-exclusivity rule, <code>_normalize_grouping_slot</code>, was removed.)</li>
+</ul>
+<p>The server side (all reading <code>_MODULES_PATH</code>): the modules-list endpoint (<code>server.py:2884-2886</code>), the toggle endpoint calling <code>toggle_module</code> (<code>server.py:2895-2901</code>), a bulk save calling <code>save_module_state</code> (<code>server.py:2912</code>), and several solve paths that snapshot <code>load_module_state</code> into the run record (e.g. <code>server.py:2063</code>, <code>:2141</code>, <code>:2170</code>). The facade’s <code>_load_module_state</code> (<code>facade.py:425</code>) is the resolver-side reader that feeds <code>_resolve_pipeline_slots</code> (<code>facade.py:475</code>), turning the flag dict into the resolved <code>preprocessors</code> chain for <code>PipelineConfig</code>.</p>
+<hr/>
+<h2 id="dormant-and-test-only-seams">Dormant and test-only seams<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#dormant-and-test-only-seams" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>Two seams in this package are wired but not exercised by the production webapp solve. Both confirmed by grepping callers.</p>
+<h3 id="revalidate--a-testcompatibility-seam-with-no-production-caller"><code>revalidate()</code> — a test/compatibility seam with no production caller<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#revalidate--a-testcompatibility-seam-with-no-production-caller" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><code>revalidate(state)</code> (<code>pipeline/runner.py:447</code>) recomputes <code>__de__</code> from the current thickness maps against the solve-grid target, writing straight into <code>state.diagnostics['__de__']</code> (no longer touches <code>thickness_maps</code>). It is a thin wrapper over <code>_recompute_de_diagnostics</code> (<code>pipeline/runner.py:327</code>), which it calls at <code>pipeline/runner.py:453</code>.</p>
+<p>Liveness: <code>run_pipeline</code> never calls the wrapper. The production solve path calls <code>_recompute_de_diagnostics</code> <strong>directly</strong> during staged finalisation (<code>pipeline/runner.py:726</code>). With the pluggable grouping slot deleted there is no post-grouping dE branch left — <code>config.grouping</code> no longer exists, so the old “revalidate after a grouping substitution” path is gone. The public <code>revalidate</code> symbol is still re-exported (<code>pipeline/__init__.py:7</code>) but its only callers are the test suite. Historically it was the post-refinement dE hook for the long-removed refinements slot. <strong>Status: test/compatibility seam; no production caller.</strong></p>
+<h3 id="snapshotpy--snapshotpublisher--one-live-hook-one-dormant-field"><code>snapshot.py</code> / <code>SnapshotPublisher</code> — one live hook, one dormant field<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#snapshotpy--snapshotpublisher--one-live-hook-one-dormant-field" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><code>SnapshotPublisher</code> (<code>pipeline/snapshot.py:27</code>) writes preprocessed source-image preview PNGs and their URLs into a shared progress dict via <code>publish_image_preview</code> (<code>pipeline/snapshot.py:47</code>). Liveness, two halves:</p>
+<ul>
+<li><strong>The preview hook is live but only reachable via a dormant facade entry point.</strong> <code>publish_image_preview</code> is called by the preprocessing runner per enabled operator (<code>preprocessing/runner.py:281</code>), which receives the publisher as a direct parameter (<code>preprocessing/runner.py:216</code>, threaded from <code>pipeline/runner.py:780</code>). A publisher reaches <code>run_pipeline</code> only through <code>facade.solve_preview_progressive(..., publisher=...)</code> (<code>facade.py:849</code>, forwarded into the run at <code>:886</code>). That facade function has <strong>no production caller</strong> — grep finds only its own definition (<code>facade.py:849</code>); the production webapp uses <code>solve_full</code> (<code>server.py:4961</code>), which never passes a publisher. Its own docstring marks it “currently dormant in production, exercised by the preprocessing preview tests” (<code>facade.py:860-864</code>).</li>
+<li><strong>The <code>state.snapshot_publisher</code> field is write-only and dead.</strong> The runner assigns it (<code>pipeline/runner.py:1220</code>) but <strong>nothing reads it back</strong> — grepping <code>.snapshot_publisher</code> across <code>Prisma/</code> finds only that single write. The live preview path threads its publisher as a function parameter, not via this field. The progressive-<em>solve</em> snapshot emitter (<code>maybe_publish</code>) was removed in the Stage 3 cleanup; the field’s docstring at <code>pipeline/state.py:282-285</code> is code-true about this. A standing removal candidate is documented in <code>Prisma/generator/docs/legacy_audit/12_WEBAPP_DEAD_BACKEND_CANDIDATES_REMOVAL_PLAN.md</code>. <strong>Status: <code>publish_image_preview</code> hook = live but production-dormant (test-only entry); <code>state.snapshot_publisher</code> field = dead (write-only).</strong></li>
+</ul>
+<hr/>
+<h2 id="see-also">See also<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#see-also" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>generation_pipeline — end-to-end narrative of a solve</li>
+<li><a href="../../../prisma-lithophane-generator/technical-reference/architecture/generator.facade" class="internal internal-link" data-slug="prisma-lithophane-generator/technical-reference/architecture/generator.facade">generator.facade</a> — <code>solve_full</code> / <code>solve_compare</code> and slot resolution</li>
+<li><a href="../../../prisma-lithophane-generator/technical-reference/architecture/generator.pipeline.staged_runner" class="internal internal-link" data-slug="prisma-lithophane-generator/technical-reference/architecture/generator.pipeline.staged_runner">generator.pipeline.staged_runner</a> — the staged solve engine (<code>run_staged_backend_path</code>)</li>
+<li>generator.preprocessing — the F1 operator chain and color-domain conversions</li>
+<li>Module management and settings — the UI over <code>modules.json</code></li>
+<li><a href="../../../prisma-lithophane-generator/how-it-works/target-colors/model-domain-ingress" class="internal internal-link alias" data-slug="prisma-lithophane-generator/how-it-works/target-colors/model-domain-ingress">Model-domain ingress</a> — model-domain vs display-domain truth sources</li>
+</ul></div></article><hr/><div class="page-footer"></div></div><div class="right sidebar"><div class="toc"><button type="button" class="toc-header" aria-controls="toc-243" aria-expanded="true"><h3>Table of Contents</h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><ul id="list-0" class="toc-content overflow"><li class="depth-0"><a href="#how-to-drive-it-users" data-for="how-to-drive-it-users">How to drive it (users)</a></li><li class="depth-0"><a href="#the-shared-carriers-pipelinestatepy" data-for="the-shared-carriers-pipelinestatepy">The shared carriers (pipeline/state.py)</a></li><li class="depth-1"><a href="#pipelinestate--the-bag-of-solve-state" data-for="pipelinestate--the-bag-of-solve-state">PipelineState — the bag of solve state</a></li><li class="depth-1"><a href="#pipelineconfig--the-frozen-request" data-for="pipelineconfig--the-frozen-request">PipelineConfig — the frozen request</a></li><li class="depth-1"><a href="#profileset-and-qualitypreset" data-for="profileset-and-qualitypreset">ProfileSet and QualityPreset</a></li><li class="depth-0"><a href="#the-orchestrator-fixed-spine-plus-two-slots-pipelinerunnerpy" data-for="the-orchestrator-fixed-spine-plus-two-slots-pipelinerunnerpy">The orchestrator: fixed spine plus two slots (pipeline/runner.py)</a></li><li class="depth-1"><a href="#observation-vs-solve-grid" data-for="observation-vs-solve-grid">Observation vs solve grid</a></li><li class="depth-1"><a href="#progress-reporting" data-for="progress-reporting">Progress reporting</a></li><li class="depth-0"><a href="#the-module-plugin-contract-pipelinebasepy" data-for="the-module-plugin-contract-pipelinebasepy">The module plugin contract (pipeline/base.py)</a></li><li class="depth-1"><a href="#preprocessingmodule-f1" data-for="preprocessingmodule-f1">PreprocessingModule (F1)</a></li><li class="depth-1"><a href="#swap-grouping-is-no-longer-a-module" data-for="swap-grouping-is-no-longer-a-module">Swap grouping is no longer a module</a></li><li class="depth-1"><a href="#paramdef--parameter-self-description" data-for="paramdef--parameter-self-description">ParamDef — parameter self-description</a></li><li class="depth-0"><a href="#registry-and-auto-discovery-pipelineregistrypy" data-for="registry-and-auto-discovery-pipelineregistrypy">Registry and auto-discovery (pipeline/registry.py)</a></li><li class="depth-0"><a href="#module-onoff-persistence-pipelinemodulespy" data-for="module-onoff-persistence-pipelinemodulespy">Module on/off persistence (pipeline/modules.py)</a></li><li class="depth-0"><a href="#dormant-and-test-only-seams" data-for="dormant-and-test-only-seams">Dormant and test-only seams</a></li><li class="depth-1"><a href="#revalidate--a-testcompatibility-seam-with-no-production-caller" data-for="revalidate--a-testcompatibility-seam-with-no-production-caller">revalidate() — a test/compatibility seam with no production caller</a></li><li class="depth-1"><a href="#snapshotpy--snapshotpublisher--one-live-hook-one-dormant-field" data-for="snapshotpy--snapshotpublisher--one-live-hook-one-dormant-field">snapshot.py / SnapshotPublisher — one live hook, one dormant field</a></li><li class="depth-0"><a href="#see-also" data-for="see-also">See also</a></li><li class="overflow-end"></li></ul></div><div class="backlinks"><h3>Backlinks</h3><ul id="list-0" class="overflow"><li><a href="../../../prisma-lithophane-generator/technical-reference/color/model-domain-ingress-and-display-conversion" class="internal">Model-domain ingress and display conversion</a></li><li><a href="../../../prisma-lithophane-generator/technical-reference/output/color-region-geometry-(dormant)" class="internal">Color-region geometry (dormant)</a></li><li><a href="../../../prisma-lithophane-generator/technical-reference/solver/the-joint-lut-building-and-querying" class="internal">The Joint LUT building and querying</a></li><li><a href="../../../prisma-lithophane-generator/technical-reference/" class="internal">Technical Reference</a></li><li class="overflow-end"></li></ul></div></div><footer class><p>Created with <a href="https://quartz.jzhao.xyz/">Quartz v5.0.0</a> © 2026</p><ul><li><a href="https://github.com/jackyzha0/quartz">GitHub</a></li><li><a href="https://discord.gg/cRFFHYye7t">Discord Community</a></li></ul></footer></div></div></body><script src="../../../static/resource-after-e13fffa1.js" type="application/javascript" data-persist="true"></script><script src="../../../static/resource-after-8b336f9a.js" type="application/javascript" data-persist="true"></script><script src="../../../static/resource-after-baba652b.js" type="application/javascript" data-persist="true"></script><script src="../../../static/resource-after-5eb75950.js" type="module" data-persist="true"></script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/copy-tex.min.js" type="application/javascript" data-persist="true"></script><script src="../../../postscript-64271ee0.js" type="module" data-persist="true"></script></html>

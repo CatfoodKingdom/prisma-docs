@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 430" width="960" height="430" role="img" aria-labelledby="title desc">
+  <title id="title">From accepted measurements to published calibration models</title>
+  <desc id="desc">Accepted measurements enter Modeling. Sample exclusion, swatch exclusion, and filament exclusion determine the included evidence. Fit Models consumes that included evidence and publishes Color Model v1, Color Model v2, and the Camera Transform when needed.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 Z" class="arrow-fill"/></marker>
+    <style>
+      :root { --surface:#f8fafc; --surface-2:#e8edf3; --text:#1f2937; --muted:#52606d; --line:#6b7a8a; --grid:#c8d0d9; --cyan:#35a9c8; --magenta:#d65b88; --yellow:#e8bc3d; --green:#58a978; --violet:#7868b5; }
+      @media (prefers-color-scheme:dark) { :root { --surface:#151a22; --surface-2:#252d38; --text:#edf2f7; --muted:#b3bfcc; --line:#9aa8b7; --grid:#3c4653; --cyan:#43b8d7; --magenta:#e16c99; --yellow:#f0ca51; --green:#6fbd8d; --violet:#9386ca; } }
+      text { font-family:system-ui,-apple-system,"Segoe UI",sans-serif; fill:var(--text); letter-spacing:0; }
+      .heading { font-size:19px; font-weight:600; } .label { font-size:15px; font-weight:600; } .note { font-size:14px; fill:var(--muted); } .tiny { font-size:13px; fill:var(--muted); }
+      .panel { fill:var(--surface-2); stroke:var(--grid); stroke-width:1.5; } .item { fill:var(--surface); stroke:var(--grid); stroke-width:1.5; }
+      .connector { fill:none; stroke:var(--line); stroke-width:2; marker-end:url(#arrow); } .active { fill:none; stroke:var(--cyan); stroke-width:2.5; marker-end:url(#arrow); }
+      .blocked { fill:none; stroke:var(--magenta); stroke-width:2; stroke-dasharray:6 4; } .arrow-fill { fill:var(--line); }
+    </style>
+  </defs>
+  <rect x="1" y="1" width="958" height="428" rx="8" fill="var(--surface)" stroke="var(--grid)"/>
+  <text x="480" y="38" text-anchor="middle" class="heading">Modeling selects the evidence used by Fit Models</text>
+  <text x="480" y="62" text-anchor="middle" class="note">exclusion changes participation; it does not delete measurements</text>
+
+  <g transform="translate(32 99)">
+    <rect width="190" height="230" rx="5" class="panel"/>
+    <text x="95" y="27" text-anchor="middle" class="heading">Accepted</text>
+    <text x="95" y="48" text-anchor="middle" class="heading">measurements</text>
+    <g transform="translate(20 57)">
+      <rect width="150" height="42" rx="4" class="item"/><text x="75" y="26" text-anchor="middle" class="label">Sample A</text>
+      <rect y="53" width="150" height="42" rx="4" class="item"/><text x="75" y="79" text-anchor="middle" class="label">Sample B</text>
+      <rect y="106" width="150" height="42" rx="4" class="item"/><text x="75" y="132" text-anchor="middle" class="label">Sample C</text>
+    </g>
+    <text x="95" y="218" text-anchor="middle" class="tiny">canonical measurements</text>
+  </g>
+
+  <path d="M222 214 H278" class="connector"/>
+  <g transform="translate(286 91)">
+    <rect width="220" height="246" rx="5" class="panel"/>
+    <text x="110" y="31" text-anchor="middle" class="heading">Fit inclusion controls</text>
+    <g transform="translate(20 59)">
+      <rect width="180" height="45" rx="4" class="item"/><circle cx="22" cy="22" r="8" fill="var(--magenta)"/><text x="40" y="27" class="label">Exclude Sample</text>
+      <rect y="57" width="180" height="45" rx="4" class="item"/><circle cx="22" cy="79" r="8" fill="var(--yellow)"/><text x="40" y="84" class="label">Swatch Exclusion</text>
+      <rect y="114" width="180" height="45" rx="4" class="item"/><circle cx="22" cy="136" r="8" fill="var(--violet)"/><text x="40" y="132" class="label">Exclude from</text><text x="40" y="149" class="label">model fits</text>
+    </g>
+    <text x="110" y="229" text-anchor="middle" class="tiny">sample · swatch · filament</text>
+  </g>
+
+  <path d="M506 214 H562" class="active"/>
+  <g transform="translate(570 130)">
+    <rect width="166" height="168" rx="5" fill="var(--surface-2)" stroke="var(--cyan)" stroke-width="2.5"/>
+    <text x="83" y="34" text-anchor="middle" class="heading">Included evidence</text>
+    <g transform="translate(22 60)">
+      <rect width="24" height="42" fill="var(--cyan)" fill-opacity=".4"/><rect x="24" width="24" height="42" fill="var(--cyan)" fill-opacity=".55"/><rect x="48" width="24" height="42" fill="var(--cyan)" fill-opacity=".7"/><rect x="72" width="24" height="42" fill="var(--cyan)" fill-opacity=".85"/><rect x="96" width="24" height="42" fill="var(--cyan)"/>
+    </g>
+    <text x="83" y="132" text-anchor="middle" class="note">what the next fit uses</text>
+  </g>
+
+  <path d="M736 214 H765 V126 H786" class="active"/>
+  <g transform="translate(794 94)">
+    <rect width="134" height="64" rx="5" fill="var(--cyan)" fill-opacity=".2" stroke="var(--cyan)" stroke-width="2"/>
+    <text x="67" y="38" text-anchor="middle" class="label">Fit Models</text>
+    <path d="M67 64 V92" class="connector"/>
+    <rect y="98" width="134" height="46" rx="4" class="item"/><text x="67" y="126" text-anchor="middle" class="label">Color Model v1</text>
+    <rect y="154" width="134" height="46" rx="4" class="item"/><text x="67" y="182" text-anchor="middle" class="label">Color Model v2</text>
+    <rect y="210" width="134" height="46" rx="4" class="item"/><text x="67" y="229" text-anchor="middle" class="label">Camera Transform</text><text x="67" y="246" text-anchor="middle" class="tiny">when needed</text>
+  </g>
+
+  <path d="M396 337 V378 H655 V306" class="blocked"/>
+  <text x="520" y="400" text-anchor="middle" class="note">excluded evidence remains stored and can be included again</text>
+</svg>

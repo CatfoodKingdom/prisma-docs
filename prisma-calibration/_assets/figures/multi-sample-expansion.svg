@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 500" width="960" height="500" role="img" aria-labelledby="title desc">
+  <title id="title">A Multi shared slot expands a Geometry Bundle into sample records</title>
+  <desc id="desc">An example Geometry Bundle contains three geometries. Shared Filament A is set to Multi with three selected filaments while the other shared slot remains Single. The preview expands every selected filament across every geometry, producing a three-by-three matrix of nine separate sample records. In general the result is G times N samples.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 Z" class="arrow-fill"/></marker>
+    <style>
+      :root { --surface:#f8fafc; --surface-2:#e8edf3; --text:#1f2937; --muted:#52606d; --line:#6b7a8a; --grid:#c8d0d9; --cyan:#35a9c8; --magenta:#d65b88; --yellow:#e8bc3d; --green:#58a978; --violet:#7868b5; }
+      @media (prefers-color-scheme:dark) { :root { --surface:#151a22; --surface-2:#252d38; --text:#edf2f7; --muted:#b3bfcc; --line:#9aa8b7; --grid:#3c4653; --cyan:#43b8d7; --magenta:#e16c99; --yellow:#f0ca51; --green:#6fbd8d; --violet:#9386ca; } }
+      text { font-family:system-ui,-apple-system,"Segoe UI",sans-serif; fill:var(--text); letter-spacing:0; }
+      .heading { font-size:19px; font-weight:600; } .label { font-size:15px; font-weight:600; } .note { font-size:14px; fill:var(--muted); } .tiny { font-size:12px; fill:var(--muted); }
+      .panel { fill:var(--surface-2); stroke:var(--grid); stroke-width:1.5; } .item { fill:var(--surface); stroke:var(--grid); stroke-width:1.5; }
+      .strip { stroke:var(--line); stroke-width:1.5; stroke-linejoin:round; } .connector { fill:none; stroke:var(--line); stroke-width:2; marker-end:url(#arrow); } .arrow-fill { fill:var(--line); }
+    </style>
+  </defs>
+  <rect x="1" y="1" width="958" height="498" rx="8" fill="var(--surface)" stroke="var(--grid)"/>
+  <text x="480" y="38" text-anchor="middle" class="heading">Multi applies every selected filament to every source geometry</text>
+  <text x="480" y="62" text-anchor="middle" class="note">example shown: three geometries × three Multi filaments = nine sample records</text>
+
+  <g transform="translate(30 91)">
+    <rect width="228" height="326" rx="5" class="panel"/>
+    <text x="114" y="31" text-anchor="middle" class="heading">Geometry Bundle</text>
+    <text x="114" y="53" text-anchor="middle" class="note">G member geometries</text>
+    <g transform="translate(24 78)">
+      <rect width="180" height="57" rx="4" class="item"/><path d="M16 37 V28 H46 V24 H76 V20 H106 V16 H136 V37 Z" fill="var(--cyan)" class="strip"/><text x="152" y="31" class="tiny">G1</text>
+      <rect y="70" width="180" height="57" rx="4" class="item"/><rect x="16" y="107" width="120" height="12" fill="var(--yellow)" class="strip"/><path d="M16 107 V98 H46 V94 H76 V90 H106 V86 H136 V107 Z" fill="var(--cyan)" class="strip"/><text x="152" y="101" class="tiny">G2</text>
+      <rect y="140" width="180" height="57" rx="4" class="item"/><rect x="16" y="177" width="120" height="12" fill="var(--yellow)" class="strip"/><path d="M16 177 V168 H46 V164 H76 V160 H106 V156 H136 V177 Z" fill="var(--cyan)" class="strip"/><rect x="16" y="150" width="120" height="10" fill="var(--green)" class="strip"/><text x="152" y="171" class="tiny">G3</text>
+    </g>
+    <text x="114" y="302" text-anchor="middle" class="tiny">each remains a separate geometry</text>
+  </g>
+
+  <g transform="translate(292 91)">
+    <rect width="230" height="326" rx="5" class="panel"/>
+    <text x="115" y="31" text-anchor="middle" class="heading">Shared Filament A</text>
+    <text x="115" y="54" text-anchor="middle" class="label">Multi</text>
+    <g transform="translate(25 77)">
+      <rect width="180" height="48" rx="4" class="item"/><rect x="12" y="11" width="26" height="26" rx="3" fill="var(--magenta)"/><text x="51" y="30" class="label">Filament 1</text>
+      <rect y="60" width="180" height="48" rx="4" class="item"/><rect x="12" y="71" width="26" height="26" rx="3" fill="var(--cyan)"/><text x="51" y="90" class="label">Filament 2</text>
+      <rect y="120" width="180" height="48" rx="4" class="item"/><rect x="12" y="131" width="26" height="26" rx="3" fill="var(--violet)"/><text x="51" y="150" class="label">Filament 3</text>
+      <rect y="195" width="180" height="48" rx="4" fill="var(--surface)" stroke="var(--yellow)" stroke-width="2"/><text x="90" y="216" text-anchor="middle" class="tiny">other shared slots</text><text x="90" y="234" text-anchor="middle" class="label">Single</text>
+    </g>
+  </g>
+
+  <path d="M258 254 H284" class="connector"/><path d="M522 254 H558" class="connector"/>
+
+  <g transform="translate(566 82)">
+    <rect width="364" height="346" rx="5" class="panel"/>
+    <text x="182" y="31" text-anchor="middle" class="heading">Sample Preview</text>
+    <text x="182" y="53" text-anchor="middle" class="note">one record per geometry-and-filament pair</text>
+    <g transform="translate(25 79)">
+      <text x="71" y="0" text-anchor="middle" class="tiny">Filament 1</text><text x="169" y="0" text-anchor="middle" class="tiny">Filament 2</text><text x="267" y="0" text-anchor="middle" class="tiny">Filament 3</text>
+      <text x="0" y="45" class="tiny">G1</text><text x="0" y="123" class="tiny">G2</text><text x="0" y="201" class="tiny">G3</text>
+      <g fill="var(--surface)" stroke="var(--grid)">
+        <rect x="28" y="17" width="84" height="58" rx="4"/><rect x="126" y="17" width="84" height="58" rx="4"/><rect x="224" y="17" width="84" height="58" rx="4"/>
+        <rect x="28" y="95" width="84" height="58" rx="4"/><rect x="126" y="95" width="84" height="58" rx="4"/><rect x="224" y="95" width="84" height="58" rx="4"/>
+        <rect x="28" y="173" width="84" height="58" rx="4"/><rect x="126" y="173" width="84" height="58" rx="4"/><rect x="224" y="173" width="84" height="58" rx="4"/>
+      </g>
+      <g class="tiny" text-anchor="middle">
+        <text x="70" y="43">sample</text><text x="70" y="61">G1 + F1</text><text x="168" y="43">sample</text><text x="168" y="61">G1 + F2</text><text x="266" y="43">sample</text><text x="266" y="61">G1 + F3</text>
+        <text x="70" y="121">sample</text><text x="70" y="139">G2 + F1</text><text x="168" y="121">sample</text><text x="168" y="139">G2 + F2</text><text x="266" y="121">sample</text><text x="266" y="139">G2 + F3</text>
+        <text x="70" y="199">sample</text><text x="70" y="217">G3 + F1</text><text x="168" y="199">sample</text><text x="168" y="217">G3 + F2</text><text x="266" y="199">sample</text><text x="266" y="217">G3 + F3</text>
+      </g>
+      <text x="168" y="252" text-anchor="middle" class="label">G × N sample records</text>
+    </g>
+  </g>
+  <text x="480" y="474" text-anchor="middle" class="note">Only one role or shared slot can be Multi in a sample set.</text>
+</svg>

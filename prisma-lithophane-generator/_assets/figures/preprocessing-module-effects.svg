@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 610" width="960" height="610" role="img" aria-labelledby="title desc">
+  <title id="title">Effects of the five preprocessing modules</title>
+  <desc id="desc">Noise Reduction removes small color fluctuations while preserving an edge. Print-Scale Smoothing removes features below printable scale. Flat-Area Smoothing turns gradual texture into broad flat areas. Palette Tone Fit moves shadows and highlights into the printable tonal range. Palette Saturation Fit pulls over-vivid colors inward toward the palette's reachable saturation while preserving hue.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 Z" class="arrow-fill"/></marker>
+    <linearGradient id="tone-wide" x1="0" x2="1"><stop offset="0" stop-color="#111820"/><stop offset=".5" stop-color="#71808c"/><stop offset="1" stop-color="#ffffff"/></linearGradient>
+    <linearGradient id="tone-fit" x1="0" x2="1"><stop offset="0" stop-color="#34434d"/><stop offset=".5" stop-color="#788892"/><stop offset="1" stop-color="#dce3e5"/></linearGradient>
+    <linearGradient id="soft-gradient" x1="0" x2="1"><stop offset="0" stop-color="#547e97"/><stop offset=".5" stop-color="#7ba59f"/><stop offset="1" stop-color="#b1b16f"/></linearGradient>
+    <style>
+      :root { --surface:#f8fafc; --surface-2:#e8edf3; --text:#1f2937; --muted:#52606d; --line:#6b7a8a; --grid:#c8d0d9; --blue:#4a91ae; --blue-2:#75b3c9; --green:#5f8d67; --green-2:#8eaa6c; --pink:#d9538a; --violet:#7c62b1; --accept:#4d9b69; }
+      @media (prefers-color-scheme:dark) { :root { --surface:#151a22; --surface-2:#252d38; --text:#edf2f7; --muted:#b3bfcc; --line:#aab6c2; --grid:#3c4653; --blue:#56a2be; --blue-2:#7fc0d5; --green:#6fa077; --green-2:#a0ba7c; --pink:#e16d9d; --violet:#9580c6; --accept:#68b783; } }
+      text { font-family:system-ui,-apple-system,"Segoe UI",sans-serif; fill:var(--text); letter-spacing:0; }
+      .heading { font-size:18px; font-weight:600; } .note { font-size:14px; fill:var(--muted); } .tiny { font-size:13px; fill:var(--muted); }
+      .panel { fill:var(--surface-2); stroke:var(--grid); stroke-width:1.5; }
+      .sample { stroke:var(--line); stroke-width:1.4; }
+      .connector { fill:none; stroke:var(--line); stroke-width:2; marker-end:url(#arrow); } .arrow-fill { fill:var(--line); }
+    </style>
+  </defs>
+
+  <rect x="1" y="1" width="958" height="608" rx="8" fill="var(--surface)" stroke="var(--grid)"/>
+  <text x="480" y="36" text-anchor="middle" class="heading">Spatial simplification</text>
+
+  <!-- Noise reduction. -->
+  <g transform="translate(35 58)">
+    <rect width="280" height="210" rx="5" class="panel"/>
+    <text x="140" y="29" text-anchor="middle" class="heading">Noise Reduction</text>
+    <rect x="18" y="52" width="100" height="100" rx="3" fill="var(--blue-2)" class="sample"/>
+    <path d="M68 52 H118 V152 H68 Z" fill="var(--green)"/>
+    <g fill="var(--pink)" opacity=".75"><circle cx="32" cy="66" r="2"/><circle cx="43" cy="91" r="2"/><circle cx="25" cy="126" r="2"/><circle cx="57" cy="137" r="2"/><circle cx="91" cy="72" r="2"/><circle cx="105" cy="101" r="2"/><circle cx="81" cy="127" r="2"/></g>
+    <path d="M129 102 H157" class="connector"/>
+    <rect x="168" y="52" width="94" height="100" rx="3" fill="var(--blue-2)" class="sample"/>
+    <path d="M215 52 H262 V152 H215 Z" fill="var(--green)"/>
+    <circle cx="187" cy="86" r="1.5" fill="var(--pink)" opacity=".45"/>
+    <text x="140" y="181" text-anchor="middle" class="note">small fluctuations soften</text>
+    <text x="140" y="200" text-anchor="middle" class="tiny">strong color edges remain</text>
+  </g>
+
+  <!-- Print-scale smoothing. -->
+  <g transform="translate(340 58)">
+    <rect width="280" height="210" rx="5" class="panel"/>
+    <text x="140" y="29" text-anchor="middle" class="heading">Print-Scale Smoothing</text>
+    <rect x="18" y="52" width="100" height="100" rx="3" fill="var(--blue-2)" class="sample"/>
+    <path d="M31 144 V65 M44 144 V86 M57 144 V58 M70 144 V103 M83 144 V76 M96 144 V116" stroke="var(--green)" stroke-width="4"/>
+    <circle cx="106" cy="69" r="3" fill="var(--pink)"/>
+    <path d="M129 102 H157" class="connector"/>
+    <rect x="168" y="52" width="94" height="100" rx="3" fill="var(--blue-2)" class="sample"/>
+    <path d="M179 144 C183 101 195 73 208 69 C223 64 239 84 251 144 Z" fill="var(--green)"/>
+    <text x="140" y="181" text-anchor="middle" class="note">sub-print features merge or disappear</text>
+    <text x="140" y="200" text-anchor="middle" class="tiny">scale follows nozzle size and Solve Pitch</text>
+  </g>
+
+  <!-- Flat-area smoothing. -->
+  <g transform="translate(645 58)">
+    <rect width="280" height="210" rx="5" class="panel"/>
+    <text x="140" y="29" text-anchor="middle" class="heading">Flat-Area Smoothing</text>
+    <rect x="18" y="52" width="100" height="100" rx="3" fill="url(#soft-gradient)" class="sample"/>
+    <path d="M18 80 C38 68 49 92 68 80 C87 68 99 91 118 78 M18 118 C37 104 51 129 70 115 C89 102 102 126 118 113" fill="none" stroke="var(--surface)" stroke-width="3" opacity=".55"/>
+    <path d="M129 102 H157" class="connector"/>
+    <rect x="168" y="52" width="94" height="100" rx="3" fill="var(--blue)" class="sample"/>
+    <path d="M199 52 H231 V152 H199 Z" fill="var(--green)"/><path d="M231 52 H262 V152 H231 Z" fill="var(--green-2)"/>
+    <text x="140" y="181" text-anchor="middle" class="note">gradual texture becomes broad patches</text>
+    <text x="140" y="200" text-anchor="middle" class="tiny">stronger settings look more graphic</text>
+  </g>
+
+  <line x1="35" y1="300" x2="925" y2="300" stroke="var(--grid)" stroke-width="1.5"/>
+  <text x="480" y="337" text-anchor="middle" class="heading">Palette fitting</text>
+
+  <!-- Palette tone fit. -->
+  <g transform="translate(95 360)">
+    <rect width="360" height="210" rx="5" class="panel"/>
+    <text x="180" y="30" text-anchor="middle" class="heading">Palette Tone Fit</text>
+    <rect x="22" y="68" width="122" height="44" rx="3" fill="url(#tone-wide)" class="sample"/>
+    <text x="83" y="132" text-anchor="middle" class="tiny">source tones</text>
+    <path d="M153 90 H197" class="connector"/>
+    <rect x="208" y="68" width="130" height="44" rx="3" fill="url(#tone-fit)" class="sample"/>
+    <path d="M219 59 V50 H327 V59 M219 121 V130 H327 V121" fill="none" stroke="var(--accept)" stroke-width="2"/>
+    <text x="273" y="148" text-anchor="middle" class="tiny">palette's printable tonal range</text>
+    <text x="180" y="181" text-anchor="middle" class="note">shadows and highlights move into range</text>
+    <text x="180" y="200" text-anchor="middle" class="tiny">hue and saturation stay unchanged</text>
+  </g>
+
+  <!-- Palette saturation fit. -->
+  <g transform="translate(505 360)">
+    <rect width="360" height="210" rx="5" class="panel"/>
+    <text x="180" y="30" text-anchor="middle" class="heading">Palette Saturation Fit</text>
+    <circle cx="180" cy="103" r="62" fill="none" stroke="var(--grid)" stroke-width="1.5"/>
+    <path d="M180 103 L291 62" stroke="var(--pink)" stroke-width="2"/>
+    <path d="M180 103 C213 74 249 73 273 88 C288 98 295 116 288 134 C277 163 237 174 204 157 C180 145 168 123 180 103 Z" fill="var(--surface-2)" stroke="var(--accept)" stroke-width="2" stroke-dasharray="6 4"/>
+    <circle cx="291" cy="62" r="8" fill="var(--pink)"/>
+    <circle cx="259" cy="74" r="8" fill="var(--pink)" stroke="var(--surface)" stroke-width="2"/>
+    <path d="M284 67 L266 72" class="connector"/>
+    <text x="180" y="181" text-anchor="middle" class="note">over-vivid colors pull inward</text>
+    <text x="180" y="200" text-anchor="middle" class="tiny">hue and lightness stay unchanged</text>
+  </g>
+</svg>

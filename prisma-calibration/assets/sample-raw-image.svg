@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1162 772" role="img" aria-label="Simplified linear raw sample decode showing a calibration strip on a lightbox">
+  <defs>
+    <filter id="soft-shadow" x="-20%" y="-40%" width="140%" height="180%">
+      <feDropShadow dx="0" dy="4" stdDeviation="5" flood-color="#000" flood-opacity="0.35"/>
+    </filter>
+  </defs>
+  <rect width="1162" height="772" fill="#050505"/>
+  <g filter="url(#soft-shadow)">
+    <rect x="268" y="150" width="626" height="472" rx="4" fill="#191a14"/>
+    <rect x="278" y="161" width="606" height="450" rx="2" fill="#d9decf"/>
+  </g>
+  <g transform="translate(359 330)" filter="url(#soft-shadow)">
+    <rect x="0" y="0" width="444" height="13" rx="2" fill="#113447"/>
+    <rect x="0" y="0" width="12" height="112" rx="2" fill="#113447"/>
+    <rect x="432" y="0" width="12" height="112" rx="2" fill="#113447"/>
+    <rect x="12" y="13" width="70" height="99" fill="#86aeb8"/>
+    <rect x="82" y="13" width="70" height="99" fill="#709ba9"/>
+    <rect x="152" y="13" width="70" height="99" fill="#5c8798"/>
+    <rect x="222" y="13" width="70" height="99" fill="#487486"/>
+    <rect x="292" y="13" width="70" height="99" fill="#355f73"/>
+    <rect x="362" y="13" width="70" height="99" fill="#244a5f"/>
+    <path d="M82 13V112M152 13V112M222 13V112M292 13V112M362 13V112" stroke="#183a4b" stroke-opacity="0.4" stroke-width="2"/>
+  </g>
+</svg>

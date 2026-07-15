@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 410" width="960" height="410" role="img" aria-labelledby="title desc">
+  <title id="title">Transmission and appearance color domains</title>
+  <desc id="desc">Transmission is measured from linear raw photos and used by the color models. The Camera Transform maps it to camera-rendered appearance and is numerically inverted for the opposite direction. An auto-brightened preview decode is used only for strip location and display.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 Z" class="arrow-fill"/></marker>
+    <style>
+      :root { --surface:#f8fafc; --surface-2:#e8edf3; --text:#1f2937; --muted:#52606d; --line:#6b7a8a; --grid:#c8d0d9; --cyan:#35a9c8; --magenta:#d65b88; --yellow:#e8bc3d; --green:#58a978; --violet:#7868b5; --orange:#df7d45; }
+      @media (prefers-color-scheme:dark) { :root { --surface:#151a22; --surface-2:#252d38; --text:#edf2f7; --muted:#b3bfcc; --line:#9aa8b7; --grid:#3c4653; --cyan:#43b8d7; --magenta:#e16c99; --yellow:#f0ca51; --green:#6fbd8d; --violet:#9386ca; --orange:#ed9360; } }
+      text { font-family:system-ui,-apple-system,"Segoe UI",sans-serif; fill:var(--text); letter-spacing:0; }
+      .heading { font-size:20px; font-weight:600; } .label { font-size:16px; font-weight:600; } .note { font-size:15px; fill:var(--muted); } .tiny { font-size:13px; fill:var(--muted); }
+      .arrow { fill:none; stroke:var(--line); stroke-width:2; marker-end:url(#arrow); } .arrow-fill { fill:var(--line); }
+    </style>
+  </defs>
+  <rect x="1" y="1" width="958" height="408" rx="8" fill="var(--surface)" stroke="var(--grid)"/>
+
+  <text x="210" y="48" text-anchor="middle" class="heading">Transmission</text>
+  <text x="210" y="72" text-anchor="middle" class="note">physical fraction of light passed per RGB channel</text>
+  <g transform="translate(83 104)">
+    <rect x="25" y="116" width="204" height="20" fill="var(--surface-2)" stroke="var(--line)"/>
+    <rect x="58" y="88" width="138" height="28" fill="var(--yellow)"/><rect x="76" y="60" width="102" height="28" fill="var(--magenta)"/><rect x="96" y="32" width="62" height="28" fill="var(--cyan)"/>
+    <path d="M84 153 V8 M127 153 V8 M170 153 V8" stroke="var(--line)" stroke-width="2" stroke-dasharray="5 5"/>
+    <path d="M84 8 L78 19 H90 Z M127 8 L121 19 H133 Z M170 8 L164 19 H176 Z" fill="var(--line)"/>
+    <text x="84" y="173" text-anchor="middle" class="note">T<tspan baseline-shift="sub" font-size="11">R</tspan></text><text x="127" y="173" text-anchor="middle" class="note">T<tspan baseline-shift="sub" font-size="11">G</tspan></text><text x="170" y="173" text-anchor="middle" class="note">T<tspan baseline-shift="sub" font-size="11">B</tspan></text>
+  </g>
+  <text x="210" y="306" text-anchor="middle" class="label">linear raw photo</text>
+  <text x="210" y="329" text-anchor="middle" class="note">Color Model v1 and Color Model v2</text>
+  <text x="210" y="350" text-anchor="middle" class="note">fit and predict here</text>
+
+  <g>
+    <rect x="392" y="119" width="176" height="92" rx="5" fill="var(--surface-2)" stroke="var(--line)" stroke-width="2"/>
+    <text x="480" y="153" text-anchor="middle" class="heading">The Camera</text><text x="480" y="178" text-anchor="middle" class="heading">Transform</text>
+    <path d="M335 142 H382" class="arrow"/><path d="M568 142 H625" class="arrow"/><text x="358" y="128" text-anchor="middle" class="tiny">forward</text>
+    <path d="M625 189 H578" class="arrow"/><path d="M392 189 H345" class="arrow"/><text x="602" y="213" text-anchor="middle" class="tiny">numerical inverse</text>
+  </g>
+
+  <text x="750" y="48" text-anchor="middle" class="heading">Appearance</text>
+  <text x="750" y="72" text-anchor="middle" class="note">camera-rendered color</text>
+  <g transform="translate(665 112)">
+    <rect x="0" y="0" width="170" height="128" rx="5" fill="var(--surface-2)" stroke="var(--line)" stroke-width="2"/>
+    <rect x="8" y="8" width="62" height="48" fill="var(--cyan)"/><rect x="70" y="8" width="92" height="48" fill="var(--violet)"/>
+    <rect x="8" y="56" width="88" height="64" fill="var(--green)"/><rect x="96" y="56" width="66" height="64" fill="var(--orange)"/>
+    <circle cx="111" cy="63" r="18" fill="var(--magenta)" stroke="var(--surface)" stroke-width="4"/>
+  </g>
+  <text x="750" y="273" text-anchor="middle" class="label">JPEG camera rendering</text>
+  <text x="750" y="296" text-anchor="middle" class="note">source images, previews,</text><text x="750" y="317" text-anchor="middle" class="note">and human judgments live here</text>
+
+  <g>
+    <rect x="350" y="298" width="260" height="78" rx="5" fill="none" stroke="var(--line)" stroke-width="2" stroke-dasharray="7 5"/>
+    <text x="480" y="326" text-anchor="middle" class="label">Auto-brightened preview decode</text>
+    <text x="480" y="350" text-anchor="middle" class="note">strip location and on-screen swatches only</text>
+    <text x="480" y="370" text-anchor="middle" class="tiny">no model consumes it</text>
+  </g>
+</svg>

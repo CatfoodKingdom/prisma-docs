@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 470" width="960" height="470" role="img" aria-labelledby="title desc">
+  <title id="title">RAW image archive lifecycle</title>
+  <desc id="desc">The active library first creates a RAW image archive by copying raw files. After the archive is verified and stored safely, Remove Archived Images From Active Library releases only raw files represented by that archive. Restore Archived Images later copies only missing raw files from the archive back into the active library.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 Z" class="arrow-fill"/></marker>
+    <style>
+      :root { --surface:#f8fafc; --surface-2:#e8edf3; --text:#1f2937; --muted:#52606d; --line:#6b7a8a; --grid:#c8d0d9; --cyan:#35a9c8; --magenta:#d65b88; --yellow:#e8bc3d; --green:#58a978; }
+      @media (prefers-color-scheme:dark) { :root { --surface:#151a22; --surface-2:#252d38; --text:#edf2f7; --muted:#b3bfcc; --line:#9aa8b7; --grid:#3c4653; --cyan:#43b8d7; --magenta:#e16c99; --yellow:#f0ca51; --green:#6fbd8d; } }
+      text { font-family:system-ui,-apple-system,"Segoe UI",sans-serif; fill:var(--text); letter-spacing:0; }
+      .heading { font-size:19px; font-weight:600; } .label { font-size:15px; font-weight:600; } .note { font-size:14px; fill:var(--muted); } .tiny { font-size:13px; fill:var(--muted); }
+      .panel { fill:var(--surface-2); stroke:var(--grid); stroke-width:1.5; } .item { fill:var(--surface); stroke:var(--grid); stroke-width:1.5; }
+      .copy { fill:none; stroke:var(--cyan); stroke-width:2.5; marker-end:url(#arrow); } .remove { fill:none; stroke:var(--magenta); stroke-width:2.5; marker-end:url(#arrow); }
+      .restore { fill:none; stroke:var(--green); stroke-width:2.5; marker-end:url(#arrow); } .arrow-fill { fill:var(--line); }
+    </style>
+  </defs>
+  <rect x="1" y="1" width="958" height="468" rx="8" fill="var(--surface)" stroke="var(--grid)"/>
+  <text x="480" y="38" text-anchor="middle" class="heading">Archive first, release local RAW files second</text>
+  <text x="480" y="62" text-anchor="middle" class="note">the validated archive is the custody record used for removal and restoration</text>
+
+  <g transform="translate(35 150)">
+    <rect width="214" height="208" rx="5" class="panel"/>
+    <text x="107" y="31" text-anchor="middle" class="heading">Active library</text>
+    <g transform="translate(28 58)">
+      <rect width="158" height="40" rx="4" class="item"/><text x="79" y="25" text-anchor="middle" class="label">Database + artifacts</text>
+      <rect y="52" width="158" height="40" rx="4" fill="var(--surface)" stroke="var(--cyan)" stroke-width="2"/><text x="79" y="77" text-anchor="middle" class="label">RAW image files</text>
+      <rect y="104" width="158" height="40" rx="4" class="item"/><text x="79" y="129" text-anchor="middle" class="label">Derived images</text>
+    </g>
+  </g>
+
+  <path d="M249 220 C300 180 330 170 373 170" class="copy"/>
+  <text x="311" y="101" text-anchor="middle" class="label">Create RAW Image Archive</text>
+  <text x="311" y="123" text-anchor="middle" class="tiny">copies; active library unchanged</text>
+
+  <g transform="translate(373 135)">
+    <rect width="214" height="158" rx="5" fill="var(--surface-2)" stroke="var(--cyan)" stroke-width="2.5"/>
+    <text x="107" y="31" text-anchor="middle" class="heading">RAW image archive</text>
+    <path d="M55 55 H143 L160 72 V124 H55 Z" fill="var(--surface)" stroke="var(--line)" stroke-width="2"/><path d="M143 55 V72 H160" fill="none" stroke="var(--line)" stroke-width="2"/>
+    <text x="107" y="103" text-anchor="middle" class="label">validated ZIP</text>
+    <text x="107" y="142" text-anchor="middle" class="tiny">store somewhere safe</text>
+  </g>
+
+  <path d="M587 200 C641 160 680 160 717 185" class="remove"/>
+  <text x="660" y="91" text-anchor="middle" class="label">Remove Archived Images</text>
+  <text x="660" y="112" text-anchor="middle" class="label">From Active Library</text>
+  <text x="660" y="133" text-anchor="middle" class="tiny">removes only represented RAW files</text>
+
+  <g transform="translate(717 150)">
+    <rect width="208" height="208" rx="5" class="panel"/>
+    <text x="104" y="31" text-anchor="middle" class="heading">Space released</text>
+    <g transform="translate(25 58)">
+      <rect width="158" height="40" rx="4" class="item"/><text x="79" y="25" text-anchor="middle" class="label">Database + artifacts</text>
+      <rect y="52" width="158" height="40" rx="4" fill="var(--surface)" stroke="var(--magenta)" stroke-width="2" stroke-dasharray="6 4"/><text x="79" y="77" text-anchor="middle" class="label">RAW files released</text>
+      <rect y="104" width="158" height="40" rx="4" class="item"/><text x="79" y="129" text-anchor="middle" class="label">Derived images</text>
+    </g>
+  </g>
+
+  <path d="M480 293 C480 435 142 435 142 366" class="restore"/>
+  <text x="330" y="378" text-anchor="middle" class="label">Restore Archived Images</text>
+  <text x="330" y="400" text-anchor="middle" class="tiny">copies only missing RAW files back</text>
+  <text x="480" y="456" text-anchor="middle" class="note">The archive remains intact after removal and restoration.</text>
+</svg>

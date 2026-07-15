@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 560" role="img" aria-label="Side views of one, two, and three layer calibration strip structures with fixed and variable layer roles">
+  <style>
+    text { font-family: Inter, Arial, sans-serif; fill: #000; dominant-baseline: middle; }
+    .row-label { font-size: 18px; font-weight: 700; }
+    .role-label { font-size: 15px; font-weight: 550; }
+    .layer { stroke: #000; stroke-width: 1.1; vector-effect: non-scaling-stroke; }
+  </style>
+  <rect width="980" height="560" fill="#f7f7f2"/>
+  <text x="200" y="126" text-anchor="end" class="row-label">1 layer</text>
+  <g transform="translate(290 32)">
+    <path class="layer" d="M0 94 H82 V91 H164 V88 H246 V85 H328 V82 H410 V79 H492 V108 H0 Z" fill="#9b9b9b"/>
+    <text x="526" y="95" class="role-label">LR_01 (variable)</text>
+  </g>
+  <text x="200" y="281" text-anchor="end" class="row-label">2 layers</text>
+  <g transform="translate(290 176)">
+    <rect class="layer" x="0" y="110" width="492" height="18" fill="#efd0b9"/>
+    <path class="layer" d="M0 96 H82 V93 H164 V90 H246 V87 H328 V84 H410 V81 H492 V110 H0 Z" fill="#9b9b9b"/>
+    <text x="526" y="95" class="role-label">LR_02 (variable)</text>
+    <text x="526" y="119" class="role-label">LR_01 (fixed)</text>
+  </g>
+  <text x="200" y="418" text-anchor="end" class="row-label">3 layers</text>
+  <g transform="translate(290 320)">
+    <rect class="layer" x="0" y="110" width="492" height="18" fill="#d9d2ef"/>
+    <path class="layer" d="M0 96 H82 V93 H164 V90 H246 V87 H328 V84 H410 V81 H492 V110 H0 Z" fill="#9b9b9b"/>
+    <path class="layer" d="M0 82 H82 V79 H164 V76 H246 V73 H328 V70 H410 V67 H492 V81 H410 V84 H328 V87 H246 V90 H164 V93 H82 V96 H0 Z" fill="#cbe7cf"/>
+    <text x="526" y="75" class="role-label">LR_03 (fixed)</text>
+    <text x="526" y="95" class="role-label">LR_02 (variable)</text>
+    <text x="526" y="119" class="role-label">LR_01 (fixed)</text>
+  </g>
+</svg>

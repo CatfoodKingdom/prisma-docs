@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 430" width="960" height="430" role="img" aria-labelledby="title desc">
+  <title id="title">Boundary mutation</title>
+  <desc id="desc">An initial recipe boundary misses a diagonal source-image edge. Boundary pixels test the recipes immediately across the border. Connected runs move to the neighboring recipe only when the color-error improvement and boundary contact pass the configured thresholds, bringing the recipe boundary closer to the image edge.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 Z" class="arrow-fill"/></marker>
+    <style>
+      :root { --surface:#f8fafc; --surface-2:#e8edf3; --text:#1f2937; --muted:#52606d; --line:#6b7a8a; --grid:#c8d0d9; --recipe-a:#5aa9c2; --recipe-b:#e5b84a; --target:#263849; --candidate:#d95f76; --accept:#4d9b69; }
+      @media (prefers-color-scheme:dark) { :root { --surface:#151a22; --surface-2:#252d38; --text:#edf2f7; --muted:#b3bfcc; --line:#aab6c2; --grid:#3c4653; --recipe-a:#53a8c2; --recipe-b:#dbb24d; --target:#edf2f7; --candidate:#ec7890; --accept:#68b783; } }
+      text { font-family:system-ui,-apple-system,"Segoe UI",sans-serif; fill:var(--text); letter-spacing:0; }
+      .heading { font-size:18px; font-weight:600; } .note { font-size:14px; fill:var(--muted); } .tiny { font-size:13px; fill:var(--muted); }
+      .panel { fill:var(--surface-2); stroke:var(--grid); stroke-width:1.5; }
+      .target-edge { fill:none; stroke:var(--target); stroke-width:3; stroke-dasharray:7 5; }
+      .recipe-edge { fill:none; stroke:var(--surface); stroke-width:3; stroke-linejoin:round; }
+      .grid { stroke:var(--grid); stroke-width:1; opacity:.65; }
+      .connector { fill:none; stroke:var(--line); stroke-width:2; marker-end:url(#arrow); } .arrow-fill { fill:var(--line); }
+    </style>
+    <pattern id="cell-grid" width="24" height="24" patternUnits="userSpaceOnUse"><path d="M24 0H0V24" class="grid" fill="none"/></pattern>
+  </defs>
+
+  <rect x="1" y="1" width="958" height="428" rx="8" fill="var(--surface)" stroke="var(--grid)"/>
+  <text x="165" y="42" text-anchor="middle" class="heading">Initial region recipes</text>
+  <text x="480" y="42" text-anchor="middle" class="heading">Test neighboring recipes</text>
+  <text x="795" y="42" text-anchor="middle" class="heading">Accepted boundary shift</text>
+
+  <!-- Initial boundary. -->
+  <g transform="translate(45 70)">
+    <rect width="240" height="240" rx="4" class="panel"/>
+    <rect width="240" height="240" fill="var(--recipe-b)"/>
+    <path d="M0 0 H120 V48 H144 V96 H120 V144 H144 V192 H120 V240 H0 Z" fill="var(--recipe-a)"/>
+    <path d="M120 0 V48 H144 V96 H120 V144 H144 V192 H120 V240" class="recipe-edge"/>
+    <path d="M91 0 L179 240" class="target-edge"/>
+    <rect width="240" height="240" fill="url(#cell-grid)"/>
+  </g>
+  <text x="165" y="331" text-anchor="middle" class="note">recipe boundary misses</text>
+  <text x="165" y="349" text-anchor="middle" class="note">the source-image edge</text>
+
+  <path d="M300 190 H342" class="connector"/>
+
+  <!-- Candidate evaluation. -->
+  <g transform="translate(360 70)">
+    <rect width="240" height="240" rx="4" class="panel"/>
+    <rect width="240" height="240" fill="var(--recipe-b)"/>
+    <path d="M0 0 H120 V48 H144 V96 H120 V144 H144 V192 H120 V240 H0 Z" fill="var(--recipe-a)"/>
+    <path d="M120 0 V48 H144 V96 H120 V144 H144 V192 H120 V240" class="recipe-edge"/>
+    <path d="M91 0 L179 240" class="target-edge"/>
+    <rect width="240" height="240" fill="url(#cell-grid)"/>
+    <rect x="120" y="48" width="24" height="24" fill="none" stroke="var(--candidate)" stroke-width="4"/>
+    <rect x="120" y="72" width="24" height="24" fill="none" stroke="var(--candidate)" stroke-width="4"/>
+    <rect x="120" y="144" width="24" height="24" fill="none" stroke="var(--candidate)" stroke-width="4"/>
+    <rect x="120" y="168" width="24" height="24" fill="none" stroke="var(--candidate)" stroke-width="4"/>
+    <path d="M133 60 H157 M133 84 H157 M133 156 H157 M133 180 H157" stroke="var(--candidate)" stroke-width="2.5" marker-end="url(#arrow)"/>
+  </g>
+  <text x="480" y="331" text-anchor="middle" class="note">boundary points test only</text>
+  <text x="480" y="349" text-anchor="middle" class="note">an adjacent recipe</text>
+
+  <path d="M615 190 H657" class="connector"/>
+
+  <!-- Mutated boundary. -->
+  <g transform="translate(675 70)">
+    <rect width="240" height="240" rx="4" class="panel"/>
+    <rect width="240" height="240" fill="var(--recipe-b)"/>
+    <path d="M0 0 H96 V48 H120 V96 H144 V144 H168 V192 H192 V240 H0 Z" fill="var(--recipe-a)"/>
+    <path d="M96 0 V48 H120 V96 H144 V144 H168 V192 H192 V240" class="recipe-edge"/>
+    <path d="M91 0 L179 240" class="target-edge"/>
+    <rect width="240" height="240" fill="url(#cell-grid)"/>
+    <rect x="120" y="48" width="24" height="48" fill="none" stroke="var(--accept)" stroke-width="4"/>
+    <rect x="144" y="144" width="24" height="48" fill="none" stroke="var(--accept)" stroke-width="4"/>
+  </g>
+  <text x="795" y="331" text-anchor="middle" class="note">accepted runs move toward</text>
+  <text x="795" y="349" text-anchor="middle" class="note">a better image match</text>
+
+  <g transform="translate(82 381)">
+    <circle cx="0" cy="0" r="5" fill="var(--candidate)"/><text x="12" y="5" class="tiny">Current-dE percentile selects which boundary points are eligible</text>
+    <circle cx="391" cy="0" r="5" fill="var(--accept)"/><text x="403" y="5" class="tiny">Min gain and min contact decide which connected runs move</text>
+  </g>
+  <text x="480" y="414" text-anchor="middle" class="tiny">Each Mutation pass can advance a recipe boundary by one solve point; passes stop when nothing else improves.</text>
+</svg>

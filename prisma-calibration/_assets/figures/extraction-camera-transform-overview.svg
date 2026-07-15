@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 500" width="960" height="500" role="img" aria-labelledby="title desc">
+  <title id="title">Extraction and the Camera Transform</title>
+  <desc id="desc">A linear RAW blank and linear RAW sample feed extraction and flatfield correction to produce six muted, darker transmission swatches. The embedded JPEG supplies brighter appearance values for those same six colors. The Camera Transform maps transmission to appearance and is numerically inverted for the opposite direction.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 Z" class="arrow-fill"/></marker>
+    <style>
+      :root {
+        --surface:#f8fafc; --surface-2:#e8edf3; --text:#1f2937; --muted:#52606d; --line:#6b7a8a; --grid:#c8d0d9; --photo:#11151a;
+        --raw-lightbox:#d2d8c9; --appearance-lightbox:#fbfcf4;
+        --raw-1:#6d98a3; --raw-2:#608a96; --raw-3:#527886; --raw-4:#436875; --raw-5:#315363; --raw-6:#203d4c;
+        --appearance-1:#9ed5e7; --appearance-2:#7bc5dc; --appearance-3:#58b3d2; --appearance-4:#35a0c5; --appearance-5:#1685ae; --appearance-6:#075f83;
+      }
+      @media (prefers-color-scheme:dark) {
+        :root {
+          --surface:#151a22; --surface-2:#252d38; --text:#edf2f7; --muted:#b3bfcc; --line:#9aa8b7; --grid:#3c4653; --photo:#07090d;
+          --raw-lightbox:#d2d8c9; --appearance-lightbox:#fbfcf4;
+          --raw-1:#6d98a3; --raw-2:#608a96; --raw-3:#527886; --raw-4:#436875; --raw-5:#315363; --raw-6:#203d4c;
+          --appearance-1:#9ed5e7; --appearance-2:#7bc5dc; --appearance-3:#58b3d2; --appearance-4:#35a0c5; --appearance-5:#1685ae; --appearance-6:#075f83;
+        }
+      }
+      text { font-family:system-ui,-apple-system,"Segoe UI",sans-serif; fill:var(--text); letter-spacing:0; }
+      .heading { font-size:20px; font-weight:600; } .label { font-size:16px; font-weight:600; } .note { font-size:15px; fill:var(--muted); } .tiny { font-size:13px; fill:var(--muted); }
+      .arrow { fill:none; stroke:var(--line); stroke-width:2; marker-end:url(#arrow); } .arrow-fill { fill:var(--line); }
+    </style>
+
+    <!-- The inset and extracted versions reuse exactly the same strip geometry. -->
+    <g id="raw-strip">
+      <rect x="0" y="0" width="330" height="72" rx="3" fill="var(--surface-2)" stroke="var(--line)" stroke-width="2"/>
+      <rect x="3" y="3" width="54" height="66" fill="var(--raw-1)"/><rect x="57" y="3" width="54" height="66" fill="var(--raw-2)"/>
+      <rect x="111" y="3" width="54" height="66" fill="var(--raw-3)"/><rect x="165" y="3" width="54" height="66" fill="var(--raw-4)"/>
+      <rect x="219" y="3" width="54" height="66" fill="var(--raw-5)"/><rect x="273" y="3" width="54" height="66" fill="var(--raw-6)"/>
+    </g>
+    <g id="appearance-strip">
+      <rect x="0" y="0" width="330" height="72" rx="3" fill="var(--surface-2)" stroke="var(--line)" stroke-width="2"/>
+      <rect x="3" y="3" width="54" height="66" fill="var(--appearance-1)"/><rect x="57" y="3" width="54" height="66" fill="var(--appearance-2)"/>
+      <rect x="111" y="3" width="54" height="66" fill="var(--appearance-3)"/><rect x="165" y="3" width="54" height="66" fill="var(--appearance-4)"/>
+      <rect x="219" y="3" width="54" height="66" fill="var(--appearance-5)"/><rect x="273" y="3" width="54" height="66" fill="var(--appearance-6)"/>
+    </g>
+  </defs>
+  <rect x="1" y="1" width="958" height="498" rx="8" fill="var(--surface)" stroke="var(--grid)"/>
+
+  <text x="235" y="39" text-anchor="middle" class="heading">Linear RAW inputs</text>
+  <text x="735" y="39" text-anchor="middle" class="heading">Embedded JPEG appearance</text>
+
+  <!-- Linear RAW blank. -->
+  <g transform="translate(35 68)">
+    <rect x="0" y="0" width="180" height="124" rx="4" fill="var(--photo)" stroke="var(--line)"/>
+    <rect x="38" y="25" width="104" height="74" rx="3" fill="var(--raw-lightbox)"/>
+    <text x="90" y="149" text-anchor="middle" class="label">RAW blank</text>
+    <text x="90" y="170" text-anchor="middle" class="tiny">linear decode</text>
+  </g>
+
+  <!-- Linear RAW sample. -->
+  <g transform="translate(255 68)">
+    <rect x="0" y="0" width="180" height="124" rx="4" fill="var(--photo)" stroke="var(--line)"/>
+    <rect x="30" y="20" width="120" height="84" rx="3" fill="var(--raw-lightbox)"/>
+    <use href="#raw-strip" transform="translate(37.2 50.5) scale(.32)"/>
+    <text x="90" y="149" text-anchor="middle" class="label">RAW sample</text>
+    <text x="90" y="170" text-anchor="middle" class="tiny">linear decode</text>
+  </g>
+
+  <!-- Embedded JPEG appearance sample. -->
+  <g transform="translate(645 68)">
+    <rect x="0" y="0" width="180" height="124" rx="4" fill="var(--photo)" stroke="var(--line)"/>
+    <rect x="30" y="20" width="120" height="84" rx="3" fill="var(--appearance-lightbox)"/>
+    <use href="#appearance-strip" transform="translate(37.2 50.5) scale(.32)"/>
+    <text x="90" y="149" text-anchor="middle" class="label">Appearance sample</text>
+    <text x="90" y="170" text-anchor="middle" class="tiny">embedded JPEG</text>
+  </g>
+
+  <!-- Extraction paths. -->
+  <path d="M125 248 V305" class="arrow"/>
+  <path d="M345 248 V305" class="arrow"/>
+  <text x="235" y="267" text-anchor="middle" class="label">Extraction + flatfield correction</text>
+  <text x="235" y="288" text-anchor="middle" class="tiny">registered sample divided by registered blank</text>
+
+  <path d="M735 248 V305" class="arrow"/>
+  <text x="835" y="267" text-anchor="middle" class="label">Appearance capture</text>
+  <text x="835" y="288" text-anchor="middle" class="tiny">matching swatch patches</text>
+
+  <!-- Extracted transmission and appearance strips. -->
+  <use href="#raw-strip" transform="translate(45 320)"/>
+  <text x="210" y="424" text-anchor="middle" class="heading">Transmission domain</text>
+  <text x="210" y="447" text-anchor="middle" class="note">per-swatch transmission</text>
+
+  <use href="#appearance-strip" transform="translate(585 320)"/>
+  <text x="750" y="424" text-anchor="middle" class="heading">Appearance domain</text>
+  <text x="750" y="447" text-anchor="middle" class="note">camera-rendered swatch color</text>
+
+  <!-- The fitted bridge between domains. -->
+  <path d="M397 342 H563" class="arrow"/><text x="480" y="330" text-anchor="middle" class="label">The Camera Transform</text>
+  <path d="M563 379 H397" class="arrow"/><text x="480" y="401" text-anchor="middle" class="label">numerical inverse</text>
+</svg>

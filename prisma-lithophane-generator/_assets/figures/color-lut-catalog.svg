@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 430" width="960" height="430" role="img" aria-labelledby="title desc">
+  <title id="title">Building and querying the Color LUT</title>
+  <desc id="desc">The Palette defines printable candidate stacks, the Color Model predicts each stack's color, and the Color LUT stores the resulting stack and color pairs for nearest-neighbor lookup.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 Z" class="arrow-fill"/></marker>
+    <style>
+      :root { --surface:#f8fafc; --surface-2:#e8edf3; --text:#1f2937; --muted:#52606d; --line:#6b7a8a; --grid:#c8d0d9; --cyan:#35a9c8; --magenta:#d65b88; --yellow:#e8bc3d; --green:#58a978; --violet:#7868b5; --orange:#df7d45; }
+      @media (prefers-color-scheme:dark) { :root { --surface:#151a22; --surface-2:#252d38; --text:#edf2f7; --muted:#b3bfcc; --line:#9aa8b7; --grid:#3c4653; --cyan:#43b8d7; --magenta:#e16c99; --yellow:#f0ca51; --green:#6fbd8d; --violet:#9386ca; --orange:#ed9360; } }
+      text { font-family:system-ui,-apple-system,"Segoe UI",sans-serif; fill:var(--text); letter-spacing:0; }
+      .heading { font-size:19px; font-weight:600; } .label { font-size:16px; font-weight:600; } .note { font-size:15px; fill:var(--muted); } .tiny { font-size:13px; fill:var(--muted); }
+      .arrow { fill:none; stroke:var(--line); stroke-width:2; marker-end:url(#arrow); } .arrow-fill { fill:var(--line); }
+    </style>
+  </defs>
+  <rect x="1" y="1" width="958" height="428" rx="8" fill="var(--surface)" stroke="var(--grid)"/>
+
+  <text x="120" y="45" text-anchor="middle" class="heading">Palette</text>
+  <text x="120" y="68" text-anchor="middle" class="note">permitted filaments</text>
+  <g transform="translate(47 95)">
+    <rect x="0" y="0" width="28" height="94" rx="3" fill="var(--cyan)"/><rect x="36" y="0" width="28" height="94" rx="3" fill="var(--magenta)"/>
+    <rect x="72" y="0" width="28" height="94" rx="3" fill="var(--yellow)"/><rect x="108" y="0" width="28" height="94" rx="3" fill="var(--green)"/>
+    <text x="14" y="116" text-anchor="middle" class="tiny">C</text><text x="50" y="116" text-anchor="middle" class="tiny">M</text><text x="86" y="116" text-anchor="middle" class="tiny">Y</text><text x="122" y="116" text-anchor="middle" class="tiny">G</text>
+  </g>
+  <text x="120" y="246" text-anchor="middle" class="label">Enumerate candidates</text>
+  <text x="120" y="269" text-anchor="middle" class="note">filament subsets</text>
+  <text x="120" y="290" text-anchor="middle" class="note">colored-layer thicknesses</text>
+  <text x="120" y="311" text-anchor="middle" class="note">white-cap thicknesses</text>
+
+  <path d="M228 154 H299" class="arrow"/>
+
+  <text x="385" y="45" text-anchor="middle" class="heading">Color Model</text>
+  <text x="385" y="68" text-anchor="middle" class="note">evaluate each candidate once</text>
+  <g transform="translate(323 103)">
+    <rect x="0" y="88" width="124" height="28" fill="var(--surface-2)" stroke="var(--line)"/>
+    <rect x="14" y="64" width="96" height="24" fill="var(--yellow)"/>
+    <rect x="27" y="40" width="70" height="24" fill="var(--magenta)"/>
+    <rect x="38" y="16" width="48" height="24" fill="var(--cyan)"/>
+    <rect x="0" y="0" width="124" height="16" fill="var(--surface-2)" stroke="var(--line)"/>
+    <text x="62" y="135" text-anchor="middle" class="tiny">candidate stack</text>
+  </g>
+  <text x="385" y="272" text-anchor="middle" class="label">Predict transmission</text>
+  <text x="385" y="295" text-anchor="middle" class="note">express predicted color in OKLab</text>
+
+  <path d="M470 154 H514" class="arrow"/>
+
+  <text x="695" y="45" text-anchor="middle" class="heading">The Color LUT</text>
+  <text x="695" y="68" text-anchor="middle" class="note">one stored entry per retained color cell</text>
+  <g transform="translate(525 92)">
+    <rect x="0" y="0" width="365" height="206" rx="4" fill="var(--surface-2)" stroke="var(--line)" stroke-width="2"/>
+    <line x1="0" y1="44" x2="365" y2="44" stroke="var(--line)"/><line x1="0" y1="98" x2="365" y2="98" stroke="var(--grid)"/><line x1="0" y1="152" x2="365" y2="152" stroke="var(--grid)"/>
+    <line x1="94" y1="0" x2="94" y2="206" stroke="var(--line)"/><line x1="218" y1="0" x2="218" y2="206" stroke="var(--line)"/><line x1="292" y1="0" x2="292" y2="206" stroke="var(--line)"/>
+    <text x="47" y="27" text-anchor="middle" class="tiny">filaments</text>
+    <text x="156" y="18" text-anchor="middle" class="tiny">colored-layer</text><text x="156" y="34" text-anchor="middle" class="tiny">thicknesses</text>
+    <text x="255" y="18" text-anchor="middle" class="tiny">white</text><text x="255" y="34" text-anchor="middle" class="tiny">cap</text>
+    <text x="329" y="18" text-anchor="middle" class="tiny">stored</text><text x="329" y="34" text-anchor="middle" class="tiny">color</text>
+    <circle cx="37" cy="71" r="10" fill="var(--cyan)"/><circle cx="58" cy="71" r="10" fill="var(--magenta)"/>
+    <rect x="118" y="63" width="38" height="16" fill="var(--cyan)"/><rect x="156" y="63" width="30" height="16" fill="var(--magenta)"/>
+    <rect x="239" y="62" width="32" height="18" fill="var(--surface)" stroke="var(--line)"/><circle cx="329" cy="71" r="12" fill="var(--green)"/>
+    <circle cx="47" cy="125" r="10" fill="var(--yellow)"/>
+    <rect x="124" y="117" width="63" height="16" fill="var(--yellow)"/><rect x="244" y="116" width="22" height="18" fill="var(--surface)" stroke="var(--line)"/><circle cx="329" cy="125" r="12" fill="var(--orange)"/>
+    <rect x="2" y="154" width="361" height="50" fill="none" stroke="var(--magenta)" stroke-width="3"/>
+    <circle cx="37" cy="179" r="10" fill="var(--cyan)"/><circle cx="58" cy="179" r="10" fill="var(--yellow)"/>
+    <rect x="112" y="171" width="28" height="16" fill="var(--cyan)"/><rect x="140" y="171" width="48" height="16" fill="var(--yellow)"/>
+    <rect x="237" y="170" width="36" height="18" fill="var(--surface)" stroke="var(--line)"/><circle cx="329" cy="179" r="12" fill="var(--violet)"/>
+  </g>
+
+  <g>
+    <circle cx="348" cy="371" r="18" fill="var(--violet)" stroke="var(--surface)" stroke-width="3"/>
+    <text x="313" y="376" text-anchor="end" class="label">target color</text>
+    <path d="M373 371 H579" class="arrow"/>
+    <text x="476" y="357" text-anchor="middle" class="note">nearest-neighbor lookup</text>
+    <rect x="594" y="347" width="250" height="48" rx="4" fill="var(--surface-2)" stroke="var(--line)"/>
+    <text x="719" y="369" text-anchor="middle" class="label">nearest stored stack</text>
+    <text x="719" y="389" text-anchor="middle" class="note">plus color error</text>
+  </g>
+</svg>

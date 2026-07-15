@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr"><head><title>Color-core library</title><meta charset="utf-8"/><link rel="preload" href="../../../index-42bd8b3f.css" as="style"/><link rel="preload" href="../../../prescript-2bfc6315.js" as="script"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted Grotesk:wght@400;700&amp;family=Source Sans Pro:ital,wght@0,400;0,600;1,400;1,600&amp;family=IBM Plex Mono:wght@400;600&amp;display=swap"/><link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="og:site_name" content="Prisma Documentation"/><meta property="og:title" content="Color-core library"/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="Color-core library"/><meta name="twitter:description" content="In one sentence: the Prisma/lib/ color core is the shared, framework-free toolbox of color-space conversions, two non-interchangeable ΔE definitions, the spline transmission model (build / predict / compose / pair-correct), adjacent-layer collapsing, the filament-registry accessor, and the Camera T..."/><meta property="og:description" content="In one sentence: the Prisma/lib/ color core is the shared, framework-free toolbox of color-space conversions, two non-interchangeable ΔE definitions, the spline transmission model (build / predict / compose / pair-correct), adjacent-layer collapsing, the filament-registry accessor, and the Camera T..."/><meta property="og:image:alt" content="In one sentence: the Prisma/lib/ color core is the shared, framework-free toolbox of color-space conversions, two non-interchangeable ΔE definitions, the spline transmission model (build / predict / compose / pair-correct), adjacent-layer collapsing, the filament-registry accessor, and the Camera T..."/><meta property="twitter:domain" content="catfoodkingdom.github.io/prisma-docs"/><meta property="og:url" content="https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/technical-reference/color/color-core-library"/><meta property="twitter:url" content="https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/technical-reference/color/color-core-library"/><link rel="icon" href="../../../static/icon.png"/><meta name="description" content="In one sentence: the Prisma/lib/ color core is the shared, framework-free toolbox of color-space conversions, two non-interchangeable ΔE definitions, the spline transmission model (build / predict / compose / pair-correct), adjacent-layer collapsing, the filament-registry accessor, and the Camera T..."/><meta name="generator" content="Quartz"/><link href="../../../index-42bd8b3f.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-735924e0.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-589c1cea.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-bbc3f7c0.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-2911f5d1.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-e427079e.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-53b25b2b.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-c93c6a44.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-8a06014f.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-77d6a441.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-6ee21cee.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-1ea6ad18.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-788c9ca3.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-642859cd.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-4abc06bd.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-274a3dfe.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-94cb6c84.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-58d5ff56.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-7262b5a7.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../static/resource-style-a5c806d2.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../static/resource-style-6bd36952.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../static/resource-style-9857b007.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../static/resource-style-d3a1a224.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" rel="stylesheet" type="text/css" data-persist="true"/><script src="../../../prescript-2bfc6315.js" type="application/javascript" data-persist="true"></script><script type="application/javascript" data-persist="true">const fetchData = fetch("../../../static/contentIndex.json").then(data => data.json())</script><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted%20Grotesk%3Awght%40400%3B700&amp;family=Source%20Sans%20Pro%3Aital%2Cwght%400%2C400%3B0%2C600%3B1%2C400%3B1%2C600&amp;family=IBM%20Plex%20Mono%3Awght%40400%3B600&amp;display=swap"/><meta property="og:image:width" content="1200"/><meta property="og:image:height" content="630"/><meta property="og:image" content="https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/technical-reference/color/color-core-library-og-image.webp"/><meta property="og:image:url" content="https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/technical-reference/color/color-core-library-og-image.webp"/><meta name="twitter:image" content="https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/technical-reference/color/color-core-library-og-image.webp"/><meta property="og:image:type" content="image/webp"/></head><body data-slug="prisma-lithophane-generator/technical-reference/color/color-core-library" data-basepath="/prisma-docs"><div id="quartz-root" class="page" data-frame="default"><div id="quartz-body"><div class="left sidebar"><h2 class="page-title"><a href="../../..">Prisma Documentation</a></h2><div class="mobile-only"><div class="spacer"></div></div><div class="flex-component" style="flex-direction: row; flex-wrap: nowrap; gap: 0.5rem;"><div style="flex-grow: 1; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><div class="search"><button class="search-button" aria-label="Search" aria-expanded="false"><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title>Search</title><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"></path><circle cx="8" cy="8" r="7"></circle></g></svg><p>Search</p></button><div class="search-container"><div class="search-space"><input autocomplete="off" class="search-bar" name="search" type="text" aria-label="Search for something..." placeholder="Search for something..."/><div class="search-layout" data-preview="true" data-field-priority="[&quot;title&quot;,&quot;content&quot;,&quot;tags&quot;]"></div></div></div></div></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="darkmode" aria-label="Dark mode"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="dayIcon" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35" xml:space="preserve" aria-label="Dark mode"><title>Dark mode</title><path d="M6,17.5C6,16.672,5.328,16,4.5,16h-3C0.672,16,0,16.672,0,17.5    S0.672,19,1.5,19h3C5.328,19,6,18.328,6,17.5z M7.5,26c-0.414,0-0.789,0.168-1.061,0.439l-2,2C4.168,28.711,4,29.086,4,29.5    C4,30.328,4.671,31,5.5,31c0.414,0,0.789-0.168,1.06-0.44l2-2C8.832,28.289,9,27.914,9,27.5C9,26.672,8.329,26,7.5,26z M17.5,6    C18.329,6,19,5.328,19,4.5v-3C19,0.672,18.329,0,17.5,0S16,0.672,16,1.5v3C16,5.328,16.671,6,17.5,6z M27.5,9    c0.414,0,0.789-0.168,1.06-0.439l2-2C30.832,6.289,31,5.914,31,5.5C31,4.672,30.329,4,29.5,4c-0.414,0-0.789,0.168-1.061,0.44    l-2,2C26.168,6.711,26,7.086,26,7.5C26,8.328,26.671,9,27.5,9z M6.439,8.561C6.711,8.832,7.086,9,7.5,9C8.328,9,9,8.328,9,7.5    c0-0.414-0.168-0.789-0.439-1.061l-2-2C6.289,4.168,5.914,4,5.5,4C4.672,4,4,4.672,4,5.5c0,0.414,0.168,0.789,0.439,1.06    L6.439,8.561z M33.5,16h-3c-0.828,0-1.5,0.672-1.5,1.5s0.672,1.5,1.5,1.5h3c0.828,0,1.5-0.672,1.5-1.5S34.328,16,33.5,16z     M28.561,26.439C28.289,26.168,27.914,26,27.5,26c-0.828,0-1.5,0.672-1.5,1.5c0,0.414,0.168,0.789,0.439,1.06l2,2    C28.711,30.832,29.086,31,29.5,31c0.828,0,1.5-0.672,1.5-1.5c0-0.414-0.168-0.789-0.439-1.061L28.561,26.439z M17.5,29    c-0.829,0-1.5,0.672-1.5,1.5v3c0,0.828,0.671,1.5,1.5,1.5s1.5-0.672,1.5-1.5v-3C19,29.672,18.329,29,17.5,29z M17.5,7    C11.71,7,7,11.71,7,17.5S11.71,28,17.5,28S28,23.29,28,17.5S23.29,7,17.5,7z M17.5,25c-4.136,0-7.5-3.364-7.5-7.5    c0-4.136,3.364-7.5,7.5-7.5c4.136,0,7.5,3.364,7.5,7.5C25,21.636,21.636,25,17.5,25z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="nightIcon" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100" xml:space="preserve" aria-label="Light mode"><title>Light mode</title><path d="M96.76,66.458c-0.853-0.852-2.15-1.064-3.23-0.534c-6.063,2.991-12.858,4.571-19.655,4.571  C62.022,70.495,50.88,65.88,42.5,57.5C29.043,44.043,25.658,23.536,34.076,6.47c0.532-1.08,0.318-2.379-0.534-3.23  c-0.851-0.852-2.15-1.064-3.23-0.534c-4.918,2.427-9.375,5.619-13.246,9.491c-9.447,9.447-14.65,22.008-14.65,35.369  c0,13.36,5.203,25.921,14.65,35.368s22.008,14.65,35.368,14.65c13.361,0,25.921-5.203,35.369-14.65  c3.872-3.871,7.064-8.328,9.491-13.246C97.826,68.608,97.611,67.309,96.76,66.458z"></path></svg></button></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="readermode" aria-label="Reader mode"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="readerIcon" fill="currentColor" stroke="currentColor" stroke-width="0.2" stroke-linecap="round" stroke-linejoin="round" width="64px" height="64px" viewBox="0 0 24 24" aria-label="Reader mode"><title>Reader mode</title><g transform="translate(-1.8, -1.8) scale(1.15, 1.2)"><path d="M8.9891247,2.5 C10.1384702,2.5 11.2209868,2.96705384 12.0049645,3.76669482 C12.7883914,2.96705384 13.8709081,2.5 15.0202536,2.5 L18.7549359,2.5 C19.1691495,2.5 19.5049359,2.83578644 19.5049359,3.25 L19.5046891,4.004 L21.2546891,4.00457396 C21.6343849,4.00457396 21.9481801,4.28672784 21.9978425,4.6528034 L22.0046891,4.75457396 L22.0046891,20.25 C22.0046891,20.6296958 21.7225353,20.943491 21.3564597,20.9931534 L21.2546891,21 L2.75468914,21 C2.37499337,21 2.06119817,20.7178461 2.01153575,20.3517706 L2.00468914,20.25 L2.00468914,4.75457396 C2.00468914,4.37487819 2.28684302,4.061083 2.65291858,4.01142057 L2.75468914,4.00457396 L4.50368914,4.004 L4.50444233,3.25 C4.50444233,2.87030423 4.78659621,2.55650904 5.15267177,2.50684662 L5.25444233,2.5 L8.9891247,2.5 Z M4.50368914,5.504 L3.50468914,5.504 L3.50468914,19.5 L10.9478955,19.4998273 C10.4513189,18.9207296 9.73864328,18.5588115 8.96709342,18.5065584 L8.77307039,18.5 L5.25444233,18.5 C4.87474657,18.5 4.56095137,18.2178461 4.51128895,17.8517706 L4.50444233,17.75 L4.50368914,5.504 Z M19.5049359,17.75 C19.5049359,18.1642136 19.1691495,18.5 18.7549359,18.5 L15.2363079,18.5 C14.3910149,18.5 13.5994408,18.8724714 13.0614828,19.4998273 L20.5046891,19.5 L20.5046891,5.504 L19.5046891,5.504 L19.5049359,17.75 Z M18.0059359,3.999 L15.0202536,4 L14.8259077,4.00692283 C13.9889509,4.06666544 13.2254227,4.50975805 12.7549359,5.212 L12.7549359,17.777 L12.7782651,17.7601316 C13.4923805,17.2719483 14.3447024,17 15.2363079,17 L18.0059359,16.999 L18.0056891,4.798 L18.0033792,4.75457396 L18.0056891,4.71 L18.0059359,3.999 Z M8.9891247,4 L6.00368914,3.999 L6.00599909,4.75457396 L6.00599909,4.75457396 L6.00368914,4.783 L6.00368914,16.999 L8.77307039,17 C9.57551536,17 10.3461406,17.2202781 11.0128313,17.6202194 L11.2536891,17.776 L11.2536891,5.211 C10.8200889,4.56369974 10.1361548,4.13636104 9.37521067,4.02745763 L9.18347055,4.00692283 L8.9891247,4 Z"></path></g></svg></button></div></div><div class="explorer nav-files-container" data-behavior="link" data-collapsed="collapsed" data-savestate="true" data-data-fns="{&quot;order&quot;:[&quot;filter&quot;,&quot;map&quot;,&quot;sort&quot;],&quot;sortFn&quot;:&quot;(a2, b2) => {\r\n    const __rank = {\&quot;prisma-lithophane-generator\&quot;:0,\&quot;prisma-calibration\&quot;:1,\&quot;getting-started\&quot;:0,\&quot;how-to-use\&quot;:1,\&quot;how-it-works\&quot;:2,\&quot;technical-reference\&quot;:3};\r\n    const __rankPath = {\&quot;prisma-lithophane-generator/how-to-use/installing-prisma\&quot;:0,\&quot;prisma-lithophane-generator/how-to-use/launching-prisma\&quot;:1,\&quot;prisma-lithophane-generator/how-to-use/configuration\&quot;:2,\&quot;prisma-lithophane-generator/how-to-use/image\&quot;:3,\&quot;prisma-lithophane-generator/how-to-use/palette\&quot;:4,\&quot;prisma-lithophane-generator/how-to-use/settings\&quot;:5,\&quot;prisma-lithophane-generator/how-to-use/preview\&quot;:6,\&quot;prisma-lithophane-generator/how-to-use/exporting\&quot;:7,\&quot;prisma-lithophane-generator/how-to-use/3d-printing\&quot;:8,\&quot;prisma-lithophane-generator/how-to-use/tutorials\&quot;:9,\&quot;prisma-lithophane-generator/how-it-works/how-a-solve-works\&quot;:0,\&quot;prisma-lithophane-generator/how-it-works/image-adjustments\&quot;:1,\&quot;prisma-lithophane-generator/how-it-works/preprocessing\&quot;:2,\&quot;prisma-lithophane-generator/how-it-works/target-colors\&quot;:3,\&quot;prisma-lithophane-generator/how-it-works/palette\&quot;:4,\&quot;prisma-lithophane-generator/how-it-works/color-model\&quot;:5,\&quot;prisma-lithophane-generator/how-it-works/the-color-lut\&quot;:6,\&quot;prisma-lithophane-generator/how-it-works/the-solve\&quot;:7,\&quot;prisma-lithophane-generator/how-it-works/white-cap\&quot;:8,\&quot;prisma-lithophane-generator/how-it-works/grouping\&quot;:9,\&quot;prisma-lithophane-generator/how-it-works/export\&quot;:10,\&quot;prisma-calibration/how-to-use/installing-the-calibration-app\&quot;:0,\&quot;prisma-calibration/how-to-use/launching-the-calibration-app\&quot;:1,\&quot;prisma-calibration/how-to-use/filaments\&quot;:2,\&quot;prisma-calibration/how-to-use/geometries\&quot;:3,\&quot;prisma-calibration/how-to-use/logbook\&quot;:4,\&quot;prisma-calibration/how-to-use/images\&quot;:5,\&quot;prisma-calibration/how-to-use/modeling\&quot;:6,\&quot;prisma-calibration/how-to-use/maintenance\&quot;:7,\&quot;prisma-calibration/how-to-use/backups\&quot;:8,\&quot;prisma-calibration/how-to-use/calibration-tutorials\&quot;:9,\&quot;prisma-calibration/how-it-works/transmission-vs-appearance\&quot;:0,\&quot;prisma-calibration/how-it-works/sample-geometry\&quot;:1,\&quot;prisma-calibration/how-it-works/extraction\&quot;:2,\&quot;prisma-calibration/how-it-works/color-model-v1\&quot;:3,\&quot;prisma-calibration/how-it-works/color-model-v2\&quot;:4,\&quot;prisma-calibration/how-it-works/model-fitting\&quot;:5,\&quot;prisma-calibration/how-it-works/the-camera-transform\&quot;:6,\&quot;prisma-calibration/how-it-works/maintenance-operations\&quot;:7};\r\n    const __pa = a2.slugSegments.join(\&quot;/\&quot;), __pb = b2.slugSegments.join(\&quot;/\&quot;);\r\n    const __ra = __rankPath[__pa] ?? __rank[a2.slugSegment], __rb = __rankPath[__pb] ?? __rank[b2.slugSegment];\r\n    if (__ra !== void 0 || __rb !== void 0) return (__ra ?? 99) - (__rb ?? 99);\r\n    if (!a2.isFolder &amp;&amp; !b2.isFolder || a2.isFolder &amp;&amp; b2.isFolder) {\r\n      return (a2.displayName || \&quot;\&quot;).localeCompare(b2.displayName || \&quot;\&quot;, void 0, {\r\n        numeric: true,\r\n        sensitivity: \&quot;base\&quot;\r\n      });\r\n    }\r\n    if (!a2.isFolder &amp;&amp; b2.isFolder) {\r\n      return 1;\r\n    }\r\n    return -1;\r\n  }&quot;,&quot;filterFn&quot;:&quot;(node) => node.slugSegment !== \&quot;tags\&quot;&quot;,&quot;mapFn&quot;:&quot;(node) => {\r\n    return node;\r\n  }&quot;}"><button type="button" class="explorer-toggle mobile-explorer hide-until-loaded" data-mobile="true" aria-controls="explorer-275" aria-label="Explorer"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-menu"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg></button><button type="button" class="title-button explorer-toggle desktop-explorer" data-mobile="false" aria-expanded="true"><h2>Explorer</h2><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><div id="explorer-275" class="explorer-content" aria-expanded="false" role="group"><ul class="explorer-ul overflow" id="list-0"><li class="overflow-end"></li></ul></div><template id="template-file"><li><a href="#" class="nav-file-title tree-item-self"></a></li></template><template id="template-folder"><li><div class="folder-container nav-folder-title tree-item-self"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon nav-folder-collapse-indicator collapse-icon"><polyline points="6 9 12 15 18 9"></polyline></svg><div><button class="folder-button"><span class="folder-title"></span></button></div></div><div class="folder-outer"><ul class="content tree-item-children"></ul></div></li></template></div></div><div class="center"><div class="page-header"><div class="popover-hint"><nav class="breadcrumb-container" aria-label="breadcrumbs"><div class="breadcrumb-element"><a href="../../../">Home</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../../prisma-lithophane-generator/">Prisma Lithophane Generator</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../../prisma-lithophane-generator/technical-reference/">Technical Reference</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../../prisma-lithophane-generator/technical-reference/color/">Color</a><p> ❯ </p></div><div class="breadcrumb-element"><a href>Color-core library</a></div></nav><h1 class="article-title">Color-core library</h1><details class="note-properties metadata-container" open data-collapsed="false"><summary class="note-properties-header"><span class="note-properties-title">Properties</span><span class="note-properties-count">1</span></summary><table class="note-properties-table"><tbody><tr class="note-properties-row metadata-property"><td class="note-properties-key metadata-property-key">tags</td><td class="note-properties-value metadata-property-value"><span class="note-properties-tags"><a href="../../../tags/generator" class="internal internal-link tag-link">generator</a><span class="note-properties-separator">, </span><a href="../../../tags/color" class="internal internal-link tag-link">color</a></span></td></tr></tbody></table></details><p show-comma="true" class="content-meta"><time datetime="2026-07-13T07:36:06.570Z">Jul 13, 2026</time><span>10 min read</span></p></div></div><article class="popover-hint"><div class="markdown-preview-view markdown-rendered"><blockquote>
+<p>In one sentence: the <code>Prisma/lib/</code> color core is the shared, framework-free toolbox of color-space conversions, two non-interchangeable ΔE definitions, the spline transmission model (build / predict / compose / pair-correct), adjacent-layer collapsing, the filament-registry accessor, and the Camera Transform loader (forward fit, Newton inverse, trilinear LUT) that both the generator and calibration apps build on.</p>
+</blockquote>
+<p>This page documents the modules under <code>Prisma/lib/</code> that the generator solve path depends on. These are <strong>pure helpers</strong> — no FastAPI, no disk writes beyond reading JSON/<code>.npz</code> artifacts. If you are wiring a new solve stage, this is the layer you import from. For how these pieces compose into a render, see <a href="../../../prisma-lithophane-generator/how-it-works/color-model/the-transmission-model" class="internal internal-link alias" data-slug="prisma-lithophane-generator/how-it-works/color-model/the-transmission-model">The Transmission Model</a> and <a href="../../../prisma-lithophane-generator/technical-reference/architecture/generator.model" class="internal internal-link" data-slug="prisma-lithophane-generator/technical-reference/architecture/generator.model">generator.model</a>; for the color-domain contracts, see <a href="../../../prisma-lithophane-generator/how-it-works/target-colors/model-domain-ingress" class="internal internal-link alias" data-slug="prisma-lithophane-generator/how-it-works/target-colors/model-domain-ingress">Model-domain ingress</a>.</p>
+<p>Related technical references: <a href="../../../prisma-lithophane-generator/technical-reference/color/model-domain-ingress-and-display-conversion" class="internal internal-link alias" data-slug="prisma-lithophane-generator/technical-reference/color/model-domain-ingress-and-display-conversion">Model-domain ingress and display conversion</a>.</p>
+<p>Related architecture nodes: <a href="../../../prisma-lithophane-generator/technical-reference/architecture/lib.transmission" class="internal internal-link" data-slug="prisma-lithophane-generator/technical-reference/architecture/lib.transmission">lib.transmission</a>, <a href="../../../prisma-lithophane-generator/technical-reference/architecture/lib.color" class="internal internal-link" data-slug="prisma-lithophane-generator/technical-reference/architecture/lib.color">lib.color</a>, <a href="../../../prisma-lithophane-generator/technical-reference/architecture/lib.stack_geometry" class="internal internal-link" data-slug="prisma-lithophane-generator/technical-reference/architecture/lib.stack_geometry">lib.stack_geometry</a>, <a href="../../../prisma-lithophane-generator/technical-reference/architecture/lib.filaments" class="internal internal-link" data-slug="prisma-lithophane-generator/technical-reference/architecture/lib.filaments">lib.filaments</a>, <a href="../../../prisma-lithophane-generator/technical-reference/architecture/lib.camera_transform" class="internal internal-link" data-slug="prisma-lithophane-generator/technical-reference/architecture/lib.camera_transform">lib.camera_transform</a>.</p>
+<hr/>
+<h2 id="two-δe-definitions--not-interchangeable">Two ΔE definitions — not interchangeable<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#two-δe-definitions--not-interchangeable" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>The repo has <strong>two distinct color-difference functions</strong> that live in different modules, use different color spaces, and serve different consumers. Mixing them up is a real trap. (One wiring caveat: the generator’s <code>deltaE_ok</code> path is live, but the <code>lib/color.py</code> <code>compute_dE_from_linear</code> shown here is a <em>dormant copy</em> — the calibration app consumes an identical duplicate; details below.)</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>Function</th><th>Space</th><th>Formula</th><th>Source</th></tr></thead><tbody><tr><td><code>deltaE_ok(lab1, lab2)</code></td><td><strong>OKLab</strong></td><td>Euclidean distance in OKLab</td><td><code>lib/transmission.py:59</code></td></tr><tr><td><code>compute_dE_from_linear(measured, predicted)</code></td><td><strong>CIE Lab (CIE76)</strong></td><td>Euclidean distance of CIE-Lab triplets</td><td><code>lib/color.py:95</code></td></tr></tbody></table></div>
+<ul>
+<li><code>deltaE_ok</code> operates on <strong>OKLab</strong> coordinates produced by <code>linear_to_oklab</code> (<code>lib/transmission.py:40</code>). It is the generator’s perceptual metric — the solver imports <code>linear_to_oklab</code> directly (<code>generator/model.py:22</code>, used at <code>generator/model.py:160</code>) and compares candidates in OKLab. The module docstring’s claim that OKLab is “faster than CIEDE2000” is a design note, not a guarantee — what matters is it is a different space from CIE76.</li>
+<li><code>compute_dE_from_linear</code> converts each linear-RGB triplet to <strong>CIE Lab</strong> via <code>linear_to_lab</code> (<code>lib/color.py:77</code>, an approximate D65 transform) and returns the plain CIE76 distance (<code>lib/color.py:99</code>). This is the <strong>calibration</strong> metric in spirit, but watch the wiring: the calibration fitting and composition paths import a <strong>byte-for-byte duplicate</strong> from <code>calibration/fitting/color_math.py</code> (defined at <code>calibration/fitting/color_math.py:93</code>), not this <code>lib/color.py</code> copy. The current <code>lib/color.py</code> importer is the modeling-review <code>linear_to_hex</code> call described below; it does not make this CIE76 helper live.</li>
+</ul>
+<p><strong>Practical rule:</strong> a “ΔE 3.3” reported by the generator’s OKLab metric and a “ΔE 3.3” from the calibration CIE76 metric are <em>not the same number</em>. Never compare them across the two systems. See Delta E definitions.</p>
+<hr/>
+<h2 id="oklab-round-trip-libtransmissionpy">OKLab round-trip (<code>lib/transmission.py</code>)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#oklab-round-trip-libtransmissionpy" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>Function</th><th>What it does</th><th>Source</th></tr></thead><tbody><tr><td><code>linear_to_oklab(rgb_linear)</code></td><td>linear-sRGB <code>(...,3)</code> in <code>[0,1]</code> → OKLab; vectorised over arbitrary leading dims via the <code>_M1</code>/<code>_M2</code> matrices</td><td><code>lib/transmission.py:40</code></td></tr><tr><td><code>oklab_to_linear(lab)</code></td><td>OKLab → linear-sRGB; inverts <code>_M2</code>, cubes LMS, inverts <code>_M1</code>, then <strong>clips to <code>[0,1]</code></strong></td><td><code>lib/transmission.py:51</code></td></tr><tr><td><code>deltaE_ok(lab1, lab2)</code></td><td>scalar Euclidean OKLab distance</td><td><code>lib/transmission.py:59</code></td></tr></tbody></table></div>
+<p>Note the round-trip is <strong>not loss-free at the gamut edge</strong>: <code>oklab_to_linear</code> clips its output to <code>[0,1]</code> (<code>lib/transmission.py:56</code>), so OKLab values that map outside the unit cube are clamped. The matrices are the standard Björn Ottosson OKLab coefficients hard-coded at <code>lib/transmission.py:27</code> and <code>:33</code>.</p>
+<p><code>linear_to_oklab</code> is the generator’s entry point into perceptual space — <code>generator/model.py:160</code> wraps it as <code>to_oklab(...)</code> and casts to <code>float32</code>.</p>
+<hr/>
+<h2 id="srgb--linear--lab-helpers-libcolorpy">sRGB / linear / Lab helpers (<code>lib/color.py</code>)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#srgb--linear--lab-helpers-libcolorpy" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>These are the <strong>scalar, stdlib-only</strong> conversions (the module imports only <code>math</code>). They are the calibration-flavored cousins of the vectorised numpy helpers above.</p>
+<blockquote>
+<p><strong>Liveness: <code>lib/color.py</code> is only partially wired.</strong> The calibration modeling-review path imports its <code>linear_to_hex</code> helper (<code>calibration/modeling_review.py:13</code>, used at <code>:225</code>), and the server reaches that review builder (<code>calibration/server.py:111</code>, <code>:8285</code>). The other helpers below, including <code>compute_dE_from_linear</code>, <code>linear_to_lab</code>, and the interpolation functions, have no current importer found in the production tree; the calibration fitting path uses its duplicate <code>calibration/fitting/color_math.py</code> instead. Treat this module as a mixed boundary: <code>linear_to_hex</code> is live for modeling-review presentation, while the remaining functions are dormant reference utilities.</p>
+</blockquote>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>Function</th><th>Direction</th><th>Notes</th><th>Source</th></tr></thead><tbody><tr><td><code>linear_to_srgb(c)</code></td><td>linear <code>[0,1]</code> → sRGB <code>[0,255]</code> int</td><td>exact sRGB piecewise transfer (0.0031308 / 2.4 gamma)</td><td><code>lib/color.py:54</code></td></tr><tr><td><code>linear_to_hex(r,g,b)</code></td><td>linear <code>[0,1]</code> → <code>#RRGGBB</code></td><td>wraps <code>linear_to_srgb</code></td><td><code>lib/color.py:64</code></td></tr><tr><td><code>srgb_to_linear(c)</code></td><td>sRGB <code>[0,255]</code> int → linear <code>[0,1]</code></td><td>inverse sRGB transfer</td><td><code>lib/color.py:69</code></td></tr><tr><td><code>linear_to_lab(rgb_linear)</code></td><td>linear RGB → CIE Lab</td><td>approximate D65, sRGB→XYZ matrix + <code>f(t)</code></td><td><code>lib/color.py:77</code></td></tr><tr><td><code>interp_single(knots, values, d)</code></td><td>scalar interpolation</td><td>linear interp; <strong>log-linear extrapolation</strong> past the last knot (<code>lib/color.py:20</code>)</td><td><code>lib/color.py:12</code></td></tr><tr><td><code>interpolate_pchip(knots, values, d_dense)</code></td><td>vector PCHIP</td><td>falls back to <code>interp_single</code> when <code>&lt;2</code> knots or scipy missing (<code>lib/color.py:36</code>, <code>:50</code>)</td><td><code>lib/color.py:31</code></td></tr></tbody></table></div>
+<p><code>interp_single</code> / <code>interpolate_pchip</code> are the <strong>single-value</strong> interpolators of the calibration color pipeline (live via the <code>calibration/fitting/color_math.py</code> duplicate, not this module — see the liveness note above); they are distinct from the three-channel <code>build_spline</code>/<code>predict</code> pair in <code>transmission.py</code>. Note <code>linear_to_srgb</code> here is the <strong>exact</strong> sRGB transfer with the 2.4 exponent, whereas <code>transmission.to_srgb</code> uses a plain <code>gamma=2.2</code> power (see below) — two different gamma conventions in the core, used in different places.</p>
+<hr/>
+<h2 id="spline-transmission-model-libtransmissionpy">Spline transmission model (<code>lib/transmission.py</code>)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#spline-transmission-model-libtransmissionpy" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>This is the heart of <a href="../../../prisma-lithophane-generator/how-it-works/color-model/the-transmission-model" class="internal internal-link alias" data-slug="prisma-lithophane-generator/how-it-works/color-model/the-transmission-model">The Transmission Model</a>: measured <code>(thickness, T_rgb)</code> knots interpolated with monotone cubic (Pchip), <strong>not</strong> Beer-Lambert. Composition is multiplicative and order-independent (the corrections term excepted).</p>
+<h3 id="build--predict">Build / predict<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#build--predict" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>Function</th><th>Contract</th><th>Source</th></tr></thead><tbody><tr><td><code>build_spline(knots_mm, T_r, T_g, T_b)</code></td><td>returns <code>{'r','g','b'}</code> of <code>PchipInterpolator</code> with <code>extrapolate=False</code>; <strong>asserts <code>knots_mm[0] == 0.0</code></strong> (<code>lib/transmission.py:81</code>) and clips T to <code>[0,1]</code></td><td><code>lib/transmission.py:67</code></td></tr><tr><td><code>predict(profile, d)</code></td><td>linear-RGB <code>(3,)</code> transmission at thickness <code>d</code>. <code>d&lt;=0</code> → <code>ones(3)</code>; <code>d>d_max</code> → <code>_extrapolate</code>; otherwise clipped spline eval</td><td><code>lib/transmission.py:89</code></td></tr><tr><td><code>_get_splines(profile)</code></td><td>lazily builds and <strong>caches</strong> splines under <code>profile['_splines']</code></td><td><code>lib/transmission.py:138</code></td></tr><tr><td><code>_extrapolate(profile, spl, d, d_max)</code></td><td><strong>Beer-Lambert</strong> slope extrapolation from the last two knots when <code>d</code> exceeds the measured range</td><td><code>lib/transmission.py:120</code></td></tr></tbody></table></div>
+<blockquote>
+<p><strong>De-facto public despite the underscore.</strong> <code>_get_splines</code> and <code>_extrapolate</code> are imported by name across the generator and are part of the real contract, not private internals:</p>
+<ul>
+<li><code>generator/palette/suggest.py:57</code> (vectorised T sampling)</li>
+<li><code>generator/lut.py:2025</code> (legacy cap-fixed-color helper)</li>
+<li><code>generator/pipeline/staged_solver_helpers.py:60</code> (the <strong>staged backend</strong> solve path — see <a href="../../../prisma-lithophane-generator/technical-reference/architecture/generator.pipeline.staged_runner" class="internal internal-link" data-slug="prisma-lithophane-generator/technical-reference/architecture/generator.pipeline.staged_runner">generator.pipeline.staged_runner</a>)</li>
+</ul>
+<p>They are duplicated, not shared, in <code>calibration/fitting/fitting.py:171,189</code> — calibration carries its own copy. Treat the <code>transmission.py</code> pair as the canonical generator-side definitions.</p>
+</blockquote>
+<h3 id="compose--pair-corrections">Compose / pair-corrections<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#compose--pair-corrections" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>Function</th><th>Contract</th><th>Source</th></tr></thead><tbody><tr><td><code>compose(layers, corrections=None)</code></td><td>multiply <code>predict</code> over an ordered <code>[(profile, d), ...]</code> stack; optionally apply a per-pair correction factor <code>C(d_overlay)</code>; final clip <code>[0,1]</code></td><td><code>lib/transmission.py:146</code></td></tr><tr><td><code>_interpolate_correction(corr, d)</code></td><td>linear interp of <code>C_r/C_g/C_b</code> over the correction’s <code>knots_mm</code>; anchored <code>C=1</code> at <code>d=0</code>, holds constant past the last knot</td><td><code>lib/transmission.py:183</code></td></tr><tr><td><code>to_srgb(T_linear, gamma=2.2)</code></td><td>gamma-encode linear transmission (plain <code>pow(1/gamma)</code>)</td><td><code>lib/transmission.py:196</code></td></tr><tr><td><code>profile_from_dict(d)</code></td><td>pre-build splines and return the (mutated) dict</td><td><code>lib/transmission.py:203</code></td></tr><tr><td><code>profile_to_save_dict(profile)</code></td><td>drop the non-serializable <code>_splines</code> key for JSON saving</td><td><code>lib/transmission.py:209</code></td></tr></tbody></table></div>
+<p><strong>Pair-correction key format (verify before constructing one):</strong> when <code>len(layers) >= 2</code>, <code>compose</code> builds the lookup key from the <strong>first</strong> layer as overlay and the rest as base (<code>lib/transmission.py:168</code>-<code>179</code>):</p>
+<pre><code>pair_key = f&quot;{overlay_fid}|{base1_fid}@{d1:.2f}+{base2_fid}@{d2:.2f}...&quot;
+</code></pre>
+<p>i.e. <code>&quot;overlay|base@0.20&quot;</code> with thicknesses formatted to two decimals. Each <code>profile</code> must carry a <code>filament_id</code> for this to match; absent it, the key uses an empty string and the correction silently no-ops.</p>
+<p><strong><code>compute_pair_corrections</code> lives elsewhere.</strong> The <code>compose</code>/<code>build_spline</code> docstrings reference <code>compute_pair_corrections()</code>, but that producer is <strong>not in this module</strong> — it is defined in <code>calibration/fitting/fitter_core.py</code> and writes <code>data/filaments/pair_corrections.json</code>. The generator only <em>consumes</em> the resulting dict: it loads the JSON through <code>generator/server.py</code> and threads it through the solve configuration to the active provider/LUT paths. See Pair corrections.</p>
+<hr/>
+<h2 id="adjacent-layer-collapsing-libstack_geometrypy">Adjacent-layer collapsing (<code>lib/stack_geometry.py</code>)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#adjacent-layer-collapsing-libstack_geometrypy" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>For prediction, a light path through <code>A 0.40 + A 0.20 + W 0.20</code> sees <code>A 0.60 + W 0.20</code> — adjacent same-filament runs are one contiguous region, but <strong>non-adjacent</strong> repeats stay separate because interface order matters.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>Function</th><th>Contract</th><th>Source</th></tr></thead><tbody><tr><td><code>collapse_adjacent_layers(layers, *, precision=5, drop_zero=True)</code></td><td>merge adjacent same-filament runs, preserving order; rounds thickness to <code>precision</code>, drops sub-epsilon and (optionally) zero layers</td><td><code>lib/stack_geometry.py:31</code></td></tr><tr><td><code>canonicalize_filament_stack(filaments, thicknesses_mm, *, ...)</code></td><td>zip parallel lists then collapse</td><td><code>lib/stack_geometry.py:62</code></td></tr><tr><td><code>unzip_layers(layers)</code></td><td>inverse: a layer sequence → parallel <code>(filaments, thicknesses)</code> tuples</td><td><code>lib/stack_geometry.py:82</code></td></tr></tbody></table></div>
+<p><strong>Live in the generator:</strong> <code>generator/appearance_model.py:29</code> imports <code>collapse_adjacent_layers</code> and calls it at <code>appearance_model.py:294</code> before predicting a stack. Also used calibration-side: <code>calibration/fitting/physical_stack.py:255</code> (imports at <code>:16</code>/<code>:18</code>) and <code>lib/photo_stack_model/predictor.py:1478</code> (imports at <code>:25</code>/<code>:27</code>). The example transforms in the docstring (<code>stack_geometry.py:40</code>-<code>41</code>) match the code behavior.</p>
+<blockquote>
+<p>Note: <code>appearance_model</code>’s <em>appearance-named</em> methods are <strong>pass-through</strong> after the projection-slot retirement — they return model-domain values, not display values. Collapsing happens regardless; the naming is the stale part, not the geometry. See <a href="../../../prisma-lithophane-generator/technical-reference/architecture/generator.appearance_model" class="internal internal-link" data-slug="prisma-lithophane-generator/technical-reference/architecture/generator.appearance_model">generator.appearance_model</a>.</p>
+</blockquote>
+<hr/>
+<h2 id="filament-registry-accessor-libfilamentspy">Filament registry accessor (<code>lib/filaments.py</code>)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#filament-registry-accessor-libfilamentspy" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>Thin JSON reader over <code>data/filaments/registry.json</code>. <strong>No caching</strong> — every call re-reads the file.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>Function</th><th>Returns</th><th>Source</th></tr></thead><tbody><tr><td><code>load_registry(registry_path)</code></td><td>the full dict keyed by <code>filament_id</code></td><td><code>lib/filaments.py:9</code></td></tr><tr><td><code>list_filament_ids(registry_path)</code></td><td>sorted list of IDs</td><td><code>lib/filaments.py:15</code></td></tr><tr><td><code>get_filament(registry_path, filament_id)</code></td><td><code>{&quot;filament_id&quot;: id, **info}</code> or <strong><code>None</code></strong> if absent</td><td><code>lib/filaments.py:20</code></td></tr></tbody></table></div>
+<p><code>get_filament</code> injects <code>filament_id</code> into the returned dict (<code>lib/filaments.py:26</code>) — convenient, because <code>compose</code>’s pair-correction key needs exactly that field. All three take an explicit <code>registry_path: Path</code>; the module hard-codes no location. See <a href="../../../prisma-lithophane-generator/technical-reference/architecture/lib.filaments" class="internal internal-link" data-slug="prisma-lithophane-generator/technical-reference/architecture/lib.filaments">lib.filaments</a>.</p>
+<hr/>
+<h2 id="camera-transform-artifact-libcamera_transformpy">Camera Transform artifact (<code>lib/camera_transform.py</code>)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#camera-transform-artifact-libcamera_transformpy" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>The Camera Transform (CT) is the color bridge between the <strong>model domain</strong> (predicted transmission RGB) and <strong>display sRGB</strong>. It has two directions:</p>
+<ul>
+<li><strong>Forward F</strong> — model RGB → camera-rendered display sRGB. A Finlayson degree-2 root-polynomial matrix (<code>rp_features</code>) followed by monotone PCHIP curves.</li>
+<li><strong>Inverse G</strong> — display sRGB → model RGB, used for <em>image ingress</em>. Baked once into a <code>33³</code> trilinear LUT.</li>
+</ul>
+<p>The on-disk schema is <code>camera_transform_v1</code> carrying a <code>v2</code> fit model (<code>camera_transform.py:20</code>, <code>:183</code>-<code>187</code>). See <a href="../../../prisma-lithophane-generator/how-it-works/target-colors/camera-transform" class="internal internal-link alias" data-slug="prisma-lithophane-generator/how-it-works/target-colors/camera-transform">Camera Transform</a> and <a href="../../../prisma-lithophane-generator/how-it-works/target-colors/model-domain-ingress" class="internal internal-link alias" data-slug="prisma-lithophane-generator/how-it-works/target-colors/model-domain-ingress">Model-domain ingress</a>.</p>
+<h3 id="artifact-layout-generation-pinning-sha256">Artifact layout, generation-pinning, sha256<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#artifact-layout-generation-pinning-sha256" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>Constant</th><th>Value</th><th>Source</th></tr></thead><tbody><tr><td><code>CAMERA_TRANSFORM_JSON</code></td><td><code>camera_transform.json</code> (fit params)</td><td><code>camera_transform.py:21</code></td></tr><tr><td><code>CAMERA_TRANSFORM_LUT</code></td><td><code>inverse_lut_33.npz</code> (baked G)</td><td><code>camera_transform.py:22</code></td></tr><tr><td><code>CAMERA_TRANSFORM_MANIFEST</code></td><td><code>manifest.json</code> (hashes)</td><td><code>camera_transform.py:23</code></td></tr><tr><td><code>CAMERA_TRANSFORM_CURRENT</code></td><td><code>CURRENT</code> (generation pointer)</td><td><code>camera_transform.py:24</code></td></tr><tr><td><code>N_KNOTS=10</code>, <code>N_W=18</code>, <code>N_PARAMS=48</code>, <code>LUT_SHAPE=(33,33,33,3)</code></td><td>model dims</td><td><code>camera_transform.py:26</code>-<code>32</code></td></tr></tbody></table></div>
+<p><strong>Generation pinning.</strong> A CT directory holds dated <code>gen-*</code> subdirs plus a <code>CURRENT</code> file naming one of them. <code>_read_current_generation</code> (<code>camera_transform.py:69</code>) reads <code>CURRENT</code>, and rejects anything that is absolute or not a single local path component (<code>camera_transform.py:80</code>) — a guard against pointer traversal. <code>_resolve_artifact_file</code> (<code>camera_transform.py:88</code>) transparently follows <code>CURRENT</code> when the path is a directory, so callers pass the CT <em>root</em> and get the pinned generation’s file.</p>
+<p><strong>SHA-256 integrity.</strong> When a generation dir is resolved, <code>_verify_generation_hashes</code> (<code>camera_transform.py:160</code>) loads <code>manifest.json</code>, requires an <code>artifact_hashes</code> map containing both filenames, and recomputes each file’s SHA-256 (<code>_sha256_file</code>, <code>camera_transform.py:139</code>) — raising <code>CameraTransformError</code> on mismatch (<code>:175</code>). Both <code>load_camera_transform</code> and <code>load_inverse_lut</code> run this verification before reading (<code>camera_transform.py:205</code>, <code>:337</code>). Separately, <code>load_camera_transform</code> records the raw JSON bytes’ SHA-256 on the returned <code>CameraTransform.sha256</code> (<code>camera_transform.py:223</code>) for downstream provenance.</p>
+<p><strong>Caching.</strong> Both loaders cache by <code>(resolved_path, mtime_ns)</code> and <strong>clear the cache on every miss</strong> (<code>camera_transform.py:225</code>, <code>:351</code>) — a deliberate single-entry cache, not an unbounded one.</p>
+<p><strong>Runtime ownership.</strong> In the packaged Generator, <code>PRISMA_PUBLISHED_LIBRARY_MODE=1</code> and the launcher-provided model-library root keep Camera Transform resolution inside the one active immutable published library. <code>_resolve_data_root_default</code> therefore does not consult Calibration or re-root that active path. <code>_configured_data_root</code> and the legacy <code>Prisma/calibration/.data-root</code> pointer remain only as a source-development/compatibility fallback when published-library mode is not active (<code>camera_transform.py:127</code>-<code>:160</code>).</p>
+<h3 id="validators">Validators<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#validators" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>Validator</th><th>Checks</th><th>Source</th></tr></thead><tbody><tr><td><code>validate_camera_transform_payload(payload, *, path)</code></td><td>dict; <code>schema == &quot;camera_transform_v1&quot;</code>; <code>model_version == &quot;v2&quot;</code>; <code>used_lattice</code> falsy (lattice unsupported, <code>:188</code>); <code>params</code> shape <code>(48,)</code> and finite; <code>n_params</code>/<code>n_knots</code> match</td><td><code>camera_transform.py:178</code></td></tr><tr><td><code>validate_inverse_lut(lut, *, path)</code></td><td>shape <code>(33,33,33,3)</code>; all finite</td><td><code>camera_transform.py:325</code></td></tr></tbody></table></div>
+<p>Both raise <code>CameraTransformError</code> whose message appends the actionable <code>&quot;Rebuild via Calibration -> Camera Transform.&quot;</code> (<code>camera_transform.py:34</code>, <code>:136</code>).</p>
+<h3 id="forward-f-newton-inverse-trilinear-lut">Forward F, Newton inverse, trilinear LUT<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#forward-f-newton-inverse-trilinear-lut" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>Function</th><th>Role</th><th>Source</th></tr></thead><tbody><tr><td><code>rp_features(linear_rgb)</code></td><td>degree-2 root-polynomial features <code>[r,g,b,√(rg),√(gb),√(rb)]</code></td><td><code>camera_transform.py:244</code></td></tr><tr><td><code>unpack_params(params)</code></td><td>split the 48-vector into the <code>(3,6)</code> matrix <code>w</code> and the <code>3×10</code> curve knots</td><td><code>camera_transform.py:254</code></td></tr><tr><td><code>_decode_knots(raw)</code></td><td>monotone-positive PCHIP knot decode (softplus deltas, capped at <code>OUT_MAX</code>)</td><td><code>camera_transform.py:230</code></td></tr><tr><td><code>apply_forward(linear_rgb, params)</code></td><td><strong>F</strong>: root-poly matrix → clip → per-channel PCHIP curve</td><td><code>camera_transform.py:259</code></td></tr><tr><td><code>invert_curve_channel(y_col, raw)</code></td><td>invert one PCHIP curve (swap knot axes)</td><td><code>camera_transform.py:273</code></td></tr><tr><td><code>invert_forward(display_srgb, params, *, n_newton=4)</code></td><td><strong>G</strong> analytic: curve-invert, then <strong>Newton iteration</strong> on the root-poly residual with a hand-built Jacobian</td><td><code>camera_transform.py:279</code></td></tr><tr><td><code>load_inverse_lut(path)</code></td><td>load + validate the baked <code>33³</code> LUT</td><td><code>camera_transform.py:333</code></td></tr><tr><td><code>apply_inverse_lut(img_srgb, lut)</code></td><td><strong>trilinear</strong> interpolation of the LUT over an sRGB image (auto-normalizes uint8 → <code>[0,1]</code>)</td><td><code>camera_transform.py:356</code></td></tr></tbody></table></div>
+<p><strong>Where each runs — the load-bearing distinction.</strong> The generator’s <strong>image ingress</strong> does <em>not</em> call <code>invert_forward</code>. It loads the pre-baked LUT and trilinearly interpolates it:</p>
+<ul>
+<li><code>generator/model.py:21</code> imports <code>apply_inverse_lut, load_inverse_lut</code>; calls them at <code>model.py:120</code> / <code>:125</code>.</li>
+<li><code>generator/model_domain_display.py:28</code> imports <code>apply_forward, load_camera_transform</code>; applies <strong>F</strong> at <code>model_domain_display.py:44</code> (model RGB → display, for previews).</li>
+</ul>
+<p><code>invert_forward</code> (the Newton inverse) is called <strong>only at calibration bake time</strong> — <code>calibration/fitting/camera_transform/lut.py:17</code> runs it over the <code>33³</code> grid to <em>produce</em> <code>inverse_lut_33.npz</code>. Grep finds no generator caller of <code>invert_forward</code>. So: <strong>the generator consumes the trilinear LUT; the Newton solve lives in the calibration bake.</strong> Do not expect <code>invert_forward</code> on a hot solve path.</p>
+<hr/>
+<h2 id="quick-map-who-imports-what-generator-side">Quick map: who imports what (generator side)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#quick-map-who-imports-what-generator-side" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>Symbol</th><th>Generator caller</th><th>Anchor</th></tr></thead><tbody><tr><td><code>predict</code>, <code>compose</code>, <code>linear_to_oklab</code>, <code>profile_from_dict</code></td><td><code>generator/model.py</code></td><td><code>generator/model.py:22</code></td></tr><tr><td><code>_get_splines</code>, <code>_extrapolate</code></td><td><code>palette/suggest.py</code>, <code>lut.py</code>, <code>pipeline/staged_solver_helpers.py</code></td><td><code>generator/palette/suggest.py:57</code>, <code>generator/pipeline/staged_solver_helpers.py:60</code></td></tr><tr><td><code>collapse_adjacent_layers</code></td><td><code>generator/appearance_model.py</code></td><td><code>generator/appearance_model.py:29</code></td></tr><tr><td><code>apply_inverse_lut</code>, <code>load_inverse_lut</code></td><td><code>generator/model.py</code> (ingress G)</td><td><code>generator/model.py:21</code></td></tr><tr><td><code>apply_forward</code>, <code>load_camera_transform</code></td><td><code>generator/model_domain_display.py</code> (forward F preview)</td><td><code>generator/model_domain_display.py:28</code></td></tr><tr><td><code>pair_corrections.json</code> (via <code>compose</code>)</td><td><code>generator/server.py</code> → <code>pipeline/runner.py</code></td><td><code>generator/server.py</code> correction loader, <code>generator/pipeline/runner.py</code> provider setup</td></tr></tbody></table></div>
+<p>See also: <a href="../../../prisma-lithophane-generator/how-it-works/color-model/the-transmission-model" class="internal internal-link alias" data-slug="prisma-lithophane-generator/how-it-works/color-model/the-transmission-model">The Transmission Model</a>, <a href="../../../prisma-lithophane-generator/technical-reference/architecture/generator.model" class="internal internal-link" data-slug="prisma-lithophane-generator/technical-reference/architecture/generator.model">generator.model</a>, <a href="../../../prisma-lithophane-generator/technical-reference/architecture/generator.pipeline.staged_runner" class="internal internal-link" data-slug="prisma-lithophane-generator/technical-reference/architecture/generator.pipeline.staged_runner">generator.pipeline.staged_runner</a>, <a href="../../../prisma-lithophane-generator/how-it-works/target-colors/model-domain-ingress" class="internal internal-link alias" data-slug="prisma-lithophane-generator/how-it-works/target-colors/model-domain-ingress">Model-domain ingress</a>, <a href="../../../prisma-lithophane-generator/how-it-works/target-colors/camera-transform" class="internal internal-link alias" data-slug="prisma-lithophane-generator/how-it-works/target-colors/camera-transform">Camera Transform</a>, Pair corrections, <a href="../../../prisma-lithophane-generator/technical-reference/architecture/lib.filaments" class="internal internal-link" data-slug="prisma-lithophane-generator/technical-reference/architecture/lib.filaments">lib.filaments</a>, Delta E definitions.</p></div></article><hr/><div class="page-footer"></div></div><div class="right sidebar"><div class="toc"><button type="button" class="toc-header" aria-controls="toc-233" aria-expanded="true"><h3>Table of Contents</h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><ul id="list-0" class="toc-content overflow"><li class="depth-0"><a href="#two-δe-definitions--not-interchangeable" data-for="two-δe-definitions--not-interchangeable">Two ΔE definitions — not interchangeable</a></li><li class="depth-0"><a href="#oklab-round-trip-libtransmissionpy" data-for="oklab-round-trip-libtransmissionpy">OKLab round-trip (lib/transmission.py)</a></li><li class="depth-0"><a href="#srgb--linear--lab-helpers-libcolorpy" data-for="srgb--linear--lab-helpers-libcolorpy">sRGB / linear / Lab helpers (lib/color.py)</a></li><li class="depth-0"><a href="#spline-transmission-model-libtransmissionpy" data-for="spline-transmission-model-libtransmissionpy">Spline transmission model (lib/transmission.py)</a></li><li class="depth-1"><a href="#build--predict" data-for="build--predict">Build / predict</a></li><li class="depth-1"><a href="#compose--pair-corrections" data-for="compose--pair-corrections">Compose / pair-corrections</a></li><li class="depth-0"><a href="#adjacent-layer-collapsing-libstack_geometrypy" data-for="adjacent-layer-collapsing-libstack_geometrypy">Adjacent-layer collapsing (lib/stack_geometry.py)</a></li><li class="depth-0"><a href="#filament-registry-accessor-libfilamentspy" data-for="filament-registry-accessor-libfilamentspy">Filament registry accessor (lib/filaments.py)</a></li><li class="depth-0"><a href="#camera-transform-artifact-libcamera_transformpy" data-for="camera-transform-artifact-libcamera_transformpy">Camera Transform artifact (lib/camera_transform.py)</a></li><li class="depth-1"><a href="#artifact-layout-generation-pinning-sha256" data-for="artifact-layout-generation-pinning-sha256">Artifact layout, generation-pinning, sha256</a></li><li class="depth-1"><a href="#validators" data-for="validators">Validators</a></li><li class="depth-1"><a href="#forward-f-newton-inverse-trilinear-lut" data-for="forward-f-newton-inverse-trilinear-lut">Forward F, Newton inverse, trilinear LUT</a></li><li class="depth-0"><a href="#quick-map-who-imports-what-generator-side" data-for="quick-map-who-imports-what-generator-side">Quick map: who imports what (generator side)</a></li><li class="overflow-end"></li></ul></div><div class="backlinks"><h3>Backlinks</h3><ul id="list-0" class="overflow"><li><a href="../../../prisma-lithophane-generator/technical-reference/color/model-domain-ingress-and-display-conversion" class="internal">Model-domain ingress and display conversion</a></li><li><a href="../../../prisma-lithophane-generator/technical-reference/" class="internal">Technical Reference</a></li><li class="overflow-end"></li></ul></div></div><footer class><p>Created with <a href="https://quartz.jzhao.xyz/">Quartz v5.0.0</a> © 2026</p><ul><li><a href="https://github.com/jackyzha0/quartz">GitHub</a></li><li><a href="https://discord.gg/cRFFHYye7t">Discord Community</a></li></ul></footer></div></div></body><script src="../../../static/resource-after-e13fffa1.js" type="application/javascript" data-persist="true"></script><script src="../../../static/resource-after-8b336f9a.js" type="application/javascript" data-persist="true"></script><script src="../../../static/resource-after-baba652b.js" type="application/javascript" data-persist="true"></script><script src="../../../static/resource-after-5eb75950.js" type="module" data-persist="true"></script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/copy-tex.min.js" type="application/javascript" data-persist="true"></script><script src="../../../postscript-64271ee0.js" type="module" data-persist="true"></script></html>

@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 500" width="960" height="500" role="img" aria-labelledby="title desc">
+  <title id="title">One shared filament slot across different geometry roles</title>
+  <desc id="desc">Three different sample geometries belong to one bundle. Shared Filament A maps to the variable LR_01 role in the first geometry, the fixed bottom LR_01 role in the second geometry, and the fixed top LR_03 role in the third geometry. The mapped roles use one filament identity despite having different role types and vertical positions.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 Z" class="arrow-fill"/></marker>
+    <style>
+      :root { --surface:#f8fafc; --surface-2:#e8edf3; --text:#1f2937; --muted:#52606d; --line:#6b7a8a; --grid:#c8d0d9; --shared:#d45b88; --variable:#4aa5bf; --fixed:#e5b94b; --fixed-2:#62a379; }
+      @media (prefers-color-scheme:dark) { :root { --surface:#151a22; --surface-2:#252d38; --text:#edf2f7; --muted:#b3bfcc; --line:#9aa8b7; --grid:#3c4653; --shared:#e3719b; --variable:#58b4cc; --fixed:#efc85c; --fixed-2:#72b68a; } }
+      text { font-family:system-ui,-apple-system,"Segoe UI",sans-serif; fill:var(--text); letter-spacing:0; }
+      .heading { font-size:19px; font-weight:600; } .label { font-size:15px; font-weight:600; } .note { font-size:14px; fill:var(--muted); } .tiny { font-size:13px; fill:var(--muted); }
+      .panel { fill:var(--surface-2); stroke:var(--grid); stroke-width:1.5; }
+      .layer { stroke:var(--line); stroke-width:2; stroke-linejoin:round; }
+      .mapped { stroke:var(--shared); stroke-width:4; stroke-linejoin:round; }
+      .connector { fill:none; stroke:var(--shared); stroke-width:2.5; marker-end:url(#arrow); }
+      .arrow-fill { fill:var(--shared); }
+    </style>
+  </defs>
+
+  <rect x="1" y="1" width="958" height="498" rx="8" fill="var(--surface)" stroke="var(--grid)"/>
+  <text x="480" y="39" text-anchor="middle" class="heading">One geometry bundle</text>
+  <text x="480" y="63" text-anchor="middle" class="note">each member keeps its own bottom-to-top layer roles</text>
+
+  <!-- Geometry 1: variable only. -->
+  <g transform="translate(36 88)">
+    <rect width="250" height="270" rx="5" class="panel"/>
+    <text x="125" y="31" text-anchor="middle" class="heading">Geometry 1</text>
+    <text x="125" y="53" text-anchor="middle" class="note">variable role only</text>
+    <path d="M23 169 V144 H57 V138 H91 V132 H125 V126 H159 V120 H193 V114 H227 V169 Z" fill="var(--shared)" class="mapped"/>
+    <line x1="19" y1="169" x2="231" y2="169" stroke="var(--line)" stroke-width="2"/>
+    <rect x="42" y="198" width="166" height="38" rx="4" fill="var(--surface)" stroke="var(--shared)" stroke-width="2"/>
+    <circle cx="60" cy="217" r="7" fill="var(--shared)"/>
+    <text x="76" y="222" class="label">LR_01 · Variable</text>
+    <text x="125" y="256" text-anchor="middle" class="tiny">mapped role is the whole stack</text>
+  </g>
+
+  <!-- Geometry 2: fixed below. -->
+  <g transform="translate(355 88)">
+    <rect width="250" height="270" rx="5" class="panel"/>
+    <text x="125" y="31" text-anchor="middle" class="heading">Geometry 2</text>
+    <text x="125" y="53" text-anchor="middle" class="note">fixed role below</text>
+    <rect x="23" y="151" width="204" height="30" fill="var(--shared)" class="mapped"/>
+    <path d="M23 151 V129 H57 V123 H91 V117 H125 V111 H159 V105 H193 V99 H227 V151 Z" fill="var(--variable)" class="layer"/>
+    <line x1="19" y1="181" x2="231" y2="181" stroke="var(--line)" stroke-width="2"/>
+    <text x="125" y="202" text-anchor="middle" class="tiny">LR_02 · Variable</text>
+    <rect x="42" y="212" width="166" height="38" rx="4" fill="var(--surface)" stroke="var(--shared)" stroke-width="2"/>
+    <circle cx="60" cy="231" r="7" fill="var(--shared)"/>
+    <text x="76" y="236" class="label">LR_01 · Fixed</text>
+    <text x="125" y="263" text-anchor="middle" class="tiny">mapped role is on the bottom</text>
+  </g>
+
+  <!-- Geometry 3: fixed below and above. -->
+  <g transform="translate(674 88)">
+    <rect width="250" height="270" rx="5" class="panel"/>
+    <text x="125" y="31" text-anchor="middle" class="heading">Geometry 3</text>
+    <text x="125" y="53" text-anchor="middle" class="note">fixed roles below and above</text>
+    <rect x="23" y="166" width="204" height="27" fill="var(--fixed)" class="layer"/>
+    <path d="M23 166 V144 H57 V138 H91 V132 H125 V126 H159 V120 H193 V114 H227 V166 Z" fill="var(--variable)" class="layer"/>
+    <path d="M23 144 H57 V138 H91 V132 H125 V126 H159 V120 H193 V114 H227 V91 H193 V97 H159 V103 H125 V109 H91 V115 H57 V121 H23 Z" fill="var(--shared)" class="mapped"/>
+    <line x1="19" y1="193" x2="231" y2="193" stroke="var(--line)" stroke-width="2"/>
+    <text x="125" y="211" text-anchor="middle" class="tiny">LR_02 · Variable</text>
+    <text x="125" y="228" text-anchor="middle" class="tiny">LR_01 · Fixed</text>
+    <rect x="42" y="237" width="166" height="38" rx="4" fill="var(--surface)" stroke="var(--shared)" stroke-width="2"/>
+    <circle cx="60" cy="256" r="7" fill="var(--shared)"/>
+    <text x="76" y="261" class="label">LR_03 · Fixed</text>
+  </g>
+
+  <!-- Converging shared-slot mapping. -->
+  <path d="M161 367 C161 399 274 402 389 412" class="connector"/>
+  <path d="M480 367 V406" class="connector"/>
+  <path d="M799 367 C799 399 686 402 571 412" class="connector"/>
+
+  <g transform="translate(374 401)">
+    <rect width="212" height="58" rx="5" fill="var(--surface-2)" stroke="var(--shared)" stroke-width="3"/>
+    <rect x="13" y="13" width="32" height="32" rx="3" fill="var(--shared)"/>
+    <text x="58" y="27" class="label">Shared Filament A</text>
+    <text x="58" y="45" class="tiny">one filament identity</text>
+  </g>
+
+  <text x="480" y="485" text-anchor="middle" class="note">Mapped roles may have different LR numbers, role types, and positions in their strips.</text>
+</svg>

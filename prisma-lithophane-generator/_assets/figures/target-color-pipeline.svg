@@ -1,0 +1,150 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 420" width="960" height="420" role="img" aria-labelledby="title desc">
+  <title id="title">Target color preparation pipeline</title>
+  <desc id="desc">A source display sRGB pixel passes through the inverse Camera Transform into the transmission domain, is expressed as a point in OKLab, and is projected into the palette's achievable gamut when necessary.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0 0 L10 5 L0 10 Z" class="arrow-fill"/>
+    </marker>
+    <style>
+      :root {
+        --surface: #f8fafc;
+        --surface-2: #e8edf3;
+        --text: #1f2937;
+        --muted: #52606d;
+        --line: #6b7a8a;
+        --grid: #c8d0d9;
+        --cyan: #35a9c8;
+        --magenta: #d65b88;
+        --yellow: #e8bc3d;
+        --green: #58a978;
+        --violet: #7868b5;
+        --orange: #df7d45;
+      }
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --surface: #151a22;
+          --surface-2: #252d38;
+          --text: #edf2f7;
+          --muted: #b3bfcc;
+          --line: #9aa8b7;
+          --grid: #3c4653;
+          --cyan: #43b8d7;
+          --magenta: #e16c99;
+          --yellow: #f0ca51;
+          --green: #6fbd8d;
+          --violet: #9386ca;
+          --orange: #ed9360;
+        }
+      }
+      text { font-family: system-ui, -apple-system, "Segoe UI", sans-serif; fill: var(--text); letter-spacing: 0; }
+      .heading { font-size: 18px; font-weight: 600; }
+      .note { font-size: 15px; fill: var(--muted); }
+      .tiny { font-size: 14px; fill: var(--muted); }
+      .connector { fill: none; stroke: var(--line); stroke-width: 2; marker-end: url(#arrow); }
+      .arrow-fill { fill: var(--line); }
+      .axis { fill: none; stroke: var(--line); stroke-width: 1.8; marker-end: url(#arrow); }
+    </style>
+  </defs>
+
+  <rect x="1" y="1" width="958" height="418" rx="8" fill="var(--surface)" stroke="var(--grid)"/>
+
+  <!-- Stage headings. -->
+  <g>
+    <circle cx="46" cy="51" r="16" fill="var(--surface-2)" stroke="var(--line)"/>
+    <text x="46" y="57" text-anchor="middle" class="heading">1</text>
+    <text x="72" y="56" class="heading">Display sRGB</text>
+    <text x="125" y="82" text-anchor="middle" class="note">on-screen appearance</text>
+  </g>
+  <g>
+    <circle cx="276" cy="51" r="16" fill="var(--surface-2)" stroke="var(--line)"/>
+    <text x="276" y="57" text-anchor="middle" class="heading">2</text>
+    <text x="302" y="56" class="heading">Transmission target</text>
+    <text x="355" y="82" text-anchor="middle" class="note">model domain</text>
+  </g>
+  <g>
+    <circle cx="506" cy="51" r="16" fill="var(--surface-2)" stroke="var(--line)"/>
+    <text x="506" y="57" text-anchor="middle" class="heading">3</text>
+    <text x="532" y="56" class="heading">OKLab point</text>
+    <text x="585" y="82" text-anchor="middle" class="note">perceptual coordinates</text>
+  </g>
+  <g>
+    <circle cx="736" cy="51" r="16" fill="var(--surface-2)" stroke="var(--line)"/>
+    <text x="736" y="57" text-anchor="middle" class="heading">4</text>
+    <text x="762" y="56" class="heading">Achievable target</text>
+    <text x="815" y="82" text-anchor="middle" class="note">inside palette gamut</text>
+  </g>
+
+  <!-- Pipeline connectors. -->
+  <path d="M195 111 H260" class="connector"/>
+  <text x="228" y="132" text-anchor="middle" class="tiny">inverse Camera</text>
+  <text x="228" y="148" text-anchor="middle" class="tiny">Transform</text>
+
+  <path d="M425 111 H490" class="connector"/>
+  <text x="458" y="132" text-anchor="middle" class="tiny">change</text>
+  <text x="458" y="148" text-anchor="middle" class="tiny">metric</text>
+
+  <path d="M655 111 H720" class="connector"/>
+  <text x="688" y="132" text-anchor="middle" class="tiny">project if</text>
+  <text x="688" y="148" text-anchor="middle" class="tiny">outside</text>
+
+  <!-- Source image and selected pixel. -->
+  <g>
+    <rect x="52" y="158" width="146" height="112" rx="4" fill="var(--surface-2)" stroke="var(--line)" stroke-width="2"/>
+    <rect x="59" y="165" width="54" height="45" fill="var(--cyan)"/>
+    <rect x="113" y="165" width="78" height="45" fill="var(--violet)"/>
+    <rect x="59" y="210" width="74" height="53" fill="var(--green)"/>
+    <rect x="133" y="210" width="58" height="53" fill="var(--orange)"/>
+    <circle cx="147" cy="218" r="15" fill="var(--magenta)" stroke="var(--surface)" stroke-width="4"/>
+    <path d="M158 229 L180 251" stroke="var(--text)" stroke-width="2"/>
+    <circle cx="184" cy="255" r="5" fill="var(--magenta)" stroke="var(--text)" stroke-width="1.5"/>
+    <text x="125" y="299" text-anchor="middle" class="note">source pixel</text>
+  </g>
+
+  <!-- Transmission-domain channel values. -->
+  <g>
+    <line x1="302" y1="263" x2="408" y2="263" stroke="var(--line)" stroke-width="2"/>
+    <path d="M315 257 V179" class="axis"/>
+    <path d="M355 257 V205" class="axis"/>
+    <path d="M395 257 V164" class="axis"/>
+    <rect x="305" y="190" width="20" height="67" fill="var(--magenta)" fill-opacity="0.78"/>
+    <rect x="345" y="216" width="20" height="41" fill="var(--green)" fill-opacity="0.78"/>
+    <rect x="385" y="175" width="20" height="82" fill="var(--cyan)" fill-opacity="0.78"/>
+    <text x="315" y="284" text-anchor="middle" class="note">T<tspan baseline-shift="sub" font-size="10">R</tspan></text>
+    <text x="355" y="284" text-anchor="middle" class="note">T<tspan baseline-shift="sub" font-size="10">G</tspan></text>
+    <text x="395" y="284" text-anchor="middle" class="note">T<tspan baseline-shift="sub" font-size="10">B</tspan></text>
+    <text x="355" y="314" text-anchor="middle" class="note">same quantity the model predicts</text>
+  </g>
+
+  <!-- OKLab coordinate triad. -->
+  <g>
+    <circle cx="565" cy="229" r="62" fill="var(--surface-2)" stroke="var(--grid)"/>
+    <path d="M565 252 V169" class="axis"/>
+    <path d="M565 252 H632" class="axis"/>
+    <path d="M565 252 L522 285" class="axis"/>
+    <text x="558" y="169" class="note">L</text>
+    <text x="635" y="258" class="note">a</text>
+    <text x="509" y="294" class="note">b</text>
+    <line x1="565" y1="252" x2="603" y2="196" stroke="var(--magenta)" stroke-width="2" stroke-dasharray="5 4"/>
+    <circle cx="603" cy="196" r="8" fill="var(--magenta)" stroke="var(--surface)" stroke-width="3"/>
+    <text x="585" y="324" text-anchor="middle" class="note">distance matches perceived difference</text>
+  </g>
+
+  <!-- Achievable gamut and projection. -->
+  <g>
+    <path d="M752 263 C737 229 751 184 790 167 C830 149 882 168 902 205 C918 236 892 273 853 285 C812 298 769 290 752 263 Z"
+          fill="var(--surface-2)" stroke="var(--line)" stroke-width="2"/>
+    <circle cx="779" cy="222" r="5" fill="var(--cyan)"/>
+    <circle cx="805" cy="189" r="5" fill="var(--green)"/>
+    <circle cx="837" cy="207" r="5" fill="var(--yellow)"/>
+    <circle cx="792" cy="253" r="5" fill="var(--orange)"/>
+    <circle cx="849" cy="261" r="5" fill="var(--violet)"/>
+    <circle cx="878" cy="229" r="5" fill="var(--magenta)"/>
+    <circle cx="888" cy="147" r="8" fill="none" stroke="var(--magenta)" stroke-width="3"/>
+    <text x="888" y="131" text-anchor="middle" class="tiny">outside</text>
+    <path d="M884 157 C880 170 875 180 866 190" class="connector"/>
+    <circle cx="862" cy="195" r="8" fill="var(--magenta)" stroke="var(--surface)" stroke-width="3"/>
+    <text x="825" y="318" text-anchor="middle" class="note">nearest reachable color</text>
+  </g>
+
+  <text x="480" y="378" text-anchor="middle" class="note">Every surviving target is in the model domain, measured perceptually, and reachable by the active palette.</text>
+</svg>

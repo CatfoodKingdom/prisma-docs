@@ -1,0 +1,123 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 500" width="960" height="500" role="img" aria-labelledby="title desc">
+  <title id="title">White cap cross-section and maximum thickness</title>
+  <desc id="desc">A cross-section of a lithophane showing the white base, variable colored material stacks, the color ceiling, a layer-stepped boundary cap, localized detail-cap patches, and the total maximum thickness.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" class="arrow-fill"/>
+    </marker>
+    <style>
+      :root {
+        --surface: #f8fafc;
+        --surface-2: #eef2f6;
+        --text: #1f2937;
+        --muted: #52606d;
+        --line: #667585;
+        --grid: #c8d0d9;
+        --cap: #e7edf3;
+        --cap-edge: #738292;
+        --detail: #c8dced;
+        --base: #f2f4f7;
+        --cyan: #36a9c9;
+        --magenta: #d65a87;
+        --yellow: #e8bd3c;
+        --dark: #495364;
+      }
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --surface: #151a22;
+          --surface-2: #202733;
+          --text: #edf2f7;
+          --muted: #b3bfcc;
+          --line: #99a7b6;
+          --grid: #3c4653;
+          --cap: #d6dde5;
+          --cap-edge: #aeb9c4;
+          --detail: #98bdd9;
+          --base: #e8edf2;
+          --cyan: #42b7d7;
+          --magenta: #e16b99;
+          --yellow: #f0ca51;
+          --dark: #697586;
+        }
+      }
+      text { font-family: system-ui, -apple-system, "Segoe UI", sans-serif; fill: var(--text); letter-spacing: 0; }
+      .label { font-size: 17px; font-weight: 600; }
+      .note { font-size: 14px; fill: var(--muted); }
+      .leader { fill: none; stroke: var(--line); stroke-width: 1.8; marker-end: url(#arrow); }
+      .measure { fill: none; stroke: var(--line); stroke-width: 1.8; marker-start: url(#arrow); marker-end: url(#arrow); }
+      .arrow-fill { fill: var(--line); }
+    </style>
+    <clipPath id="stack-clip">
+      <path d="M220 360 V305 H340 V258 H460 V288 H580 V235 H700 V360 Z"/>
+    </clipPath>
+  </defs>
+
+  <rect x="1" y="1" width="958" height="498" rx="8" fill="var(--surface)" stroke="var(--grid)"/>
+
+  <line x1="185" y1="90" x2="770" y2="90" stroke="var(--grid)" stroke-width="1.5" stroke-dasharray="7 7"/>
+  <text x="185" y="78" class="note">Target height</text>
+
+  <!-- Detail appears only where extra relief earns its place. Each patch sits directly on a horizontal boundary-cap run. -->
+  <path d="M252 278 C265 266 280 261 294 263 C303 264 310 270 316 278 Z"
+        fill="var(--detail)" stroke="var(--cap-edge)" stroke-width="2"/>
+  <path d="M382 218 C399 216 408 194 430 181 C452 168 477 176 497 194 C509 205 520 214 536 218 Z"
+        fill="var(--detail)" stroke="var(--cap-edge)" stroke-width="2"/>
+  <path d="M575 218 C591 207 607 202 624 203 C641 204 654 210 666 218 Z"
+        fill="var(--detail)" stroke="var(--cap-edge)" stroke-width="2"/>
+
+  <!-- Boundary cap: layer-quantized upper face, underside fitted to the stack. -->
+  <path d="M220 278 H305 V248 H332 V218 H700 V235 H580 V288 H460 V258 H340 V305 H220 Z"
+        fill="var(--cap)" stroke="var(--cap-edge)" stroke-width="2.2" stroke-linejoin="round"/>
+
+  <!-- Colored material layers clipped to the solved stack heights. -->
+  <g clip-path="url(#stack-clip)">
+    <rect x="220" y="336" width="480" height="24" fill="var(--yellow)"/>
+    <rect x="220" y="312" width="480" height="24" fill="var(--magenta)"/>
+    <rect x="220" y="288" width="480" height="24" fill="var(--cyan)"/>
+    <rect x="220" y="264" width="480" height="24" fill="var(--dark)"/>
+    <rect x="220" y="240" width="480" height="24" fill="var(--yellow)"/>
+    <rect x="220" y="216" width="480" height="24" fill="var(--magenta)"/>
+    <g stroke="var(--surface)" stroke-opacity="0.55" stroke-width="1">
+      <line x1="220" y1="336" x2="700" y2="336"/>
+      <line x1="220" y1="312" x2="700" y2="312"/>
+      <line x1="220" y1="288" x2="700" y2="288"/>
+      <line x1="220" y1="264" x2="700" y2="264"/>
+      <line x1="220" y1="240" x2="700" y2="240"/>
+    </g>
+  </g>
+  <path d="M220 360 V305 H340 V258 H460 V288 H580 V235 H700 V360" fill="none" stroke="var(--line)" stroke-width="2" stroke-linejoin="round"/>
+
+  <!-- White base. -->
+  <rect x="220" y="360" width="480" height="46" rx="2" fill="var(--base)" stroke="var(--cap-edge)" stroke-width="2"/>
+  <line x1="220" y1="305" x2="340" y2="305" stroke="var(--text)" stroke-width="2.5" stroke-dasharray="7 5"/>
+  <line x1="340" y1="258" x2="460" y2="258" stroke="var(--text)" stroke-width="2.5" stroke-dasharray="7 5"/>
+  <line x1="460" y1="288" x2="580" y2="288" stroke="var(--text)" stroke-width="2.5" stroke-dasharray="7 5"/>
+  <line x1="580" y1="235" x2="700" y2="235" stroke="var(--text)" stroke-width="2.5" stroke-dasharray="7 5"/>
+
+  <!-- Labels and callouts. -->
+  <text x="42" y="142" class="label">Detail cap</text>
+  <text x="42" y="163" class="note">localized fine relief</text>
+  <path d="M151 151 C201 151 230 214 263 265" class="leader"/>
+
+  <text x="42" y="230" class="label">Boundary cap</text>
+  <text x="42" y="251" class="note">continuous, stepped cover</text>
+  <path d="M163 237 C187 237 205 253 226 271" class="leader"/>
+
+  <text x="42" y="319" class="label">Color ceiling</text>
+  <text x="42" y="340" class="note">top of solved stacks</text>
+  <path d="M167 326 C188 326 200 318 224 307" class="leader"/>
+
+  <text x="412" y="327" text-anchor="middle" class="label">Color stack</text>
+  <text x="412" y="348" text-anchor="middle" class="note">whole printed layers</text>
+
+  <text x="460" y="389" text-anchor="middle" class="label" fill="#1f2937">White base</text>
+
+  <line x1="808" y1="91" x2="808" y2="405" class="measure"/>
+  <line x1="778" y1="90" x2="822" y2="90" stroke="var(--line)" stroke-width="1.8"/>
+  <line x1="748" y1="406" x2="822" y2="406" stroke="var(--line)" stroke-width="1.8"/>
+  <text x="832" y="235" class="label">Total Max</text>
+  <text x="832" y="256" class="label">Thickness</text>
+  <text x="832" y="281" class="note">base + color</text>
+  <text x="832" y="301" class="note">+ white cap</text>
+
+</svg>
