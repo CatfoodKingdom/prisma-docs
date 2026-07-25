@@ -1,864 +1,864 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml"><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-calibration/getting-started/installing-the-calibration-app</loc>
-    <lastmod>2026-07-25T01:20:55.979Z</lastmod>
+    <lastmod>2026-07-25T18:34:11.134Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-calibration/getting-started/launching-the-calibration-app</loc>
-    <lastmod>2026-07-25T01:20:55.980Z</lastmod>
+    <lastmod>2026-07-25T18:34:11.139Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-calibration/getting-started/</loc>
-    <lastmod>2026-07-25T01:20:57.020Z</lastmod>
+    <lastmod>2026-07-25T18:34:12.866Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-calibration/how-it-works/color-model-v1</loc>
-    <lastmod>2026-07-25T01:20:55.980Z</lastmod>
+    <lastmod>2026-07-25T18:34:11.145Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-calibration/how-it-works/color-model-v2</loc>
-    <lastmod>2026-07-25T01:20:55.982Z</lastmod>
+    <lastmod>2026-07-25T18:34:11.150Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-calibration/how-it-works/extraction</loc>
-    <lastmod>2026-07-25T01:20:55.983Z</lastmod>
+    <lastmod>2026-07-25T18:34:11.154Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-calibration/how-it-works/maintenance-operations</loc>
-    <lastmod>2026-07-25T01:20:55.985Z</lastmod>
+    <lastmod>2026-07-25T18:34:11.167Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-calibration/how-it-works/model-fitting</loc>
-    <lastmod>2026-07-25T01:20:55.986Z</lastmod>
+    <lastmod>2026-07-25T18:34:11.172Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-calibration/how-it-works/sample-geometry</loc>
-    <lastmod>2026-07-25T01:20:55.987Z</lastmod>
+    <lastmod>2026-07-25T18:34:11.176Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-calibration/how-it-works/the-camera-transform</loc>
-    <lastmod>2026-07-25T01:20:55.987Z</lastmod>
+    <lastmod>2026-07-25T18:34:11.183Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-calibration/how-it-works/transmission-vs-appearance</loc>
-    <lastmod>2026-07-25T01:20:55.988Z</lastmod>
+    <lastmod>2026-07-25T18:34:11.188Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-calibration/how-it-works/</loc>
-    <lastmod>2026-07-25T01:20:55.984Z</lastmod>
+    <lastmod>2026-07-25T18:34:11.161Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-calibration/how-to-use/backups/archive-raw-images</loc>
-    <lastmod>2026-07-25T01:20:57.133Z</lastmod>
+    <lastmod>2026-07-25T18:34:13.013Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-calibration/how-to-use/backups/create-backup</loc>
-    <lastmod>2026-07-25T01:20:57.135Z</lastmod>
+    <lastmod>2026-07-25T18:34:13.018Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-calibration/how-to-use/backups/restore-archived-images</loc>
-    <lastmod>2026-07-25T01:20:56.086Z</lastmod>
+    <lastmod>2026-07-25T18:34:11.305Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-calibration/how-to-use/backups/restore-from-backup</loc>
-    <lastmod>2026-07-25T01:20:57.137Z</lastmod>
+    <lastmod>2026-07-25T18:34:13.033Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-calibration/how-to-use/backups/</loc>
-    <lastmod>2026-07-25T01:20:57.135Z</lastmod>
+    <lastmod>2026-07-25T18:34:13.023Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-calibration/how-to-use/calibration-tutorials</loc>
-    <lastmod>2026-07-25T01:20:55.989Z</lastmod>
+    <lastmod>2026-07-25T18:34:11.194Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-calibration/how-to-use/filaments/</loc>
-    <lastmod>2026-07-25T01:20:57.138Z</lastmod>
+    <lastmod>2026-07-25T18:34:13.038Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-calibration/how-to-use/geometries/export-sample-geometry</loc>
-    <lastmod>2026-07-25T01:20:57.139Z</lastmod>
+    <lastmod>2026-07-25T18:34:13.043Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-calibration/how-to-use/geometries/geometry-details</loc>
-    <lastmod>2026-07-25T01:20:57.139Z</lastmod>
+    <lastmod>2026-07-25T18:34:13.049Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-calibration/how-to-use/geometries/manage-bundles</loc>
-    <lastmod>2026-07-25T01:20:57.142Z</lastmod>
+    <lastmod>2026-07-25T18:34:13.059Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-calibration/how-to-use/geometries/new-sample-geometry</loc>
-    <lastmod>2026-07-25T01:20:57.143Z</lastmod>
+    <lastmod>2026-07-25T18:34:13.065Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-calibration/how-to-use/geometries/</loc>
-    <lastmod>2026-07-25T01:20:57.140Z</lastmod>
+    <lastmod>2026-07-25T18:34:13.053Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-calibration/how-to-use/images/assign-images/csv-assignment-import</loc>
-    <lastmod>2026-07-25T01:20:57.173Z</lastmod>
+    <lastmod>2026-07-25T18:34:13.139Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-calibration/how-to-use/images/assign-images/</loc>
-    <lastmod>2026-07-25T01:20:57.175Z</lastmod>
+    <lastmod>2026-07-25T18:34:13.145Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-calibration/how-to-use/images/processing-queue/manual-processing</loc>
-    <lastmod>2026-07-25T01:20:57.182Z</lastmod>
+    <lastmod>2026-07-25T18:34:13.156Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-calibration/how-to-use/images/processing-queue/</loc>
-    <lastmod>2026-07-25T01:20:57.176Z</lastmod>
+    <lastmod>2026-07-25T18:34:13.150Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-calibration/how-to-use/images/</loc>
-    <lastmod>2026-07-25T01:20:57.144Z</lastmod>
+    <lastmod>2026-07-25T18:34:13.070Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-calibration/how-to-use/maintenance/fit-models</loc>
-    <lastmod>2026-07-25T01:20:57.150Z</lastmod>
+    <lastmod>2026-07-25T18:34:13.075Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-calibration/how-to-use/maintenance/re-extract-sample-images</loc>
-    <lastmod>2026-07-25T01:20:57.152Z</lastmod>
+    <lastmod>2026-07-25T18:34:13.085Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-calibration/how-to-use/maintenance/standard-operations</loc>
-    <lastmod>2026-07-25T01:20:57.158Z</lastmod>
+    <lastmod>2026-07-25T18:34:13.091Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-calibration/how-to-use/maintenance/</loc>
-    <lastmod>2026-07-25T01:20:57.152Z</lastmod>
+    <lastmod>2026-07-25T18:34:13.080Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-calibration/how-to-use/modeling/curating-samples</loc>
-    <lastmod>2026-07-25T01:20:57.160Z</lastmod>
+    <lastmod>2026-07-25T18:34:13.096Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-calibration/how-to-use/modeling/filament-coverage</loc>
-    <lastmod>2026-07-25T01:20:57.162Z</lastmod>
+    <lastmod>2026-07-25T18:34:13.102Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-calibration/how-to-use/modeling/modeling-overview</loc>
-    <lastmod>2026-07-25T01:20:57.169Z</lastmod>
+    <lastmod>2026-07-25T18:34:13.113Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-calibration/how-to-use/modeling/sample-comparison</loc>
-    <lastmod>2026-07-25T01:20:56.122Z</lastmod>
+    <lastmod>2026-07-25T18:34:11.400Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-calibration/how-to-use/modeling/</loc>
-    <lastmod>2026-07-25T01:20:57.163Z</lastmod>
+    <lastmod>2026-07-25T18:34:13.107Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-calibration/how-to-use/sample-logbook/creating-new-samples</loc>
-    <lastmod>2026-07-25T01:20:57.170Z</lastmod>
+    <lastmod>2026-07-25T18:34:13.123Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-calibration/how-to-use/sample-logbook/sample-record</loc>
-    <lastmod>2026-07-25T01:20:57.172Z</lastmod>
+    <lastmod>2026-07-25T18:34:13.133Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-calibration/how-to-use/sample-logbook/</loc>
-    <lastmod>2026-07-25T01:20:57.171Z</lastmod>
+    <lastmod>2026-07-25T18:34:13.128Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-calibration/how-to-use/</loc>
-    <lastmod>2026-07-25T01:20:57.052Z</lastmod>
+    <lastmod>2026-07-25T18:34:12.931Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-calibration/technical-reference/architecture/calibration.backup_restore</loc>
-    <lastmod>2026-07-25T01:20:56.136Z</lastmod>
+    <lastmod>2026-07-25T18:34:11.445Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-calibration/technical-reference/architecture/calibration.csv_assignment_import</loc>
-    <lastmod>2026-07-25T01:20:56.140Z</lastmod>
+    <lastmod>2026-07-25T18:34:11.450Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-calibration/technical-reference/architecture/calibration.data_access</loc>
-    <lastmod>2026-07-25T01:20:56.140Z</lastmod>
+    <lastmod>2026-07-25T18:34:11.455Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-calibration/technical-reference/architecture/calibration.fitting.batch_fit</loc>
-    <lastmod>2026-07-25T01:20:56.142Z</lastmod>
+    <lastmod>2026-07-25T18:34:11.460Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-calibration/technical-reference/architecture/calibration.fitting.camera_transform.corpus</loc>
-    <lastmod>2026-07-25T01:20:56.143Z</lastmod>
+    <lastmod>2026-07-25T18:34:11.466Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-calibration/technical-reference/architecture/calibration.fitting.camera_transform.export</loc>
-    <lastmod>2026-07-25T01:20:56.144Z</lastmod>
+    <lastmod>2026-07-25T18:34:11.471Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-calibration/technical-reference/architecture/calibration.fitting.camera_transform.fingerprint</loc>
-    <lastmod>2026-07-25T01:20:56.145Z</lastmod>
+    <lastmod>2026-07-25T18:34:11.477Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-calibration/technical-reference/architecture/calibration.fitting.camera_transform.fit</loc>
-    <lastmod>2026-07-25T01:20:56.146Z</lastmod>
+    <lastmod>2026-07-25T18:34:11.481Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-calibration/technical-reference/architecture/calibration.fitting.camera_transform.job</loc>
-    <lastmod>2026-07-25T01:20:56.151Z</lastmod>
+    <lastmod>2026-07-25T18:34:11.486Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-calibration/technical-reference/architecture/calibration.fitting.camera_transform.lut</loc>
-    <lastmod>2026-07-25T01:20:56.151Z</lastmod>
+    <lastmod>2026-07-25T18:34:11.491Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-calibration/technical-reference/architecture/calibration.fitting.camera_transform</loc>
-    <lastmod>2026-07-25T01:20:56.152Z</lastmod>
+    <lastmod>2026-07-25T18:34:11.496Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-calibration/technical-reference/architecture/calibration.fitting.camera_transform.parity</loc>
-    <lastmod>2026-07-25T01:20:56.153Z</lastmod>
+    <lastmod>2026-07-25T18:34:11.501Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-calibration/technical-reference/architecture/calibration.fitting.color_math</loc>
-    <lastmod>2026-07-25T01:20:56.158Z</lastmod>
+    <lastmod>2026-07-25T18:34:11.506Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-calibration/technical-reference/architecture/calibration.fitting.composition</loc>
-    <lastmod>2026-07-25T01:20:56.164Z</lastmod>
+    <lastmod>2026-07-25T18:34:11.510Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-calibration/technical-reference/architecture/calibration.fitting.export</loc>
-    <lastmod>2026-07-25T01:20:56.165Z</lastmod>
+    <lastmod>2026-07-25T18:34:11.514Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-calibration/technical-reference/architecture/calibration.fitting.filament_exclusions</loc>
-    <lastmod>2026-07-25T01:20:56.166Z</lastmod>
+    <lastmod>2026-07-25T18:34:11.519Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-calibration/technical-reference/architecture/calibration.fitting.filament_roles</loc>
-    <lastmod>2026-07-25T01:20:56.166Z</lastmod>
+    <lastmod>2026-07-25T18:34:11.523Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-calibration/technical-reference/architecture/calibration.fitting.fitter_core</loc>
-    <lastmod>2026-07-25T01:20:56.171Z</lastmod>
+    <lastmod>2026-07-25T18:34:11.528Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-calibration/technical-reference/architecture/calibration.fitting.fitting</loc>
-    <lastmod>2026-07-25T01:20:56.172Z</lastmod>
+    <lastmod>2026-07-25T18:34:11.533Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-calibration/technical-reference/architecture/calibration.fitting.legacy_spline_fit_job</loc>
-    <lastmod>2026-07-25T01:20:56.173Z</lastmod>
+    <lastmod>2026-07-25T18:34:11.537Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-calibration/technical-reference/architecture/calibration.fitting</loc>
-    <lastmod>2026-07-25T01:20:56.174Z</lastmod>
+    <lastmod>2026-07-25T18:34:11.544Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-calibration/technical-reference/architecture/calibration.fitting.model_fit_workflow</loc>
-    <lastmod>2026-07-25T01:20:56.175Z</lastmod>
+    <lastmod>2026-07-25T18:34:11.548Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-calibration/technical-reference/architecture/calibration.fitting.model_publication</loc>
-    <lastmod>2026-07-25T01:20:56.181Z</lastmod>
+    <lastmod>2026-07-25T18:34:11.553Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-calibration/technical-reference/architecture/calibration.fitting.photo_stack_model.evidence</loc>
-    <lastmod>2026-07-25T01:20:56.185Z</lastmod>
+    <lastmod>2026-07-25T18:34:11.557Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-calibration/technical-reference/architecture/calibration.fitting.photo_stack_model.fit_job</loc>
-    <lastmod>2026-07-25T01:20:56.186Z</lastmod>
+    <lastmod>2026-07-25T18:34:11.561Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-calibration/technical-reference/architecture/calibration.fitting.photo_stack_model.live_fit</loc>
-    <lastmod>2026-07-25T01:20:56.187Z</lastmod>
+    <lastmod>2026-07-25T18:34:11.566Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-calibration/technical-reference/architecture/calibration.fitting.photo_stack_model</loc>
-    <lastmod>2026-07-25T01:20:56.188Z</lastmod>
+    <lastmod>2026-07-25T18:34:11.570Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-calibration/technical-reference/architecture/calibration.fitting.photo_stack_model.metrics</loc>
-    <lastmod>2026-07-25T01:20:56.193Z</lastmod>
+    <lastmod>2026-07-25T18:34:11.575Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-calibration/technical-reference/architecture/calibration.fitting.photo_stack_model.photo_stack_engine</loc>
-    <lastmod>2026-07-25T01:20:56.198Z</lastmod>
+    <lastmod>2026-07-25T18:34:11.580Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-calibration/technical-reference/architecture/calibration.fitting.photo_stack_model.smoke_fit_job</loc>
-    <lastmod>2026-07-25T01:20:56.199Z</lastmod>
+    <lastmod>2026-07-25T18:34:11.584Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-calibration/technical-reference/architecture/calibration.fitting.photo_stack_model.v63_fit_engine</loc>
-    <lastmod>2026-07-25T01:20:56.203Z</lastmod>
+    <lastmod>2026-07-25T18:34:11.588Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-calibration/technical-reference/architecture/calibration.fitting.photo_stack_model.v63_fit_engine.research_arc_v08_latent_multilayer_model</loc>
-    <lastmod>2026-07-25T01:20:56.207Z</lastmod>
+    <lastmod>2026-07-25T18:34:11.593Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-calibration/technical-reference/architecture/calibration.fitting.photo_stack_model.v63_fit_engine.research_arc_v08_latent_multilayer_model.run_latent_multilayer_v08</loc>
-    <lastmod>2026-07-25T01:20:56.212Z</lastmod>
+    <lastmod>2026-07-25T18:34:11.597Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-calibration/technical-reference/architecture/calibration.fitting.photo_stack_model.v63_fit_engine.research_arc_v09_latent_stack_mixer</loc>
-    <lastmod>2026-07-25T01:20:56.213Z</lastmod>
+    <lastmod>2026-07-25T18:34:11.603Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-calibration/technical-reference/architecture/calibration.fitting.photo_stack_model.v63_fit_engine.research_arc_v09_latent_stack_mixer.run_latent_stack_mixer_v09</loc>
-    <lastmod>2026-07-25T01:20:56.214Z</lastmod>
+    <lastmod>2026-07-25T18:34:11.608Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-calibration/technical-reference/architecture/calibration.fitting.photo_stack_model.v63_fit_engine.research_arc_v17_trajectory_anchored_stack_mixer</loc>
-    <lastmod>2026-07-25T01:20:56.215Z</lastmod>
+    <lastmod>2026-07-25T18:34:11.613Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-calibration/technical-reference/architecture/calibration.fitting.photo_stack_model.v63_fit_engine.research_arc_v17_trajectory_anchored_stack_mixer.run_trajectory_anchored_stack_mixer_v17</loc>
-    <lastmod>2026-07-25T01:20:56.216Z</lastmod>
+    <lastmod>2026-07-25T18:34:11.617Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-calibration/technical-reference/architecture/calibration.fitting.photo_stack_model.v63_fit_engine.research_arc_v20_per_white_channelwise_latent_trajectory_model</loc>
-    <lastmod>2026-07-25T01:20:56.220Z</lastmod>
+    <lastmod>2026-07-25T18:34:11.621Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-calibration/technical-reference/architecture/calibration.fitting.photo_stack_model.v63_fit_engine.research_arc_v20_per_white_channelwise_latent_trajectory_model.run_per_white_channelwise_latent_trajectory_v20</loc>
-    <lastmod>2026-07-25T01:20:56.225Z</lastmod>
+    <lastmod>2026-07-25T18:34:11.627Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-calibration/technical-reference/architecture/calibration.fitting.photo_stack_model.v63_fit_engine.research_arc_v63_td_full_license_probe</loc>
-    <lastmod>2026-07-25T01:20:56.226Z</lastmod>
+    <lastmod>2026-07-25T18:34:11.632Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-calibration/technical-reference/architecture/calibration.fitting.photo_stack_model.v63_fit_engine.research_arc_v63_td_full_license_probe.run_td_full_license_probe_v63</loc>
-    <lastmod>2026-07-25T01:20:56.231Z</lastmod>
+    <lastmod>2026-07-25T18:34:11.637Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-calibration/technical-reference/architecture/calibration.fitting.photo_stack_model.write_artifact</loc>
-    <lastmod>2026-07-25T01:20:56.233Z</lastmod>
+    <lastmod>2026-07-25T18:34:11.641Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-calibration/technical-reference/architecture/calibration.fitting.physical_stack</loc>
-    <lastmod>2026-07-25T01:20:56.233Z</lastmod>
+    <lastmod>2026-07-25T18:34:11.646Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-calibration/technical-reference/architecture/calibration.fitting.strip_loader</loc>
-    <lastmod>2026-07-25T01:20:56.235Z</lastmod>
+    <lastmod>2026-07-25T18:34:11.651Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-calibration/technical-reference/architecture/calibration.geometry_builder</loc>
-    <lastmod>2026-07-25T01:20:56.236Z</lastmod>
+    <lastmod>2026-07-25T18:34:11.655Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-calibration/technical-reference/architecture/calibration.image_import_custody</loc>
-    <lastmod>2026-07-25T01:20:56.237Z</lastmod>
+    <lastmod>2026-07-25T18:34:11.660Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-calibration/technical-reference/architecture/calibration.lightweight_step</loc>
-    <lastmod>2026-07-25T01:20:56.238Z</lastmod>
+    <lastmod>2026-07-25T18:34:11.665Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-calibration/technical-reference/architecture/calibration.maintenance</loc>
-    <lastmod>2026-07-25T01:20:56.238Z</lastmod>
+    <lastmod>2026-07-25T18:34:11.669Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-calibration/technical-reference/architecture/calibration.maintenance_reextract</loc>
-    <lastmod>2026-07-25T01:20:56.239Z</lastmod>
+    <lastmod>2026-07-25T18:34:11.674Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-calibration/technical-reference/architecture/calibration</loc>
-    <lastmod>2026-07-25T01:20:56.239Z</lastmod>
+    <lastmod>2026-07-25T18:34:11.679Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-calibration/technical-reference/architecture/calibration.model_library_publication</loc>
-    <lastmod>2026-07-25T01:20:56.243Z</lastmod>
+    <lastmod>2026-07-25T18:34:11.693Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-calibration/technical-reference/architecture/calibration.modeling_review</loc>
-    <lastmod>2026-07-25T01:20:56.240Z</lastmod>
+    <lastmod>2026-07-25T18:34:11.683Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-calibration/technical-reference/architecture/calibration.models</loc>
-    <lastmod>2026-07-25T01:20:56.242Z</lastmod>
+    <lastmod>2026-07-25T18:34:11.688Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-calibration/technical-reference/architecture/calibration.path_safety</loc>
-    <lastmod>2026-07-25T01:20:56.248Z</lastmod>
+    <lastmod>2026-07-25T18:34:11.697Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-calibration/technical-reference/architecture/calibration.processing.artifact_sinks</loc>
-    <lastmod>2026-07-25T01:20:56.249Z</lastmod>
+    <lastmod>2026-07-25T18:34:11.702Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-calibration/technical-reference/architecture/calibration.processing.backfill</loc>
-    <lastmod>2026-07-25T01:20:56.254Z</lastmod>
+    <lastmod>2026-07-25T18:34:11.707Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-calibration/technical-reference/architecture/calibration.processing.blank_registry</loc>
-    <lastmod>2026-07-25T01:20:56.258Z</lastmod>
+    <lastmod>2026-07-25T18:34:11.711Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-calibration/technical-reference/architecture/calibration.processing.extraction</loc>
-    <lastmod>2026-07-25T01:20:56.259Z</lastmod>
+    <lastmod>2026-07-25T18:34:11.715Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-calibration/technical-reference/architecture/calibration.processing.extraction_publication</loc>
-    <lastmod>2026-07-25T01:20:56.264Z</lastmod>
+    <lastmod>2026-07-25T18:34:11.720Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-calibration/technical-reference/architecture/calibration.processing.extraction_result</loc>
-    <lastmod>2026-07-25T01:20:56.269Z</lastmod>
+    <lastmod>2026-07-25T18:34:11.725Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-calibration/technical-reference/architecture/calibration.processing.extraction_visuals</loc>
-    <lastmod>2026-07-25T01:20:56.273Z</lastmod>
+    <lastmod>2026-07-25T18:34:11.730Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-calibration/technical-reference/architecture/calibration.processing.manual</loc>
-    <lastmod>2026-07-25T01:20:56.274Z</lastmod>
+    <lastmod>2026-07-25T18:34:11.734Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-calibration/technical-reference/architecture/calibration.processing</loc>
-    <lastmod>2026-07-25T01:20:56.279Z</lastmod>
+    <lastmod>2026-07-25T18:34:11.738Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-calibration/technical-reference/architecture/calibration.processing.processor</loc>
-    <lastmod>2026-07-25T01:20:56.280Z</lastmod>
+    <lastmod>2026-07-25T18:34:11.743Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-calibration/technical-reference/architecture/calibration.restore_recovery</loc>
-    <lastmod>2026-07-25T01:20:56.280Z</lastmod>
+    <lastmod>2026-07-25T18:34:11.748Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-calibration/technical-reference/architecture/calibration.sample_mutations</loc>
-    <lastmod>2026-07-25T01:20:56.288Z</lastmod>
+    <lastmod>2026-07-25T18:34:11.757Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-calibration/technical-reference/architecture/calibration.sample_visuals</loc>
-    <lastmod>2026-07-25T01:20:56.289Z</lastmod>
+    <lastmod>2026-07-25T18:34:11.763Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-calibration/technical-reference/architecture/calibration.samples</loc>
-    <lastmod>2026-07-25T01:20:56.284Z</lastmod>
+    <lastmod>2026-07-25T18:34:11.753Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-calibration/technical-reference/architecture/calibration.server</loc>
-    <lastmod>2026-07-25T01:20:56.290Z</lastmod>
+    <lastmod>2026-07-25T18:34:11.768Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-calibration/technical-reference/architecture/calibration.sqlite_data_access</loc>
-    <lastmod>2026-07-25T01:20:56.296Z</lastmod>
+    <lastmod>2026-07-25T18:34:11.772Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-calibration/technical-reference/architecture/calibration.sqlite_restore_points</loc>
-    <lastmod>2026-07-25T01:20:56.297Z</lastmod>
+    <lastmod>2026-07-25T18:34:11.777Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-calibration/technical-reference/architecture/calibration.strips.generator</loc>
-    <lastmod>2026-07-25T01:20:56.298Z</lastmod>
+    <lastmod>2026-07-25T18:34:11.782Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-calibration/technical-reference/architecture/calibration.strips</loc>
-    <lastmod>2026-07-25T01:20:56.299Z</lastmod>
+    <lastmod>2026-07-25T18:34:11.787Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-calibration/technical-reference/architecture/calibration.strips.step_parser</loc>
-    <lastmod>2026-07-25T01:20:56.300Z</lastmod>
+    <lastmod>2026-07-25T18:34:11.791Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-calibration/technical-reference/csv-assignment-import-and-commit-lifecycle</loc>
-    <lastmod>2026-07-25T01:20:55.996Z</lastmod>
+    <lastmod>2026-07-25T18:34:11.205Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-calibration/technical-reference/data-access-and-persistence</loc>
-    <lastmod>2026-07-25T01:20:56.002Z</lastmod>
+    <lastmod>2026-07-25T18:34:11.211Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-calibration/technical-reference/extraction-artifact-sinks-and-blank-registration</loc>
-    <lastmod>2026-07-25T01:20:56.008Z</lastmod>
+    <lastmod>2026-07-25T18:34:11.216Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-calibration/technical-reference/frontend-architecture</loc>
-    <lastmod>2026-07-25T01:20:56.009Z</lastmod>
+    <lastmod>2026-07-25T18:34:11.222Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-calibration/technical-reference/geometry-and-strip-definition</loc>
-    <lastmod>2026-07-25T01:20:56.015Z</lastmod>
+    <lastmod>2026-07-25T18:34:11.227Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-calibration/technical-reference/geometry-bundle-role-mapping-and-sample-creation</loc>
-    <lastmod>2026-07-25T01:20:56.016Z</lastmod>
+    <lastmod>2026-07-25T18:34:11.232Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-calibration/technical-reference/model-workflow,-publication,-and-review</loc>
-    <lastmod>2026-07-25T01:20:56.028Z</lastmod>
+    <lastmod>2026-07-25T18:34:11.242Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-calibration/technical-reference/photo-stack-model-fitting-(v2)</loc>
-    <lastmod>2026-07-25T01:20:56.034Z</lastmod>
+    <lastmod>2026-07-25T18:34:11.248Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-calibration/technical-reference/sample-mutations,-invalidation,-and-profile-staleness</loc>
-    <lastmod>2026-07-25T01:20:56.039Z</lastmod>
+    <lastmod>2026-07-25T18:34:11.253Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-calibration/technical-reference/spline-model-fitting-(v1)</loc>
-    <lastmod>2026-07-25T01:20:56.046Z</lastmod>
+    <lastmod>2026-07-25T18:34:11.259Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-calibration/technical-reference/the-camera-transform-fitter</loc>
-    <lastmod>2026-07-25T01:20:56.052Z</lastmod>
+    <lastmod>2026-07-25T18:34:11.265Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-calibration/technical-reference/the-extraction-pipeline</loc>
-    <lastmod>2026-07-25T01:20:56.058Z</lastmod>
+    <lastmod>2026-07-25T18:34:11.270Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-calibration/technical-reference/the-maintenance-backend</loc>
-    <lastmod>2026-07-25T01:20:56.065Z</lastmod>
+    <lastmod>2026-07-25T18:34:11.276Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-calibration/technical-reference/using/assigning-images</loc>
-    <lastmod>2026-07-25T01:20:56.305Z</lastmod>
+    <lastmod>2026-07-25T18:34:11.797Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-calibration/technical-reference/using/backup-and-restore</loc>
-    <lastmod>2026-07-25T01:20:56.310Z</lastmod>
+    <lastmod>2026-07-25T18:34:11.803Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-calibration/technical-reference/using/driving-the-calibration-app</loc>
-    <lastmod>2026-07-25T01:20:57.353Z</lastmod>
+    <lastmod>2026-07-25T18:34:13.495Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-calibration/technical-reference/using/managing-filaments</loc>
-    <lastmod>2026-07-25T01:20:56.328Z</lastmod>
+    <lastmod>2026-07-25T18:34:11.826Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-calibration/technical-reference/using/processing-and-extraction</loc>
-    <lastmod>2026-07-25T01:20:56.334Z</lastmod>
+    <lastmod>2026-07-25T18:34:11.833Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-calibration/technical-reference/using/running-maintenance</loc>
-    <lastmod>2026-07-25T01:20:56.339Z</lastmod>
+    <lastmod>2026-07-25T18:34:11.838Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-calibration/technical-reference/using/samples-and-geometries</loc>
-    <lastmod>2026-07-25T01:20:56.344Z</lastmod>
+    <lastmod>2026-07-25T18:34:11.843Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-calibration/technical-reference/using/the-modeling-page</loc>
-    <lastmod>2026-07-25T01:20:56.350Z</lastmod>
+    <lastmod>2026-07-25T18:34:11.847Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-calibration/technical-reference/using/</loc>
-    <lastmod>2026-07-25T01:20:56.321Z</lastmod>
+    <lastmod>2026-07-25T18:34:11.821Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-calibration/technical-reference/web-api-and-job-orchestration</loc>
-    <lastmod>2026-07-25T01:20:56.071Z</lastmod>
+    <lastmod>2026-07-25T18:34:11.282Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-calibration/technical-reference/</loc>
-    <lastmod>2026-07-25T01:20:56.022Z</lastmod>
+    <lastmod>2026-07-25T18:34:11.236Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-calibration/</loc>
-    <lastmod>2026-07-25T01:20:57.013Z</lastmod>
+    <lastmod>2026-07-25T18:34:12.854Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/getting-started/installing-prisma</loc>
-    <lastmod>2026-07-25T01:20:57.386Z</lastmod>
+    <lastmod>2026-07-25T18:34:13.536Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/getting-started/launching-prisma</loc>
-    <lastmod>2026-07-25T01:20:56.358Z</lastmod>
+    <lastmod>2026-07-25T18:34:11.865Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/getting-started/</loc>
-    <lastmod>2026-07-25T01:20:57.385Z</lastmod>
+    <lastmod>2026-07-25T18:34:13.532Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/how-it-works/color-model/appearance-provider</loc>
-    <lastmod>2026-07-25T01:20:57.412Z</lastmod>
+    <lastmod>2026-07-25T18:34:13.598Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/how-it-works/color-model/the-transmission-model</loc>
-    <lastmod>2026-07-25T01:20:57.415Z</lastmod>
+    <lastmod>2026-07-25T18:34:13.614Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/how-it-works/color-model/the-photo-stack-v2-model</loc>
-    <lastmod>2026-07-25T01:20:57.414Z</lastmod>
+    <lastmod>2026-07-25T18:34:13.609Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/how-it-works/color-model/</loc>
-    <lastmod>2026-07-25T01:20:57.413Z</lastmod>
+    <lastmod>2026-07-25T18:34:13.604Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/how-it-works/export/</loc>
-    <lastmod>2026-07-25T01:20:57.416Z</lastmod>
+    <lastmod>2026-07-25T18:34:13.619Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/how-it-works/how-a-solve-works</loc>
-    <lastmod>2026-07-25T01:20:57.393Z</lastmod>
+    <lastmod>2026-07-25T18:34:13.547Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/how-it-works/image-adjustments/</loc>
-    <lastmod>2026-07-25T01:20:57.417Z</lastmod>
+    <lastmod>2026-07-25T18:34:13.625Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/how-it-works/palette/</loc>
-    <lastmod>2026-07-25T01:20:57.423Z</lastmod>
+    <lastmod>2026-07-25T18:34:13.631Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/how-it-works/preprocessing/preprocessing-modules</loc>
-    <lastmod>2026-07-25T01:20:57.429Z</lastmod>
+    <lastmod>2026-07-25T18:34:13.642Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/how-it-works/preprocessing/</loc>
-    <lastmod>2026-07-25T01:20:57.424Z</lastmod>
+    <lastmod>2026-07-25T18:34:13.636Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/how-it-works/runs-with-swaps/</loc>
-    <lastmod>2026-07-25T01:20:57.436Z</lastmod>
+    <lastmod>2026-07-25T18:34:13.647Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/how-it-works/settings/color-solver</loc>
-    <lastmod>2026-07-25T01:20:56.432Z</lastmod>
+    <lastmod>2026-07-25T18:34:11.975Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/how-it-works/settings/essentials</loc>
-    <lastmod>2026-07-25T01:20:56.433Z</lastmod>
+    <lastmod>2026-07-25T18:34:11.980Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/how-it-works/settings/preprocessing</loc>
-    <lastmod>2026-07-25T01:20:56.435Z</lastmod>
+    <lastmod>2026-07-25T18:34:11.989Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/how-it-works/settings/white-cap</loc>
-    <lastmod>2026-07-25T01:20:57.444Z</lastmod>
+    <lastmod>2026-07-25T18:34:13.670Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/how-it-works/settings/</loc>
-    <lastmod>2026-07-25T01:20:56.434Z</lastmod>
+    <lastmod>2026-07-25T18:34:11.984Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/how-it-works/target-colors/camera-transform</loc>
-    <lastmod>2026-07-25T01:20:57.446Z</lastmod>
+    <lastmod>2026-07-25T18:34:13.675Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/how-it-works/target-colors/gamut-mapping</loc>
-    <lastmod>2026-07-25T01:20:57.447Z</lastmod>
+    <lastmod>2026-07-25T18:34:13.680Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/how-it-works/target-colors/model-domain-ingress</loc>
-    <lastmod>2026-07-25T01:20:56.448Z</lastmod>
+    <lastmod>2026-07-25T18:34:12.016Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/how-it-works/target-colors/oklab</loc>
-    <lastmod>2026-07-25T01:20:57.460Z</lastmod>
+    <lastmod>2026-07-25T18:34:13.697Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/how-it-works/target-colors/</loc>
-    <lastmod>2026-07-25T01:20:57.454Z</lastmod>
+    <lastmod>2026-07-25T18:34:13.687Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/how-it-works/the-color-lut/</loc>
-    <lastmod>2026-07-25T01:20:57.467Z</lastmod>
+    <lastmod>2026-07-25T18:34:13.702Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/how-it-works/the-solve/solve-modes</loc>
-    <lastmod>2026-07-25T01:20:57.473Z</lastmod>
+    <lastmod>2026-07-25T18:34:13.713Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/how-it-works/the-solve/</loc>
-    <lastmod>2026-07-25T01:20:57.472Z</lastmod>
+    <lastmod>2026-07-25T18:34:13.708Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/how-it-works/white-cap/thickness-map</loc>
-    <lastmod>2026-07-25T01:20:57.481Z</lastmod>
+    <lastmod>2026-07-25T18:34:13.722Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/how-it-works/white-cap/</loc>
-    <lastmod>2026-07-25T01:20:57.480Z</lastmod>
+    <lastmod>2026-07-25T18:34:13.718Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/how-it-works/</loc>
-    <lastmod>2026-07-25T01:20:56.370Z</lastmod>
+    <lastmod>2026-07-25T18:34:11.877Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/how-to-use/3d-printing</loc>
-    <lastmod>2026-07-25T01:20:56.370Z</lastmod>
+    <lastmod>2026-07-25T18:34:11.882Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/how-to-use/configuration</loc>
-    <lastmod>2026-07-25T01:20:56.372Z</lastmod>
+    <lastmod>2026-07-25T18:34:11.887Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/how-to-use/exporting</loc>
-    <lastmod>2026-07-25T01:20:56.373Z</lastmod>
+    <lastmod>2026-07-25T18:34:11.893Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/how-to-use/image/adjustments</loc>
-    <lastmod>2026-07-25T01:20:56.470Z</lastmod>
+    <lastmod>2026-07-25T18:34:12.053Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/how-to-use/image/</loc>
-    <lastmod>2026-07-25T01:20:56.476Z</lastmod>
+    <lastmod>2026-07-25T18:34:12.060Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/how-to-use/palette</loc>
-    <lastmod>2026-07-25T01:20:56.386Z</lastmod>
+    <lastmod>2026-07-25T18:34:11.903Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/how-to-use/preview/advanced-modes</loc>
-    <lastmod>2026-07-25T01:20:56.478Z</lastmod>
+    <lastmod>2026-07-25T18:34:12.065Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/how-to-use/preview/preview-card-modes</loc>
-    <lastmod>2026-07-25T01:20:56.489Z</lastmod>
+    <lastmod>2026-07-25T18:34:12.075Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/how-to-use/preview/</loc>
-    <lastmod>2026-07-25T01:20:56.483Z</lastmod>
+    <lastmod>2026-07-25T18:34:12.070Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/how-to-use/runs-with-swaps/</loc>
-    <lastmod>2026-07-25T01:20:56.490Z</lastmod>
+    <lastmod>2026-07-25T18:34:12.080Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/how-to-use/settings/color-solver</loc>
-    <lastmod>2026-07-25T01:20:56.496Z</lastmod>
+    <lastmod>2026-07-25T18:34:12.086Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/how-to-use/settings/preprocessing-module-settings</loc>
-    <lastmod>2026-07-25T01:20:56.502Z</lastmod>
+    <lastmod>2026-07-25T18:34:12.096Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/how-to-use/settings/white-cap</loc>
-    <lastmod>2026-07-25T01:20:56.503Z</lastmod>
+    <lastmod>2026-07-25T18:34:12.101Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/how-to-use/settings/</loc>
-    <lastmod>2026-07-25T01:20:56.501Z</lastmod>
+    <lastmod>2026-07-25T18:34:12.090Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/how-to-use/tutorials</loc>
-    <lastmod>2026-07-25T01:20:56.392Z</lastmod>
+    <lastmod>2026-07-25T18:34:11.908Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/how-to-use/</loc>
-    <lastmod>2026-07-25T01:20:56.380Z</lastmod>
+    <lastmod>2026-07-25T18:34:11.898Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/technical-reference/architecture/generator.appearance_model</loc>
-    <lastmod>2026-07-25T01:20:56.509Z</lastmod>
+    <lastmod>2026-07-25T18:34:12.106Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/technical-reference/architecture/generator.auto_run_store</loc>
-    <lastmod>2026-07-25T01:20:56.515Z</lastmod>
+    <lastmod>2026-07-25T18:34:12.111Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/technical-reference/architecture/generator.cache_admin</loc>
-    <lastmod>2026-07-25T01:20:56.516Z</lastmod>
+    <lastmod>2026-07-25T18:34:12.115Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/technical-reference/architecture/generator.config</loc>
-    <lastmod>2026-07-25T01:20:56.521Z</lastmod>
+    <lastmod>2026-07-25T18:34:12.119Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/technical-reference/architecture/generator.config.resolution_schema</loc>
-    <lastmod>2026-07-25T01:20:56.522Z</lastmod>
+    <lastmod>2026-07-25T18:34:12.123Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/technical-reference/architecture/generator.data_paths</loc>
-    <lastmod>2026-07-25T01:20:56.522Z</lastmod>
+    <lastmod>2026-07-25T18:34:12.127Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/technical-reference/architecture/generator.facade</loc>
-    <lastmod>2026-07-25T01:20:56.523Z</lastmod>
+    <lastmod>2026-07-25T18:34:12.133Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/technical-reference/architecture/generator.filament_order</loc>
-    <lastmod>2026-07-25T01:20:56.530Z</lastmod>
+    <lastmod>2026-07-25T18:34:12.137Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/technical-reference/architecture/generator.filament_policy</loc>
-    <lastmod>2026-07-25T01:20:56.535Z</lastmod>
+    <lastmod>2026-07-25T18:34:12.141Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/technical-reference/architecture/generator.grouping.band_plan</loc>
-    <lastmod>2026-07-25T01:20:56.541Z</lastmod>
+    <lastmod>2026-07-25T18:34:12.150Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/technical-reference/architecture/generator.grouping.banded_export</loc>
-    <lastmod>2026-07-25T01:20:56.540Z</lastmod>
+    <lastmod>2026-07-25T18:34:12.146Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/technical-reference/architecture/generator.grouping</loc>
-    <lastmod>2026-07-25T01:20:56.542Z</lastmod>
+    <lastmod>2026-07-25T18:34:12.154Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/technical-reference/architecture/generator.image_ingress</loc>
-    <lastmod>2026-07-25T01:20:56.548Z</lastmod>
+    <lastmod>2026-07-25T18:34:12.159Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/technical-reference/architecture/generator.lut</loc>
-    <lastmod>2026-07-25T01:20:56.549Z</lastmod>
+    <lastmod>2026-07-25T18:34:12.164Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/technical-reference/architecture/generator</loc>
-    <lastmod>2026-07-25T01:20:56.549Z</lastmod>
+    <lastmod>2026-07-25T18:34:12.168Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/technical-reference/architecture/generator.mesh.export_mesh_bundle</loc>
-    <lastmod>2026-07-25T01:20:56.550Z</lastmod>
+    <lastmod>2026-07-25T18:34:12.173Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/technical-reference/architecture/generator.mesh.export_serializers</loc>
-    <lastmod>2026-07-25T01:20:56.557Z</lastmod>
+    <lastmod>2026-07-25T18:34:12.178Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/technical-reference/architecture/generator.mesh.field_white_reconstruction</loc>
-    <lastmod>2026-07-25T01:20:56.562Z</lastmod>
+    <lastmod>2026-07-25T18:34:12.183Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/technical-reference/architecture/generator.mesh.geometry_policy</loc>
-    <lastmod>2026-07-25T01:20:56.563Z</lastmod>
+    <lastmod>2026-07-25T18:34:12.187Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/technical-reference/architecture/generator.mesh.grid_rings</loc>
-    <lastmod>2026-07-25T01:20:56.565Z</lastmod>
+    <lastmod>2026-07-25T18:34:12.191Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/technical-reference/architecture/generator.mesh.hybrid_white_cap</loc>
-    <lastmod>2026-07-25T01:20:56.565Z</lastmod>
+    <lastmod>2026-07-25T18:34:12.196Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/technical-reference/architecture/generator.mesh.material_maps</loc>
-    <lastmod>2026-07-25T01:20:56.570Z</lastmod>
+    <lastmod>2026-07-25T18:34:12.201Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/technical-reference/architecture/generator.mesh</loc>
-    <lastmod>2026-07-25T01:20:56.572Z</lastmod>
+    <lastmod>2026-07-25T18:34:12.205Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/technical-reference/architecture/generator.mesh.post_solve_export</loc>
-    <lastmod>2026-07-25T01:20:56.573Z</lastmod>
+    <lastmod>2026-07-25T18:34:12.209Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/technical-reference/architecture/generator.mesh.primitives</loc>
-    <lastmod>2026-07-25T01:20:56.574Z</lastmod>
+    <lastmod>2026-07-25T18:34:12.214Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/technical-reference/architecture/generator.mesh.quality</loc>
-    <lastmod>2026-07-25T01:20:56.575Z</lastmod>
+    <lastmod>2026-07-25T18:34:12.219Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/technical-reference/architecture/generator.mesh.rectilinear_interval</loc>
-    <lastmod>2026-07-25T01:20:56.576Z</lastmod>
+    <lastmod>2026-07-25T18:34:12.223Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/technical-reference/architecture/generator.model</loc>
-    <lastmod>2026-07-25T01:20:56.582Z</lastmod>
+    <lastmod>2026-07-25T18:34:12.228Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/technical-reference/architecture/generator.model_domain_display</loc>
-    <lastmod>2026-07-25T01:20:56.587Z</lastmod>
+    <lastmod>2026-07-25T18:34:12.232Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/technical-reference/architecture/generator.palette</loc>
-    <lastmod>2026-07-25T01:20:56.588Z</lastmod>
+    <lastmod>2026-07-25T18:34:12.236Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/technical-reference/architecture/generator.palette.suggest</loc>
-    <lastmod>2026-07-25T01:20:56.589Z</lastmod>
+    <lastmod>2026-07-25T18:34:12.241Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/technical-reference/architecture/generator.photo_stack_lut</loc>
-    <lastmod>2026-07-25T01:20:56.596Z</lastmod>
+    <lastmod>2026-07-25T18:34:12.246Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/technical-reference/architecture/generator.pipeline.base</loc>
-    <lastmod>2026-07-25T01:20:56.601Z</lastmod>
+    <lastmod>2026-07-25T18:34:12.249Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/technical-reference/architecture/generator.pipeline.derived_views</loc>
-    <lastmod>2026-07-25T01:20:56.602Z</lastmod>
+    <lastmod>2026-07-25T18:34:12.254Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/technical-reference/architecture/generator.pipeline.detail_cap_smoothing</loc>
-    <lastmod>2026-07-25T01:20:56.607Z</lastmod>
+    <lastmod>2026-07-25T18:34:12.259Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/technical-reference/architecture/generator.pipeline.height_budget</loc>
-    <lastmod>2026-07-25T01:20:56.612Z</lastmod>
+    <lastmod>2026-07-25T18:34:12.263Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/technical-reference/architecture/generator.pipeline.luminance_handler</loc>
-    <lastmod>2026-07-25T01:20:56.617Z</lastmod>
+    <lastmod>2026-07-25T18:34:12.267Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/technical-reference/architecture/generator.pipeline.material_exposure</loc>
-    <lastmod>2026-07-25T01:20:56.619Z</lastmod>
+    <lastmod>2026-07-25T18:34:12.271Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/technical-reference/architecture/generator.pipeline</loc>
-    <lastmod>2026-07-25T01:20:56.619Z</lastmod>
+    <lastmod>2026-07-25T18:34:12.275Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/technical-reference/architecture/generator.pipeline.modules</loc>
-    <lastmod>2026-07-25T01:20:56.620Z</lastmod>
+    <lastmod>2026-07-25T18:34:12.280Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/technical-reference/architecture/generator.pipeline.registry</loc>
-    <lastmod>2026-07-25T01:20:56.626Z</lastmod>
+    <lastmod>2026-07-25T18:34:12.285Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/technical-reference/architecture/generator.pipeline.runner</loc>
-    <lastmod>2026-07-25T01:20:56.628Z</lastmod>
+    <lastmod>2026-07-25T18:34:12.289Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/technical-reference/architecture/generator.pipeline.solved_material_plan</loc>
-    <lastmod>2026-07-25T01:20:56.629Z</lastmod>
+    <lastmod>2026-07-25T18:34:12.293Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/technical-reference/architecture/generator.pipeline.staged_artifacts</loc>
-    <lastmod>2026-07-25T01:20:56.634Z</lastmod>
+    <lastmod>2026-07-25T18:34:12.298Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/technical-reference/architecture/generator.pipeline.staged_bridge</loc>
-    <lastmod>2026-07-25T01:20:56.639Z</lastmod>
+    <lastmod>2026-07-25T18:34:12.303Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/technical-reference/architecture/generator.pipeline.staged_printability</loc>
-    <lastmod>2026-07-25T01:20:56.639Z</lastmod>
+    <lastmod>2026-07-25T18:34:12.307Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/technical-reference/architecture/generator.pipeline.staged_runner</loc>
-    <lastmod>2026-07-25T01:20:56.641Z</lastmod>
+    <lastmod>2026-07-25T18:34:12.311Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/technical-reference/architecture/generator.pipeline.staged_solver_helpers</loc>
-    <lastmod>2026-07-25T01:20:56.642Z</lastmod>
+    <lastmod>2026-07-25T18:34:12.316Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/technical-reference/architecture/generator.pipeline.state</loc>
-    <lastmod>2026-07-25T01:20:56.643Z</lastmod>
+    <lastmod>2026-07-25T18:34:12.320Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/technical-reference/architecture/generator.pipeline.target_cloud</loc>
-    <lastmod>2026-07-25T01:20:56.648Z</lastmod>
+    <lastmod>2026-07-25T18:34:12.325Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/technical-reference/architecture/generator.preprocessing.color_convert</loc>
-    <lastmod>2026-07-25T01:20:56.653Z</lastmod>
+    <lastmod>2026-07-25T18:34:12.329Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/technical-reference/architecture/generator.preprocessing.feature_scale</loc>
-    <lastmod>2026-07-25T01:20:56.654Z</lastmod>
+    <lastmod>2026-07-25T18:34:12.333Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/technical-reference/architecture/generator.preprocessing.hue_interp</loc>
-    <lastmod>2026-07-25T01:20:56.654Z</lastmod>
+    <lastmod>2026-07-25T18:34:12.339Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/technical-reference/architecture/generator.preprocessing</loc>
-    <lastmod>2026-07-25T01:20:56.655Z</lastmod>
+    <lastmod>2026-07-25T18:34:12.343Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/technical-reference/architecture/generator.preprocessing.operators.a1_bilateral_denoise</loc>
-    <lastmod>2026-07-25T01:20:56.661Z</lastmod>
+    <lastmod>2026-07-25T18:34:12.348Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/technical-reference/architecture/generator.preprocessing.operators.b1_printscale_bilateral</loc>
-    <lastmod>2026-07-25T01:20:56.663Z</lastmod>
+    <lastmod>2026-07-25T18:34:12.352Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/technical-reference/architecture/generator.preprocessing.operators.b3_tv_flatten</loc>
-    <lastmod>2026-07-25T01:20:56.669Z</lastmod>
+    <lastmod>2026-07-25T18:34:12.357Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/technical-reference/architecture/generator.preprocessing.operators.c1_achievable_tonemap</loc>
-    <lastmod>2026-07-25T01:20:56.670Z</lastmod>
+    <lastmod>2026-07-25T18:34:12.362Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/technical-reference/architecture/generator.preprocessing.operators.c2_soft_gamut_compress</loc>
-    <lastmod>2026-07-25T01:20:56.671Z</lastmod>
+    <lastmod>2026-07-25T18:34:12.367Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/technical-reference/architecture/generator.preprocessing.operators</loc>
-    <lastmod>2026-07-25T01:20:56.672Z</lastmod>
+    <lastmod>2026-07-25T18:34:12.372Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/technical-reference/architecture/generator.preprocessing.palette_metadata</loc>
-    <lastmod>2026-07-25T01:20:56.672Z</lastmod>
+    <lastmod>2026-07-25T18:34:12.377Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/technical-reference/architecture/generator.preprocessing.runner</loc>
-    <lastmod>2026-07-25T01:20:56.673Z</lastmod>
+    <lastmod>2026-07-25T18:34:12.382Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/technical-reference/architecture/generator.preprocessing.types</loc>
-    <lastmod>2026-07-25T01:20:56.674Z</lastmod>
+    <lastmod>2026-07-25T18:34:12.386Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/technical-reference/architecture/generator.progress</loc>
-    <lastmod>2026-07-25T01:20:56.675Z</lastmod>
+    <lastmod>2026-07-25T18:34:12.391Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/technical-reference/architecture/generator.recipe_cookbook</loc>
-    <lastmod>2026-07-25T01:20:56.676Z</lastmod>
+    <lastmod>2026-07-25T18:34:12.395Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/technical-reference/architecture/generator.run_archive</loc>
-    <lastmod>2026-07-25T01:20:56.677Z</lastmod>
+    <lastmod>2026-07-25T18:34:12.399Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/technical-reference/architecture/generator.run_naming</loc>
-    <lastmod>2026-07-25T01:20:56.682Z</lastmod>
+    <lastmod>2026-07-25T18:34:12.403Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/technical-reference/architecture/generator.run_store</loc>
-    <lastmod>2026-07-25T01:20:56.683Z</lastmod>
+    <lastmod>2026-07-25T18:34:12.408Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/technical-reference/architecture/generator.scalar_palette</loc>
-    <lastmod>2026-07-25T01:20:56.683Z</lastmod>
+    <lastmod>2026-07-25T18:34:12.412Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/technical-reference/architecture/generator.server</loc>
-    <lastmod>2026-07-25T01:20:56.684Z</lastmod>
+    <lastmod>2026-07-25T18:34:12.417Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/technical-reference/architecture/generator.solve</loc>
-    <lastmod>2026-07-25T01:20:56.685Z</lastmod>
+    <lastmod>2026-07-25T18:34:12.422Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/technical-reference/architecture/generator.source_images</loc>
-    <lastmod>2026-07-25T01:20:56.686Z</lastmod>
+    <lastmod>2026-07-25T18:34:12.427Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/technical-reference/architecture/generator.swap</loc>
-    <lastmod>2026-07-25T01:20:56.687Z</lastmod>
+    <lastmod>2026-07-25T18:34:12.431Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/technical-reference/architecture/generator.thickness_maps</loc>
-    <lastmod>2026-07-25T01:20:56.688Z</lastmod>
+    <lastmod>2026-07-25T18:34:12.436Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/technical-reference/architecture/generator.white_cap_contract</loc>
-    <lastmod>2026-07-25T01:20:56.695Z</lastmod>
+    <lastmod>2026-07-25T18:34:12.440Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/technical-reference/architecture/lib.camera_transform</loc>
-    <lastmod>2026-07-25T01:20:56.699Z</lastmod>
+    <lastmod>2026-07-25T18:34:12.445Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/technical-reference/architecture/lib.color</loc>
-    <lastmod>2026-07-25T01:20:56.701Z</lastmod>
+    <lastmod>2026-07-25T18:34:12.449Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/technical-reference/architecture/lib.console_output</loc>
-    <lastmod>2026-07-25T01:20:56.702Z</lastmod>
+    <lastmod>2026-07-25T18:34:12.454Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/technical-reference/architecture/lib.export_stage_recovery</loc>
-    <lastmod>2026-07-25T01:20:56.707Z</lastmod>
+    <lastmod>2026-07-25T18:34:12.459Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/technical-reference/architecture/lib.filaments</loc>
-    <lastmod>2026-07-25T01:20:56.709Z</lastmod>
+    <lastmod>2026-07-25T18:34:12.463Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/technical-reference/architecture/lib</loc>
-    <lastmod>2026-07-25T01:20:56.709Z</lastmod>
+    <lastmod>2026-07-25T18:34:12.467Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/technical-reference/architecture/lib.model_library_store</loc>
-    <lastmod>2026-07-25T01:20:56.710Z</lastmod>
+    <lastmod>2026-07-25T18:34:12.472Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/technical-reference/architecture/lib.model_registry</loc>
-    <lastmod>2026-07-25T01:20:56.712Z</lastmod>
+    <lastmod>2026-07-25T18:34:12.477Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/technical-reference/architecture/lib.photo_stack_model.artifacts</loc>
-    <lastmod>2026-07-25T01:20:56.712Z</lastmod>
+    <lastmod>2026-07-25T18:34:12.482Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/technical-reference/architecture/lib.photo_stack_model.bundle</loc>
-    <lastmod>2026-07-25T01:20:56.713Z</lastmod>
+    <lastmod>2026-07-25T18:34:12.486Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/technical-reference/architecture/lib.photo_stack_model.correction_layer</loc>
-    <lastmod>2026-07-25T01:20:56.719Z</lastmod>
+    <lastmod>2026-07-25T18:34:12.492Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/technical-reference/architecture/lib.photo_stack_model.default_bundle</loc>
-    <lastmod>2026-07-25T01:20:56.719Z</lastmod>
+    <lastmod>2026-07-25T18:34:12.497Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/technical-reference/architecture/lib.photo_stack_model</loc>
-    <lastmod>2026-07-25T01:20:56.724Z</lastmod>
+    <lastmod>2026-07-25T18:34:12.501Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/technical-reference/architecture/lib.photo_stack_model.model</loc>
-    <lastmod>2026-07-25T01:20:56.725Z</lastmod>
+    <lastmod>2026-07-25T18:34:12.506Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/technical-reference/architecture/lib.photo_stack_model.predict</loc>
-    <lastmod>2026-07-25T01:20:56.732Z</lastmod>
+    <lastmod>2026-07-25T18:34:12.510Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/technical-reference/architecture/lib.photo_stack_model.predictor</loc>
-    <lastmod>2026-07-25T01:20:56.733Z</lastmod>
+    <lastmod>2026-07-25T18:34:12.515Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/technical-reference/architecture/lib.photo_stack_model.schema</loc>
-    <lastmod>2026-07-25T01:20:56.734Z</lastmod>
+    <lastmod>2026-07-25T18:34:12.519Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/technical-reference/architecture/lib.platform_open</loc>
-    <lastmod>2026-07-25T01:20:56.739Z</lastmod>
+    <lastmod>2026-07-25T18:34:12.523Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/technical-reference/architecture/lib.runtime_layout</loc>
-    <lastmod>2026-07-25T01:20:56.740Z</lastmod>
+    <lastmod>2026-07-25T18:34:12.528Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/technical-reference/architecture/lib.stack_geometry</loc>
-    <lastmod>2026-07-25T01:20:56.741Z</lastmod>
+    <lastmod>2026-07-25T18:34:12.532Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/technical-reference/architecture/lib.standard_model_library</loc>
-    <lastmod>2026-07-25T01:20:56.742Z</lastmod>
+    <lastmod>2026-07-25T18:34:12.537Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/technical-reference/architecture/lib.transmission</loc>
-    <lastmod>2026-07-25T01:20:56.743Z</lastmod>
+    <lastmod>2026-07-25T18:34:12.542Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/technical-reference/architecture/lib.workspace_lock</loc>
-    <lastmod>2026-07-25T01:20:56.743Z</lastmod>
+    <lastmod>2026-07-25T18:34:12.546Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/technical-reference/color/color-core-library</loc>
-    <lastmod>2026-07-25T01:20:56.751Z</lastmod>
+    <lastmod>2026-07-25T18:34:12.551Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/technical-reference/color/model-domain-ingress-and-display-conversion</loc>
-    <lastmod>2026-07-25T01:20:56.757Z</lastmod>
+    <lastmod>2026-07-25T18:34:12.557Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/technical-reference/conditioning/image-preprocessing-the-f1-slot</loc>
     <lastmod>2026-07-15T18:52:39.725Z</lastmod>
@@ -867,299 +867,299 @@
     <lastmod>2026-07-15T18:52:39.726Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/technical-reference/conditioning/palette-suggestion-search-and-ranking</loc>
-    <lastmod>2026-07-25T01:20:56.760Z</lastmod>
+    <lastmod>2026-07-25T18:34:12.572Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/technical-reference/conditioning/preprocessing-operators</loc>
-    <lastmod>2026-07-25T01:20:56.766Z</lastmod>
+    <lastmod>2026-07-25T18:34:12.578Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/technical-reference/conditioning/preprocessing,-detail-cap,-and-luminance-runtime</loc>
-    <lastmod>2026-07-25T01:20:56.772Z</lastmod>
+    <lastmod>2026-07-25T18:34:12.583Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/technical-reference/frontend-architecture</loc>
-    <lastmod>2026-07-25T01:20:56.393Z</lastmod>
+    <lastmod>2026-07-25T18:34:11.914Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/technical-reference/generator/pipeline-map</loc>
-    <lastmod>2026-07-25T01:20:56.778Z</lastmod>
+    <lastmod>2026-07-25T18:34:12.587Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/technical-reference/generator/the-joint-lut-and-staged-solve</loc>
-    <lastmod>2026-07-25T01:20:56.779Z</lastmod>
+    <lastmod>2026-07-25T18:34:12.594Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/technical-reference/generator/the-solve-facade</loc>
-    <lastmod>2026-07-25T01:20:56.788Z</lastmod>
+    <lastmod>2026-07-25T18:34:12.606Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/technical-reference/generator/the-pipeline-orchestrator-and-shared-state</loc>
-    <lastmod>2026-07-25T01:20:56.787Z</lastmod>
+    <lastmod>2026-07-25T18:34:12.601Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/technical-reference/generator/what-actually-runs</loc>
-    <lastmod>2026-07-25T01:20:56.793Z</lastmod>
+    <lastmod>2026-07-25T18:34:12.612Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/technical-reference/output/ams-grouping-and-swap-planning</loc>
-    <lastmod>2026-07-25T01:20:56.799Z</lastmod>
+    <lastmod>2026-07-25T18:34:12.618Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/technical-reference/output/export-request-lifecycle-and-artifact-ownership</loc>
-    <lastmod>2026-07-25T01:20:56.805Z</lastmod>
+    <lastmod>2026-07-25T18:34:12.623Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/technical-reference/output/from-solve-to-mesh-the-export-pipeline</loc>
     <lastmod>2026-07-15T18:52:39.732Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/technical-reference/output/robust-rectilinear-meshing</loc>
-    <lastmod>2026-07-25T01:20:56.826Z</lastmod>
+    <lastmod>2026-07-25T18:34:12.644Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/technical-reference/printability/printability-three-layers</loc>
-    <lastmod>2026-07-25T01:20:56.828Z</lastmod>
+    <lastmod>2026-07-25T18:34:12.649Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/technical-reference/printability/the-live-staged-printability-diagnostic</loc>
-    <lastmod>2026-07-25T01:20:56.834Z</lastmod>
+    <lastmod>2026-07-25T18:34:12.654Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/technical-reference/printability/the-white-cap</loc>
-    <lastmod>2026-07-25T01:20:56.839Z</lastmod>
+    <lastmod>2026-07-25T18:34:12.659Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/technical-reference/solver/solveconfig-and-solveresult-reference</loc>
-    <lastmod>2026-07-25T01:20:56.846Z</lastmod>
+    <lastmod>2026-07-25T18:34:12.665Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/technical-reference/solver/stage-1-and-2-solver-kernels</loc>
-    <lastmod>2026-07-25T01:20:56.852Z</lastmod>
+    <lastmod>2026-07-25T18:34:12.670Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/technical-reference/solver/staged-artifacts-and-the-solvedmaterialplan-contract</loc>
-    <lastmod>2026-07-25T01:20:56.857Z</lastmod>
+    <lastmod>2026-07-25T18:34:12.676Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/technical-reference/solver/the-joint-lut-building-and-querying</loc>
-    <lastmod>2026-07-25T01:20:56.862Z</lastmod>
+    <lastmod>2026-07-25T18:34:12.682Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/technical-reference/solver/the-solve-target-cloud</loc>
-    <lastmod>2026-07-25T01:20:56.867Z</lastmod>
+    <lastmod>2026-07-25T18:34:12.687Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/technical-reference/solver/the-staged-backend-(stage-0-5)</loc>
-    <lastmod>2026-07-25T01:20:56.873Z</lastmod>
+    <lastmod>2026-07-25T18:34:12.692Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/technical-reference/solver/the-vectorized-photo-stack-lut-evaluator</loc>
-    <lastmod>2026-07-25T01:20:56.880Z</lastmod>
+    <lastmod>2026-07-25T18:34:12.698Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/technical-reference/tooling/filesystem-layout,-caching,-and-the-recipe-cookbook</loc>
-    <lastmod>2026-07-25T01:20:56.885Z</lastmod>
+    <lastmod>2026-07-25T18:34:12.705Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/technical-reference/tooling/saving,-loading,-and-auto-capturing-runs</loc>
-    <lastmod>2026-07-25T01:20:56.891Z</lastmod>
+    <lastmod>2026-07-25T18:34:12.710Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/technical-reference/tooling/the-preprocessing-evaluation-harness</loc>
-    <lastmod>2026-07-25T01:20:56.898Z</lastmod>
+    <lastmod>2026-07-25T18:34:12.715Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/technical-reference/using/automatic-palette-suggestion</loc>
-    <lastmod>2026-07-25T01:20:56.899Z</lastmod>
+    <lastmod>2026-07-25T18:34:12.722Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/technical-reference/using/command-line-entry-points-and-filament-availability</loc>
-    <lastmod>2026-07-25T01:20:56.904Z</lastmod>
+    <lastmod>2026-07-25T18:34:12.728Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/technical-reference/using/driving-the-generator</loc>
-    <lastmod>2026-07-25T01:20:56.911Z</lastmod>
+    <lastmod>2026-07-25T18:34:12.734Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/technical-reference/using/exporting-print-files</loc>
-    <lastmod>2026-07-25T01:20:56.918Z</lastmod>
+    <lastmod>2026-07-25T18:34:12.740Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/technical-reference/using/settings,-resolution,-and-the-config-contract</loc>
-    <lastmod>2026-07-25T01:20:57.840Z</lastmod>
+    <lastmod>2026-07-25T18:34:14.362Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/technical-reference/using/settings/color-solver-settings</loc>
-    <lastmod>2026-07-25T01:20:57.846Z</lastmod>
+    <lastmod>2026-07-25T18:34:14.368Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/technical-reference/using/settings/geometry-settings</loc>
-    <lastmod>2026-07-25T01:20:57.848Z</lastmod>
+    <lastmod>2026-07-25T18:34:14.373Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/technical-reference/using/settings/grouping-settings</loc>
-    <lastmod>2026-07-25T01:20:56.933Z</lastmod>
+    <lastmod>2026-07-25T18:34:12.768Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/technical-reference/using/settings/pre-processing-settings</loc>
-    <lastmod>2026-07-25T01:20:57.851Z</lastmod>
+    <lastmod>2026-07-25T18:34:14.387Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/technical-reference/using/settings/white-cap-settings</loc>
-    <lastmod>2026-07-25T01:20:57.851Z</lastmod>
+    <lastmod>2026-07-25T18:34:14.393Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/technical-reference/using/settings/</loc>
-    <lastmod>2026-07-25T01:20:56.938Z</lastmod>
+    <lastmod>2026-07-25T18:34:12.774Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/technical-reference/using/</loc>
-    <lastmod>2026-07-25T01:20:57.834Z</lastmod>
+    <lastmod>2026-07-25T18:34:14.356Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/technical-reference/</loc>
-    <lastmod>2026-07-25T01:20:57.410Z</lastmod>
+    <lastmod>2026-07-25T18:34:13.592Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/</loc>
-    <lastmod>2026-07-25T01:20:57.014Z</lastmod>
+    <lastmod>2026-07-25T18:34:12.858Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/readme</loc>
-    <lastmod>2026-07-25T01:20:57.012Z</lastmod>
+    <lastmod>2026-07-25T18:34:12.849Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/</loc>
-    <lastmod>2026-07-25T01:20:57.006Z</lastmod>
+    <lastmod>2026-07-25T18:34:12.843Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-calibration/technical-reference/architecture/</loc>
-    <lastmod>2026-07-25T01:21:04.592Z</lastmod>
+    <lastmod>2026-07-25T18:34:23.619Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/technical-reference/architecture/</loc>
-    <lastmod>2026-07-25T01:21:04.592Z</lastmod>
+    <lastmod>2026-07-25T18:34:23.619Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/technical-reference/color/</loc>
-    <lastmod>2026-07-25T01:21:04.592Z</lastmod>
+    <lastmod>2026-07-25T18:34:23.619Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/technical-reference/conditioning/</loc>
-    <lastmod>2026-07-25T01:21:04.592Z</lastmod>
+    <lastmod>2026-07-25T18:34:23.619Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/technical-reference/generator/</loc>
-    <lastmod>2026-07-25T01:21:04.592Z</lastmod>
+    <lastmod>2026-07-25T18:34:23.619Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/technical-reference/output/</loc>
-    <lastmod>2026-07-25T01:21:04.592Z</lastmod>
+    <lastmod>2026-07-25T18:34:23.619Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/technical-reference/printability/</loc>
-    <lastmod>2026-07-25T01:21:04.592Z</lastmod>
+    <lastmod>2026-07-25T18:34:23.619Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/technical-reference/solver/</loc>
-    <lastmod>2026-07-25T01:21:04.592Z</lastmod>
+    <lastmod>2026-07-25T18:34:23.619Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/technical-reference/tooling/</loc>
-    <lastmod>2026-07-25T01:21:04.592Z</lastmod>
+    <lastmod>2026-07-25T18:34:23.619Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/tags/module</loc>
-    <lastmod>2026-07-25T01:21:04.592Z</lastmod>
+    <lastmod>2026-07-25T18:34:23.619Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/tags/calibration</loc>
-    <lastmod>2026-07-25T01:21:04.592Z</lastmod>
+    <lastmod>2026-07-25T18:34:23.619Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/tags/architecture</loc>
-    <lastmod>2026-07-25T01:21:04.592Z</lastmod>
+    <lastmod>2026-07-25T18:34:23.619Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/tags/samples</loc>
-    <lastmod>2026-07-25T01:21:04.592Z</lastmod>
+    <lastmod>2026-07-25T18:34:23.619Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/tags/csv</loc>
-    <lastmod>2026-07-25T01:21:04.592Z</lastmod>
+    <lastmod>2026-07-25T18:34:23.619Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/tags/sqlite</loc>
-    <lastmod>2026-07-25T01:21:04.592Z</lastmod>
+    <lastmod>2026-07-25T18:34:23.619Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/tags/persistence</loc>
-    <lastmod>2026-07-25T01:21:04.592Z</lastmod>
+    <lastmod>2026-07-25T18:34:23.619Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/tags/extraction</loc>
-    <lastmod>2026-07-25T01:21:04.592Z</lastmod>
+    <lastmod>2026-07-25T18:34:23.619Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/tags/artifacts</loc>
-    <lastmod>2026-07-25T01:21:04.592Z</lastmod>
+    <lastmod>2026-07-25T18:34:23.619Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/tags/blanks</loc>
-    <lastmod>2026-07-25T01:21:04.592Z</lastmod>
+    <lastmod>2026-07-25T18:34:23.619Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/tags/geometry</loc>
-    <lastmod>2026-07-25T01:21:04.592Z</lastmod>
+    <lastmod>2026-07-25T18:34:23.619Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/tags/bundles</loc>
-    <lastmod>2026-07-25T01:21:04.592Z</lastmod>
+    <lastmod>2026-07-25T18:34:23.619Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/tags/workflow</loc>
-    <lastmod>2026-07-25T01:21:04.592Z</lastmod>
+    <lastmod>2026-07-25T18:34:23.619Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/tags/fitting</loc>
-    <lastmod>2026-07-25T01:21:04.592Z</lastmod>
+    <lastmod>2026-07-25T18:34:23.619Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/tags/invalidation</loc>
-    <lastmod>2026-07-25T01:21:04.592Z</lastmod>
+    <lastmod>2026-07-25T18:34:23.619Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/tags/camera-transform</loc>
-    <lastmod>2026-07-25T01:21:04.592Z</lastmod>
+    <lastmod>2026-07-25T18:34:23.619Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/tags/maintenance</loc>
-    <lastmod>2026-07-25T01:21:04.592Z</lastmod>
+    <lastmod>2026-07-25T18:34:23.619Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/tags/webapp</loc>
-    <lastmod>2026-07-25T01:21:04.592Z</lastmod>
+    <lastmod>2026-07-25T18:34:23.619Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/tags/server</loc>
-    <lastmod>2026-07-25T01:21:04.592Z</lastmod>
+    <lastmod>2026-07-25T18:34:23.619Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/tags/generator</loc>
-    <lastmod>2026-07-25T01:21:04.592Z</lastmod>
+    <lastmod>2026-07-25T18:34:23.619Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/tags/howitworks</loc>
-    <lastmod>2026-07-25T01:21:04.592Z</lastmod>
+    <lastmod>2026-07-25T18:34:23.619Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/tags/lib</loc>
-    <lastmod>2026-07-25T01:21:04.592Z</lastmod>
+    <lastmod>2026-07-25T18:34:23.619Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/tags/color</loc>
-    <lastmod>2026-07-25T01:21:04.592Z</lastmod>
+    <lastmod>2026-07-25T18:34:23.619Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/tags/preprocessing</loc>
-    <lastmod>2026-07-25T01:21:04.592Z</lastmod>
+    <lastmod>2026-07-25T18:34:23.619Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/tags/conditioning</loc>
-    <lastmod>2026-07-25T01:21:04.592Z</lastmod>
+    <lastmod>2026-07-25T18:34:23.619Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/tags/palette</loc>
-    <lastmod>2026-07-25T01:21:04.592Z</lastmod>
+    <lastmod>2026-07-25T18:34:23.619Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/tags/luminance</loc>
-    <lastmod>2026-07-25T01:21:04.592Z</lastmod>
+    <lastmod>2026-07-25T18:34:23.619Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/tags/detail-cap</loc>
-    <lastmod>2026-07-25T01:21:04.592Z</lastmod>
+    <lastmod>2026-07-25T18:34:23.619Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/tags/configuration</loc>
-    <lastmod>2026-07-25T01:21:04.592Z</lastmod>
+    <lastmod>2026-07-25T18:34:23.619Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/tags/pipeline</loc>
-    <lastmod>2026-07-25T01:21:04.592Z</lastmod>
+    <lastmod>2026-07-25T18:34:23.619Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/tags/inversion</loc>
-    <lastmod>2026-07-25T01:21:04.592Z</lastmod>
+    <lastmod>2026-07-25T18:34:23.619Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/tags/facade</loc>
-    <lastmod>2026-07-25T01:21:04.592Z</lastmod>
+    <lastmod>2026-07-25T18:34:23.619Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/tags/liveness</loc>
-    <lastmod>2026-07-25T01:21:04.592Z</lastmod>
+    <lastmod>2026-07-25T18:34:23.619Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/tags/grouping</loc>
-    <lastmod>2026-07-25T01:21:04.592Z</lastmod>
+    <lastmod>2026-07-25T18:34:23.619Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/tags/export</loc>
-    <lastmod>2026-07-25T01:21:04.592Z</lastmod>
+    <lastmod>2026-07-25T18:34:23.619Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/tags/http</loc>
-    <lastmod>2026-07-25T01:21:04.592Z</lastmod>
+    <lastmod>2026-07-25T18:34:23.619Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/tags/meshing</loc>
-    <lastmod>2026-07-25T01:21:04.592Z</lastmod>
+    <lastmod>2026-07-25T18:34:23.619Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/tags/printability</loc>
-    <lastmod>2026-07-25T01:21:04.592Z</lastmod>
+    <lastmod>2026-07-25T18:34:23.619Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/tags/solver</loc>
-    <lastmod>2026-07-25T01:21:04.592Z</lastmod>
+    <lastmod>2026-07-25T18:34:23.619Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/tags/lut</loc>
-    <lastmod>2026-07-25T01:21:04.592Z</lastmod>
+    <lastmod>2026-07-25T18:34:23.619Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/tags/target</loc>
-    <lastmod>2026-07-25T01:21:04.592Z</lastmod>
+    <lastmod>2026-07-25T18:34:23.619Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/tags/evaluator</loc>
-    <lastmod>2026-07-25T01:21:04.592Z</lastmod>
+    <lastmod>2026-07-25T18:34:23.619Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/tags/filesystem</loc>
-    <lastmod>2026-07-25T01:21:04.592Z</lastmod>
+    <lastmod>2026-07-25T18:34:23.619Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/tags/runs</loc>
-    <lastmod>2026-07-25T01:21:04.592Z</lastmod>
+    <lastmod>2026-07-25T18:34:23.619Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/tags/evaluation</loc>
-    <lastmod>2026-07-25T01:21:04.592Z</lastmod>
+    <lastmod>2026-07-25T18:34:23.619Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/tags/cli</loc>
-    <lastmod>2026-07-25T01:21:04.592Z</lastmod>
+    <lastmod>2026-07-25T18:34:23.619Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/tags/config</loc>
-    <lastmod>2026-07-25T01:21:04.592Z</lastmod>
+    <lastmod>2026-07-25T18:34:23.619Z</lastmod>
   </url><url>
     <loc>https://catfoodkingdom.github.io/prisma-docs/tags/</loc>
-    <lastmod>2026-07-25T01:21:04.592Z</lastmod>
+    <lastmod>2026-07-25T18:34:23.619Z</lastmod>
   </url></urlset>
