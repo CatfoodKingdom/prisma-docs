@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 390" width="960" height="390" role="img" aria-labelledby="title desc">
-  <title id="title">Region method comparison</title>
-  <desc id="desc">The same image is divided three ways. Image regions form unequal areas that follow strong image structure. Superpixels form compact, roughly even areas that still bend around image edges. Fixed grid uses equal squares without following the image.</desc>
+  <title id="title">Region shape comparison</title>
+  <desc id="desc">The same image is divided three ways. Follow edges forms unequal areas that follow strong image structure. Compact forms compact, roughly even areas that still bend around image edges. Fixed grid uses equal squares without following the image.</desc>
   <defs>
     <style>
       :root { --surface:#f8fafc; --surface-2:#e8edf3; --text:#1f2937; --muted:#52606d; --line:#6b7a8a; --grid:#c8d0d9; --sky:#84bfd0; --land:#6f9665; --land-2:#496f50; --sun:#e9bd4d; --region:#f7fbff; }
@@ -20,14 +20,14 @@
 
   <rect x="1" y="1" width="958" height="388" rx="8" fill="var(--surface)" stroke="var(--grid)"/>
 
-  <text x="170" y="42" text-anchor="middle" class="heading">Image regions</text>
+  <text x="170" y="42" text-anchor="middle" class="heading">Follow edges</text>
   <text x="170" y="63" text-anchor="middle" class="note">unequal regions follow image structure</text>
-  <text x="480" y="42" text-anchor="middle" class="heading">Superpixels</text>
+  <text x="480" y="42" text-anchor="middle" class="heading">Compact</text>
   <text x="480" y="63" text-anchor="middle" class="note">compact regions bend around edges</text>
   <text x="790" y="42" text-anchor="middle" class="heading">Fixed grid</text>
   <text x="790" y="63" text-anchor="middle" class="note">equal cells ignore image structure</text>
 
-  <!-- Image regions. -->
+  <!-- Follow edges. -->
   <g clip-path="url(#clip-a)">
     <rect x="45" y="78" width="250" height="220" fill="var(--sky)"/>
     <circle cx="237" cy="128" r="31" fill="var(--sun)"/>
@@ -43,7 +43,7 @@
   </g>
   <rect x="45" y="78" width="250" height="220" rx="4" class="frame" fill-opacity="0"/>
 
-  <!-- Superpixels. -->
+  <!-- Compact. -->
   <g clip-path="url(#clip-b)">
     <rect x="355" y="78" width="250" height="220" fill="var(--sky)"/>
     <circle cx="547" cy="128" r="31" fill="var(--sun)"/>
@@ -77,7 +77,7 @@
     <text x="121" y="340" class="note">source-image edge</text>
     <line x1="378" y1="335" x2="414" y2="335" class="region-key"/>
     <text x="425" y="340" class="note">region boundary</text>
-    <text x="790" y="331" text-anchor="middle" class="note">Color region target sets the intended</text>
+    <text x="790" y="331" text-anchor="middle" class="note">Region size sets the intended</text>
     <text x="790" y="349" text-anchor="middle" class="note">physical scale in every method.</text>
   </g>
 </svg>

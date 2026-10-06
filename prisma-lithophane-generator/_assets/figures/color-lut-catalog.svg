@@ -43,7 +43,7 @@
   <path d="M470 154 H514" class="arrow"/>
 
   <text x="695" y="45" text-anchor="middle" class="heading">The Color LUT</text>
-  <text x="695" y="68" text-anchor="middle" class="note">one stored entry per retained color cell</text>
+  <text x="695" y="68" text-anchor="middle" class="note">one entry per color cell per filament combination</text>
   <g transform="translate(525 92)">
     <rect x="0" y="0" width="365" height="206" rx="4" fill="var(--surface-2)" stroke="var(--line)" stroke-width="2"/>
     <line x1="0" y1="44" x2="365" y2="44" stroke="var(--line)"/><line x1="0" y1="98" x2="365" y2="98" stroke="var(--grid)"/><line x1="0" y1="152" x2="365" y2="152" stroke="var(--grid)"/>

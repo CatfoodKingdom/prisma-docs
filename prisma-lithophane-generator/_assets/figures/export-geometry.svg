@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 400" width="960" height="400" role="img" aria-labelledby="title desc">
   <title id="title">Export from thickness maps to STL or 3MF</title>
-  <desc id="desc">Per-material thickness maps become stacked watertight shells, then export either as one STL file per object or one 3MF with material assignments.</desc>
+  <desc id="desc">Per-material thickness maps become stacked material shells, then export either as one STL file per object or one 3MF with material assignments. Remaining mesh problems are reported with the export.</desc>
   <defs>
     <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 Z" class="arrow-fill"/></marker>
     <style>
@@ -42,7 +42,7 @@
     <path d="M32 52 V71 L77 74 L107 80 L143 61 L184 70 L213 53 V34 L184 51 L143 42 L107 61 L77 55 Z" fill="var(--surface-2)" stroke="var(--line)"/>
     <line x1="17" y1="216" x2="220" y2="216" stroke="var(--line)" stroke-width="2"/>
   </g>
-  <text x="500" y="345" text-anchor="middle" class="label">watertight shells</text>
+  <text x="500" y="345" text-anchor="middle" class="label">material shells</text>
   <text x="500" y="367" text-anchor="middle" class="note">white base, color materials, white cap</text>
 
   <path d="M625 191 H700" class="arrow"/>

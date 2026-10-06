@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 610" width="960" height="610" role="img" aria-labelledby="title desc">
   <title id="title">Effects of the five preprocessing modules</title>
-  <desc id="desc">Noise Reduction removes small color fluctuations while preserving an edge. Print-Scale Smoothing removes features below printable scale. Flat-Area Smoothing turns gradual texture into broad flat areas. Palette Tone Fit moves shadows and highlights into the printable tonal range. Palette Saturation Fit pulls over-vivid colors inward toward the palette's reachable saturation while preserving hue.</desc>
+  <desc id="desc">Noise Reduction removes small color fluctuations while preserving an edge. Print-Scale Smoothing smooths features within a fixed physical radius. Flat-Area Smoothing turns gradual texture into broad flat areas. Palette Tone Fit moves shadows and highlights into the estimated printable tonal range. Palette Saturation Fit pulls over-vivid colors inward toward the palette's reachable saturation while preserving hue.</desc>
   <defs>
     <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 Z" class="arrow-fill"/></marker>
     <linearGradient id="tone-wide" x1="0" x2="1"><stop offset="0" stop-color="#111820"/><stop offset=".5" stop-color="#71808c"/><stop offset="1" stop-color="#ffffff"/></linearGradient>
@@ -46,7 +46,7 @@
     <rect x="168" y="52" width="94" height="100" rx="3" fill="var(--blue-2)" class="sample"/>
     <path d="M179 144 C183 101 195 73 208 69 C223 64 239 84 251 144 Z" fill="var(--green)"/>
     <text x="140" y="181" text-anchor="middle" class="note">sub-print features merge or disappear</text>
-    <text x="140" y="200" text-anchor="middle" class="tiny">scale follows nozzle size and Solve Pitch</text>
+    <text x="140" y="200" text-anchor="middle" class="tiny">radius stays fixed in millimeters</text>
   </g>
 
   <!-- Flat-area smoothing. -->
@@ -74,9 +74,9 @@
     <path d="M153 90 H197" class="connector"/>
     <rect x="208" y="68" width="130" height="44" rx="3" fill="url(#tone-fit)" class="sample"/>
     <path d="M219 59 V50 H327 V59 M219 121 V130 H327 V121" fill="none" stroke="var(--accept)" stroke-width="2"/>
-    <text x="273" y="148" text-anchor="middle" class="tiny">palette's printable tonal range</text>
+    <text x="273" y="148" text-anchor="middle" class="tiny">estimated printable tonal range</text>
     <text x="180" y="181" text-anchor="middle" class="note">shadows and highlights move into range</text>
-    <text x="180" y="200" text-anchor="middle" class="tiny">hue and saturation stay unchanged</text>
+    <text x="180" y="200" text-anchor="middle" class="tiny">adjusts lightness rather than chroma</text>
   </g>
 
   <!-- Palette saturation fit. -->

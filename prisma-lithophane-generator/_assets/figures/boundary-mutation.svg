@@ -70,8 +70,8 @@
   <text x="795" y="349" text-anchor="middle" class="note">a better image match</text>
 
   <g transform="translate(82 381)">
-    <circle cx="0" cy="0" r="5" fill="var(--candidate)"/><text x="12" y="5" class="tiny">Current-dE percentile selects which boundary points are eligible</text>
-    <circle cx="391" cy="0" r="5" fill="var(--accept)"/><text x="403" y="5" class="tiny">Min gain and min contact decide which connected runs move</text>
+    <circle cx="0" cy="0" r="5" fill="var(--candidate)"/><text x="12" y="5" class="tiny">Boundary points test neighboring recipes</text>
+    <circle cx="391" cy="0" r="5" fill="var(--accept)"/><text x="403" y="5" class="tiny">Color gain and printable contact decide which runs move</text>
   </g>
   <text x="480" y="414" text-anchor="middle" class="tiny">Each Mutation pass can advance a recipe boundary by one solve point; passes stop when nothing else improves.</text>
 </svg>

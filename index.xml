@@ -6,65 +6,65 @@
       <description>Last 10 notes on Prisma Documentation</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
-    <title>Architecture</title>
-    <link>https://catfoodkingdom.github.io/prisma-docs/prisma-calibration/technical-reference/architecture/</link>
-    <guid>https://catfoodkingdom.github.io/prisma-docs/prisma-calibration/technical-reference/architecture/</guid>
+    <title>generator</title>
+    <link>https://catfoodkingdom.github.io/prisma-docs/tags/generator</link>
+    <guid>https://catfoodkingdom.github.io/prisma-docs/tags/generator</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Fri, 07 Aug 2026 17:56:15 GMT</pubDate>
+    <pubDate>Tue, 06 Oct 2026 15:47:40 GMT</pubDate>
   </item><item>
-    <title>Architecture</title>
-    <link>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/technical-reference/architecture/</link>
-    <guid>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/technical-reference/architecture/</guid>
+    <title>howitworks</title>
+    <link>https://catfoodkingdom.github.io/prisma-docs/tags/howitworks</link>
+    <guid>https://catfoodkingdom.github.io/prisma-docs/tags/howitworks</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Fri, 07 Aug 2026 17:56:15 GMT</pubDate>
+    <pubDate>Tue, 06 Oct 2026 15:47:40 GMT</pubDate>
   </item><item>
-    <title>Color</title>
-    <link>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/technical-reference/color/</link>
-    <guid>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/technical-reference/color/</guid>
+    <title>Tag Index</title>
+    <link>https://catfoodkingdom.github.io/prisma-docs/tags/</link>
+    <guid>https://catfoodkingdom.github.io/prisma-docs/tags/</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Fri, 07 Aug 2026 17:56:15 GMT</pubDate>
+    <pubDate>Tue, 06 Oct 2026 15:47:40 GMT</pubDate>
   </item><item>
-    <title>Conditioning</title>
-    <link>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/technical-reference/conditioning/</link>
-    <guid>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/technical-reference/conditioning/</guid>
-    <description><![CDATA[  ]]></description>
-    <pubDate>Fri, 07 Aug 2026 17:56:15 GMT</pubDate>
+    <title>Thickness Map</title>
+    <link>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/how-it-works/white-cap/thickness-map</link>
+    <guid>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/how-it-works/white-cap/thickness-map</guid>
+    <description><![CDATA[ Once the solver has committed its regions and material recipes, Prisma can represent the result as thickness maps: one height field for each filament. ]]></description>
+    <pubDate>Tue, 06 Oct 2026 15:47:36 GMT</pubDate>
   </item><item>
-    <title>Generator</title>
-    <link>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/technical-reference/generator/</link>
-    <guid>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/technical-reference/generator/</guid>
-    <description><![CDATA[  ]]></description>
-    <pubDate>Fri, 07 Aug 2026 17:56:15 GMT</pubDate>
+    <title>White Cap</title>
+    <link>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/how-it-works/white-cap/</link>
+    <guid>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/how-it-works/white-cap/</guid>
+    <description><![CDATA[  .hiw-localnav svg text{font-family:inherit;font-size:13px}.hiw-localnav a rect{transition:stroke .15s ease}.hiw-localnav a:hover rect{stroke:var(--secondary);stroke-width:2}.hiw-localnav a:hover text{fill:var(--secondary)}The SolveWhite CapExport White Cap is the final construction step of the solv... ]]></description>
+    <pubDate>Tue, 06 Oct 2026 15:47:36 GMT</pubDate>
   </item><item>
-    <title>Output</title>
-    <link>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/technical-reference/output/</link>
-    <guid>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/technical-reference/output/</guid>
-    <description><![CDATA[  ]]></description>
-    <pubDate>Fri, 07 Aug 2026 17:56:15 GMT</pubDate>
+    <title>Solve Modes</title>
+    <link>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/how-it-works/the-solve/solve-modes</link>
+    <guid>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/how-it-works/the-solve/solve-modes</guid>
+    <description><![CDATA[ Prisma offers two Solve Modes, chosen under Essentials in Settings: Color (the default) and Luminance. ]]></description>
+    <pubDate>Tue, 06 Oct 2026 15:47:36 GMT</pubDate>
   </item><item>
-    <title>Printability</title>
-    <link>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/technical-reference/printability/</link>
-    <guid>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/technical-reference/printability/</guid>
-    <description><![CDATA[  ]]></description>
-    <pubDate>Fri, 07 Aug 2026 17:56:15 GMT</pubDate>
+    <title>The Solve</title>
+    <link>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/how-it-works/the-solve/</link>
+    <guid>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/how-it-works/the-solve/</guid>
+    <description><![CDATA[  .hiw-localnav svg text{font-family:inherit;font-size:13px}.hiw-localnav a rect{transition:stroke .15s ease}.hiw-localnav a:hover rect{stroke:var(--secondary);stroke-width:2}.hiw-localnav a:hover text{fill:var(--secondary)}TargetColorsThe Color LUTThe SolveWhite Cap The solve is where a prepared ima... ]]></description>
+    <pubDate>Tue, 06 Oct 2026 15:47:36 GMT</pubDate>
   </item><item>
-    <title>Solver</title>
-    <link>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/technical-reference/solver/</link>
-    <guid>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/technical-reference/solver/</guid>
-    <description><![CDATA[  ]]></description>
-    <pubDate>Fri, 07 Aug 2026 17:56:15 GMT</pubDate>
+    <title>The Color LUT</title>
+    <link>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/how-it-works/the-color-lut/</link>
+    <guid>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/how-it-works/the-color-lut/</guid>
+    <description><![CDATA[  .hiw-localnav svg text{font-family:inherit;font-size:13px}.hiw-localnav a rect{transition:stroke .15s ease}.hiw-localnav a:hover rect{stroke:var(--secondary);stroke-width:2}.hiw-localnav a:hover text{fill:var(--secondary)}PaletteColorModelRuns withSwapsThe Color LUTThe Solve Before matching the pho... ]]></description>
+    <pubDate>Tue, 06 Oct 2026 15:47:36 GMT</pubDate>
   </item><item>
-    <title>Tooling</title>
-    <link>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/technical-reference/tooling/</link>
-    <guid>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/technical-reference/tooling/</guid>
-    <description><![CDATA[  ]]></description>
-    <pubDate>Fri, 07 Aug 2026 17:56:15 GMT</pubDate>
+    <title>OKLab</title>
+    <link>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/how-it-works/target-colors/oklab</link>
+    <guid>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/how-it-works/target-colors/oklab</guid>
+    <description><![CDATA[ The solver repeatedly has to answer one question: how far is this candidate stack’s color from the target color? Distance between raw red, green, and blue values is a poor judge of that, because equal steps in RGB do not look equally different to the eye. ]]></description>
+    <pubDate>Tue, 06 Oct 2026 15:47:36 GMT</pubDate>
   </item><item>
-    <title>module</title>
-    <link>https://catfoodkingdom.github.io/prisma-docs/tags/module</link>
-    <guid>https://catfoodkingdom.github.io/prisma-docs/tags/module</guid>
-    <description><![CDATA[  ]]></description>
-    <pubDate>Fri, 07 Aug 2026 17:56:15 GMT</pubDate>
+    <title>Target Colors</title>
+    <link>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/how-it-works/target-colors/</link>
+    <guid>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/how-it-works/target-colors/</guid>
+    <description><![CDATA[  .hiw-localnav svg text{font-family:inherit;font-size:13px}.hiw-localnav a rect{transition:stroke .15s ease}.hiw-localnav a:hover rect{stroke:var(--secondary);stroke-width:2}.hiw-localnav a:hover text{fill:var(--secondary)}PreprocessingTargetColorsThe Solve After Preprocessing, the image is still an... ]]></description>
+    <pubDate>Tue, 06 Oct 2026 15:47:36 GMT</pubDate>
   </item>
     </channel>
   </rss>
