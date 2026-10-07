@@ -10,61 +10,61 @@
     <link>https://catfoodkingdom.github.io/prisma-docs/tags/generator</link>
     <guid>https://catfoodkingdom.github.io/prisma-docs/tags/generator</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Tue, 06 Oct 2026 15:47:40 GMT</pubDate>
+    <pubDate>Wed, 07 Oct 2026 21:32:55 GMT</pubDate>
   </item><item>
     <title>howitworks</title>
     <link>https://catfoodkingdom.github.io/prisma-docs/tags/howitworks</link>
     <guid>https://catfoodkingdom.github.io/prisma-docs/tags/howitworks</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Tue, 06 Oct 2026 15:47:40 GMT</pubDate>
+    <pubDate>Wed, 07 Oct 2026 21:32:55 GMT</pubDate>
   </item><item>
     <title>Tag Index</title>
     <link>https://catfoodkingdom.github.io/prisma-docs/tags/</link>
     <guid>https://catfoodkingdom.github.io/prisma-docs/tags/</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Tue, 06 Oct 2026 15:47:40 GMT</pubDate>
+    <pubDate>Wed, 07 Oct 2026 21:32:55 GMT</pubDate>
   </item><item>
     <title>Thickness Map</title>
     <link>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/how-it-works/white-cap/thickness-map</link>
     <guid>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/how-it-works/white-cap/thickness-map</guid>
     <description><![CDATA[ Once the solver has committed its regions and material recipes, Prisma can represent the result as thickness maps: one height field for each filament. ]]></description>
-    <pubDate>Tue, 06 Oct 2026 15:47:36 GMT</pubDate>
+    <pubDate>Wed, 07 Oct 2026 21:32:51 GMT</pubDate>
   </item><item>
     <title>White Cap</title>
     <link>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/how-it-works/white-cap/</link>
     <guid>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/how-it-works/white-cap/</guid>
     <description><![CDATA[  .hiw-localnav svg text{font-family:inherit;font-size:13px}.hiw-localnav a rect{transition:stroke .15s ease}.hiw-localnav a:hover rect{stroke:var(--secondary);stroke-width:2}.hiw-localnav a:hover text{fill:var(--secondary)}The SolveWhite CapExport White Cap is the final construction step of the solv... ]]></description>
-    <pubDate>Tue, 06 Oct 2026 15:47:36 GMT</pubDate>
+    <pubDate>Wed, 07 Oct 2026 21:32:51 GMT</pubDate>
   </item><item>
     <title>Solve Modes</title>
     <link>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/how-it-works/the-solve/solve-modes</link>
     <guid>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/how-it-works/the-solve/solve-modes</guid>
     <description><![CDATA[ Prisma offers two Solve Modes, chosen under Essentials in Settings: Color (the default) and Luminance. ]]></description>
-    <pubDate>Tue, 06 Oct 2026 15:47:36 GMT</pubDate>
+    <pubDate>Wed, 07 Oct 2026 21:32:51 GMT</pubDate>
   </item><item>
     <title>The Solve</title>
     <link>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/how-it-works/the-solve/</link>
     <guid>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/how-it-works/the-solve/</guid>
     <description><![CDATA[  .hiw-localnav svg text{font-family:inherit;font-size:13px}.hiw-localnav a rect{transition:stroke .15s ease}.hiw-localnav a:hover rect{stroke:var(--secondary);stroke-width:2}.hiw-localnav a:hover text{fill:var(--secondary)}TargetColorsThe Color LUTThe SolveWhite Cap The solve is where a prepared ima... ]]></description>
-    <pubDate>Tue, 06 Oct 2026 15:47:36 GMT</pubDate>
+    <pubDate>Wed, 07 Oct 2026 21:32:51 GMT</pubDate>
   </item><item>
     <title>The Color LUT</title>
     <link>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/how-it-works/the-color-lut/</link>
     <guid>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/how-it-works/the-color-lut/</guid>
     <description><![CDATA[  .hiw-localnav svg text{font-family:inherit;font-size:13px}.hiw-localnav a rect{transition:stroke .15s ease}.hiw-localnav a:hover rect{stroke:var(--secondary);stroke-width:2}.hiw-localnav a:hover text{fill:var(--secondary)}PaletteColorModelRuns withSwapsThe Color LUTThe Solve Before matching the pho... ]]></description>
-    <pubDate>Tue, 06 Oct 2026 15:47:36 GMT</pubDate>
+    <pubDate>Wed, 07 Oct 2026 21:32:51 GMT</pubDate>
   </item><item>
     <title>OKLab</title>
     <link>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/how-it-works/target-colors/oklab</link>
     <guid>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/how-it-works/target-colors/oklab</guid>
     <description><![CDATA[ The solver repeatedly has to answer one question: how far is this candidate stack’s color from the target color? Distance between raw red, green, and blue values is a poor judge of that, because equal steps in RGB do not look equally different to the eye. ]]></description>
-    <pubDate>Tue, 06 Oct 2026 15:47:36 GMT</pubDate>
+    <pubDate>Wed, 07 Oct 2026 21:32:51 GMT</pubDate>
   </item><item>
     <title>Target Colors</title>
     <link>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/how-it-works/target-colors/</link>
     <guid>https://catfoodkingdom.github.io/prisma-docs/prisma-lithophane-generator/how-it-works/target-colors/</guid>
     <description><![CDATA[  .hiw-localnav svg text{font-family:inherit;font-size:13px}.hiw-localnav a rect{transition:stroke .15s ease}.hiw-localnav a:hover rect{stroke:var(--secondary);stroke-width:2}.hiw-localnav a:hover text{fill:var(--secondary)}PreprocessingTargetColorsThe Solve After Preprocessing, the image is still an... ]]></description>
-    <pubDate>Tue, 06 Oct 2026 15:47:36 GMT</pubDate>
+    <pubDate>Wed, 07 Oct 2026 21:32:51 GMT</pubDate>
   </item>
     </channel>
   </rss>
